@@ -1,3 +1,10 @@
-import React from "react"
+import React from "react";
+import Layout from '../components/Layout';
 
-export default () => <div>Hello world!</div>
+import Head from '../components/Head';
+export default () => <Layout>
+  <Head title="Home" />
+  <h1>Hello</h1>
+  <p>using layout now!</p>
+</Layout>
+
