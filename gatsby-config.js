@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'Full-Stack Bootcamp',
@@ -11,10 +15,11 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-source-contentful',
+      resolve: 'gatsby-source-graphql',
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+        typeName: `WPGraphQL`,
+        fieldName: `wp`,
+        url: `http://darkhorsewoodworks.com/dh1/graphql`
       }
     },
     'gatsby-plugin-sass',

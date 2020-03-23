@@ -8,7 +8,7 @@ import { graphql } from 'gatsby';
 
 // export const query = graphql`
 // query($slug: String!){
-//   contentfulBlogPost(slug: {eq: $slug}){
+//   contentfulProjectPost(slug: {eq: $slug}){
 //     title
 //     publishedDate(formatString: "MMMM Do, YYYY")
 //     body {
@@ -18,28 +18,28 @@ import { graphql } from 'gatsby';
 // }
 // `
 
-const Blog = props => {
+const Project = props => {
 
-  const postContent = props.data.wp.postBy.title;
+  const portfolioContent = props.data.wp.portfolioBy.title;
 
 
   return (
     <Layout>
-      <Head title={props.data.wp.postBy.title} />
-      <h1>{postContent}</h1>
-      <div dangerouslySetInnerHTML={ {__html: props.data.wp.postBy.content} }>
+      <Head title={props.data.wp.portfolioBy.title} />
+      <h1>{portfolioContent}</h1>
+      <div dangerouslySetInnerHTML={{ __html: props.data.wp.portfolioBy.content }}>
       </div>
     </Layout>
   )
 }
 
-export default Blog;
+export default Project;
 
 
 export const query = graphql`
   query($slug: String!) {
     wp {
-      postBy(slug: $slug) {
+      portfolioBy(slug: $slug) {
         content(format: RENDERED)
         title
       }

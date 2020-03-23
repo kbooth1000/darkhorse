@@ -2,10 +2,19 @@ const path = require('path');
 
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
+  const projectTemplate = path.resolve('./src/templates/project.js');
   const blogTemplate = path.resolve('./src/templates/blog.js');
   const res = await graphql(`
-    query {
-      allContentfulBlogPost {
+  query {
+    wp {
+      posts {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+      portfolio {
         edges {
           node {
             slug
@@ -13,9 +22,22 @@ module.exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
+  }
   `)
 
-  res.data.allContentfulBlogPost.edges.forEach((edge) => {
+  console.log('res:',res);
+
+  res.data.wp.portfolio.edges.forEach((edge) => {
+    createPage({
+      component: projectTemplate,
+      path: `/project/${edge.node.slug}`,
+      context: {
+        slug: edge.node.slug
+      }
+    })
+  })
+
+  res.data.wp.posts.edges.forEach((edge) => {
     createPage({
       component: blogTemplate,
       path: `/blog/${edge.node.slug}`,
