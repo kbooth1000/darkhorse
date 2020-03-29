@@ -19,37 +19,37 @@ const Header = () => {
     <header id="header" role="banner" >
     <div className="wrap clearfix">
       <div className="logo" itemprop="headline">
-        <a href="/" title="Dark Horse Woodworks" className="custom">
+        <Link to="/" title="Dark Horse Woodworks" className="custom">
         <img src="/wp-content/uploads/2014/11/logo.png" title="Dark Horse Woodworks" alt="Dark Horse Woodworks" />
-        </a>
+        </Link>
         </div>
         <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
         <ul id="nav" className="header-menu">
           <li id="menu-item-51" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51">
-          <a href="/about/">About</a>
+          <Link to="/about/">About</Link>
         <ul className="sub-menu">
           <li id="menu-item-235" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-235">
-          <a href="/about/">Our Story</a>
+          <Link to="/about/">Our Story</Link>
         </li>
         <li id="menu-item-232" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-232">
-          <a href="/about/working-with-dark-horse/">Working with Dark Horse</a>
+          <Link to="/about/working-with-dark-horse/">Working with Dark Horse</Link>
         </li>
         </ul>
         </li>
         <li id="menu-item-24" className="portfolio menu-item menu-item-type-post_type menu-item-object-page menu-item-24 current_page_parent">
-          <a href="/gallery/">Gallery</a>
+          <Link to="/gallery/">Gallery</Link>
         </li>
         <li id="menu-item-49" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">
-          <a href="/press/">Press</a>
+          <Link to="/press/">Press</Link>
         </li>
         <li id="menu-item-1216" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1216">
-          <a href="/accolades/">Reviews</a>
+          <Link to="/accolades/">Reviews</Link>
         </li>
         <li id="menu-item-14" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-14">
-          <a href="/blog/">Blog</a>
+          <Link to="/blog/">Blog</Link>
         </li>
         <li id="menu-item-15" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-15">
-          <a href="/contact/">Contact</a>
+          <Link to="/contact/">Contact</Link>
         </li>
         </ul>
         </nav>

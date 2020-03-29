@@ -7,14 +7,14 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const res = await graphql(`
   query {
     wp {
-      posts {
+      posts(first: 99) {
         edges {
           node {
             slug
           }
         }
       }
-      portfolio {
+      portfolio(first: 99) {
         edges {
           node {
             slug
