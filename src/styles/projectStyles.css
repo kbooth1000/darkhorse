@@ -1,6 +1,8 @@
 /* =Tiled Gallery Default Styles
 -------------------------------------------------------------- */
-
+body.single-portfolio .entry-content, body.single-portfolio .entry-header {
+    width: 100%;
+}
 .tiled-gallery {
 	clear: both;
 	margin: 0 0 20px;
