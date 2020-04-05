@@ -3,6 +3,11 @@
 body.single-portfolio .entry-content, body.single-portfolio .entry-header {
     width: 100%;
 }
+
+.layout-module--content--3nIku, 
+.layout-module--container--2TGku {
+	max-width: 981px;
+}
 .tiled-gallery {
 	clear: both;
 	margin: 0 0 20px;
