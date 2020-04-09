@@ -2,6 +2,8 @@ import React from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import '../styles/index.scss';
+import '../styles/wp-styles/style.css';
+import '../styles/wp-styles/responsive.css';
 
 import layoutStyles from './layout.module.scss';
 

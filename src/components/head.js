@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import { useStaticQuery, graqhql } from 'gatsby';
 
+
 const Head = ({ title }) => {
   const data = useStaticQuery(
     graphql`

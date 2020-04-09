@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 
 import headerStyles from './header.module.scss';
+import logo from '../assets/logo.png';
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -20,7 +21,7 @@ const Header = () => {
     <div className="wrap clearfix">
       <div className="logo" itemprop="headline">
         <Link to="/" title="Dark Horse Woodworks" className="custom">
-        <img src="/wp-content/uploads/2014/11/logo.png" title="Dark Horse Woodworks" alt="Dark Horse Woodworks" />
+        <img src={logo} title="Dark Horse Woodworks" alt="Dark Horse Woodworks" />
         </Link>
         </div>
         <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
