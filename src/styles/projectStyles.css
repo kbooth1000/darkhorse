@@ -4,8 +4,8 @@ body.single-portfolio .entry-content, body.single-portfolio .entry-header {
     width: 100%;
 }
 
-.layout-module--content--3nIku, 
-.layout-module--container--2TGku {
+[class ^="layout-module--content--"], 
+[class ^="layout-module--container--"] {
 	max-width: 981px;
 }
 .tiled-gallery {
