@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import '../styles/index.scss';
 import '../styles/wp-styles/style.css';
 import '../styles/wp-styles/responsive.css';
+import '../styles/wp-styles/style-child.css';
 
 import layoutStyles from './layout.module.scss';
 
