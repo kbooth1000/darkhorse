@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'gatsby';
+
 import Layout from '../components/Layout';
 
 import Head from '../components/Head';
@@ -14,10 +16,11 @@ const Press = () => (<div className="Press">
 </p>
 
 <p>
-  
-<a className="callout-link" href="../accolades">
+
+<Link className="callout-link" to="../accolades" >
 See Client Comments
-</a>
+</Link>
+
 
 </p>
 

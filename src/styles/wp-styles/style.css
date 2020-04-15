@@ -296,6 +296,9 @@ header:after, main:after, footer:after, aside:after, section:after,
 	}
 
 #header .logo a.custom:hover {
+	transform: none; /* scale(1.01); */
+	transition: .1s;
+	filter: brightness(1.25);
 	}
 
 
@@ -665,6 +668,7 @@ body.home #portfolio .flexslider .slide:hover img {
 	-moz-transform: scale(1.02);
 	-webkit-transform: scale(1.02);
 	-o-transform: scale(1.02);
+	transform: scale(1.02);
 	}
 
 
@@ -1358,6 +1362,7 @@ body.blog #content article.format-quote .entry-title {
 .flexslider .slides > li {
 	display: none; 
 	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 	width: 50%;
 	}
 
@@ -2111,7 +2116,9 @@ body.single-portfolio #portfolio .item a:hover img,
 	-moz-transform: scale(1.02);
 	-webkit-transform: scale(1.02);
 	-o-transform: scale(1.02);
-	}
+	transform: scale(1.02);
+}
+
 
 body.page-template-template-portfolio-php .item a .overlay,
 body.page-template-template-portfolio-sortable-php .item a .overlay,
