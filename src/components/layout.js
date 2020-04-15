@@ -6,6 +6,8 @@ import '../styles/wp-styles/style.css';
 import '../styles/wp-styles/responsive.css';
 import '../styles/wp-styles/style-child.css';
 
+import 'typeface-open-sans';
+
 import layoutStyles from './layout.module.scss';
 
 const Layout = props =>

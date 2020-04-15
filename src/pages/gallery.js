@@ -36,7 +36,7 @@ const Gallery = () => {
     <Layout>
       <Head title="Gallery" />
       <h1>Gallery</h1>
-      <div>Posts will show up here.
+      <div>
         <ul className={blogStyles.posts}>
           {projects}
         </ul>
