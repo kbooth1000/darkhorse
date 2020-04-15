@@ -16,10 +16,11 @@ const Press = () => (<div className="Press">
 </p>
 
 <p>
-  
+
 <Link className="callout-link" to="../accolades" >
 See Client Comments
 </Link>
+
 
 </p>
 
