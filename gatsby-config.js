@@ -9,7 +9,7 @@ require("dotenv").config({
 })
 
 module.exports = {
-  pathPrefix: `/gatsby-test`,
+  pathPrefix: `/darkhorse`,
   siteMetadata: {
     title: 'Full-Stack Bootcamp',
     author: 'Kyle J Booth'
