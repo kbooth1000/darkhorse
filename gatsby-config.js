@@ -11,7 +11,7 @@ require("dotenv").config({
 module.exports = {
   pathPrefix: `/darkhorse`,
   siteMetadata: {
-    title: 'Full-Stack Bootcamp',
+    title: 'Dark Horse Woodworks',
     author: 'Kyle J Booth'
   },
   plugins: [
