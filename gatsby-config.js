@@ -9,7 +9,7 @@ require("dotenv").config({
 })
 
 module.exports = {
-  pathPrefix: `/gatsby-test`,
+  pathPrefix: `/darkhorse`,
   siteMetadata: {
     title: 'Dark Horse Woodworks',
     author: 'Kyle J Booth'
