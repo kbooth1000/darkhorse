@@ -8,14 +8,14 @@ const Footer = () => {
     query {
       site {
         siteMetadata {
-          author
+          title
         }
       }
     }
   `)
   return (
     <footer className={footerStyles.footer}>
-      &copy; {new Date().getFullYear()}       {data.site.siteMetadata.author}
+      &copy; {new Date().getFullYear()}       {data.site.siteMetadata.title}
 
     </footer>
   )

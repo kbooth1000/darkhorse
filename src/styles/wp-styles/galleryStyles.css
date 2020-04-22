@@ -343,12 +343,40 @@ header.entry-header {
   align-items: center;
 }
 
-img.post-image {
+.item img.post-image {
   object-fit: cover;
   display: block;
   min-width: 300px;
+  transition: .15s ease-in;
+  transform: scale(1);
+  color: #fff;
+  filter: brightness(1);
 }
 
-.project-grid .project-caption {
+.item:hover img.post-image {
+  transform: scale(1.03);
+  filter: brightness(.6);
+}
+
+.project-grid .item .project-caption {
   position: absolute;
+  color: #fff;
+  opacity: 0;
+  filter: opacity(0);
+  top: 2rem;
+  left: 2rem;
+  font-size: 1.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: left;
+  text-shadow: 0px 1px 3px rgba(0,0,0,.25);
+}
+
+.project-grid .item:hover .project-caption {
+  opacity: 1;
+  filter: opacity(1);
+}
+
+.project-grid .item .project-caption em {
+  display: none;
 }

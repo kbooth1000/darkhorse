@@ -33,7 +33,7 @@ const Gallery = () => {
     <article key={`project${i}`} style={{ transform: 'translate3d(0px, 0px, 0px)'}} className="project-thumb" itemScope="itemscope" itemType="http://schema.org/BlogPosting" srcSet="https://i1.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2019/11/IMG_2844.jpg?resize=150%2C150 150w, https://i1.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2019/11/IMG_2844.jpg?resize=300%2C300 300w, https://i1.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2019/11/IMG_2844.jpg?zoom=2&amp;resize=300%2C300 600w, https://i1.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2019/11/IMG_2844.jpg?zoom=3&amp;resize=300%2C300 900w" sizes="(max-width: 300px) 100vw, 300px" itemProp="blogPost" >
       <header className="entry-header" itemScope="itemscope" itemType="http://schema.org/WPHeader">
         <div className="item"> 
-          <a href={`/project/${project.node.slug}`} title={project.node.title}>
+          <Link to={`/project/${project.node.slug}`} title={project.node.title}>
 
             <img src={project.node.featuredImage.sourceUrl} className="post-image" alt="" />
             <div className="overlay">
@@ -41,7 +41,7 @@ const Gallery = () => {
               <span className="project-caption">{project.node.title}
                 <em>Built-Ins, Kitchens, </em>
               </span> 
-          </a>
+          </Link>
         </div>
       </header>
     </article>
@@ -49,9 +49,8 @@ const Gallery = () => {
   ))
 
   return (<div>
-        <Layout>
+        <Layout title="Gallery">
           <Head title="Gallery" />
-          <h1>Gallery</h1>
           <div className="project-grid">
               {projects}
           </div>

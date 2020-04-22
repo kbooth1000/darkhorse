@@ -5,9 +5,8 @@ import Head from '../components/Head';
 
 const Contact = () =>
   <div className="Contact">
-    <Layout>
+    <Layout title="Contact">
       <Head title="Contact" />
-      <h1>Contact Us</h1>
       <p className="address">
         116 Vanira Ave SE<br />
         Atlanta GA 30315

@@ -27,19 +27,6 @@ const Blog = () => {
   }
   `);
 
-  // query($slug: String!) {
-  //   wp {
-  //     postBy(slug: $slug) {
-  //       date
-  //       author {
-  //         name
-  //       }
-  //       content(format: RENDERED)
-  //       title(format: RENDERED)
-  //     }
-  //   }
-  // }
-
   const nodes = data.wp.posts.edges;
   const posts = nodes.map((post, i) => (
     <li key={`post${i}`} className={blogStyles.post}>
@@ -53,9 +40,8 @@ const Blog = () => {
   ))
 
   return (<div>
-    <Layout>
+    <Layout title="Blog">
       <Head title="Blog" />
-      <h1>Blog</h1>
       <div>
         <ul className={blogStyles.posts}>
           {posts}
