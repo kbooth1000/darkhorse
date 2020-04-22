@@ -7,6 +7,7 @@ import '../styles/wp-styles/responsive.css';
 import '../styles/wp-styles/style-child.css';
 
 import 'typeface-open-sans';
+import 'typeface-raleway';
 
 import layoutStyles from './layout.module.scss';
 
@@ -15,6 +16,9 @@ const Layout = props =>
   <div className={layoutStyles.container}>
     <div className={layoutStyles.content}>
       <Header />
+      <div className={layoutStyles.headerMeta}>
+        <h1>{props.title}</h1>
+      </div>
       {props.children}
     </div>
     <Footer />

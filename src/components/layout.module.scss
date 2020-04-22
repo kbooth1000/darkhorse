@@ -10,3 +10,29 @@
 .content {
   flex-grow: 1;
 }
+
+.headerMeta {
+  line-height: 58px;
+  font-size: 34px;
+  font-weight: 300;
+  letter-spacing: 7px;
+  color: #1c1c1c;
+  font-size: 34px;
+  line-height: 58px;
+  display: block;
+  margin: 1.75rem 3rem 5rem 0 ;
+  font-family: Raleway;
+}
+
+@media only screen and (max-width: 1240px) {
+  .headerMeta {
+     margin-left: 5rem;
+  }
+}
+
+
+@media only screen and (max-width: 1110px) {
+  .headerMeta {
+     margin-left: 125px !important;
+  }
+}
