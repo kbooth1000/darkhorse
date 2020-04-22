@@ -17,15 +17,16 @@
   font-weight: 300;
   letter-spacing: 7px;
   color: #1c1c1c;
-  font-size: 44px;
+  font-size: 34px;
   line-height: 58px;
   display: block;
-  margin: 1rem 3rem ;
+  margin: 1.75rem 3rem 5rem 0 ;
+  font-family: Raleway;
 }
 
 @media only screen and (max-width: 1240px) {
   .headerMeta {
-     margin-left: 75px;
+     margin-left: 5rem;
   }
 }
 

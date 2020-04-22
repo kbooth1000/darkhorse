@@ -7,6 +7,7 @@ import '../styles/wp-styles/responsive.css';
 import '../styles/wp-styles/style-child.css';
 
 import 'typeface-open-sans';
+import 'typeface-raleway';
 
 import layoutStyles from './layout.module.scss';
 

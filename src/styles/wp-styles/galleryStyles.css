@@ -380,3 +380,34 @@ header.entry-header {
 .project-grid .item .project-caption em {
   display: none;
 }
+
+body.page-template-template-portfolio-sortable-php .portfolio-filter {
+  margin-bottom: 60px;
+}
+
+body.page-template-template-portfolio-sortable-php .portfolio-filter ul, body.page-template-template-portfolio-sortable-php .portfolio-filter li {
+  display: inline-block;
+  list-style: none;
+}
+
+.portfolio-filter {
+  margin-bottom: 3rem;
+}
+
+.portfolio-filter li {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.portfolio-filter li a {
+  color: #1c1c1c;
+  font-weight: 600;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.portfolio-filter li a.active,
+.portfolio-filter li a:hover {
+  color: rgb(234, 79, 69);
+  font-weight: 600;
+}
