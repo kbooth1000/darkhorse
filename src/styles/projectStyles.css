@@ -7,7 +7,21 @@ body.single-portfolio .entry-content, body.single-portfolio .entry-header {
 [class ^="layout-module--content--"], 
 [class ^="layout-module--container--"] {
 	max-width: 981px;
+} 
+
+body.Home {
+	margin-top: 0;
 }
+
+.Home [class ^="layout-module--content--"], 
+.Home [class ^="layout-module--container--"] {
+	max-width: none;
+}
+
+.Home .layout-module--container--3BoYY {
+	padding: 0;
+}
+
 .tiled-gallery {
 	clear: both;
 	margin: 0 0 20px;

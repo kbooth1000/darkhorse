@@ -26,10 +26,10 @@ const data = useStaticQuery(
   `
 )
 
-return <div className={`${layoutStyles.container} ${data.site.siteMetadata.title}`}>
+return <div className={`${layoutStyles.container} ${data.site.siteMetadata.title} home`}>
     <div className={layoutStyles.content}>
       <Header />
-      <div className={layoutStyles.headerMeta}>
+      <div className={`${layoutStyles.headerMeta} headerMeta`}>
         <h1>{props.title}</h1>
       </div>
       {props.children}

@@ -5,17 +5,8 @@ import headerStyles from './header.module.scss';
 import logo from '../assets/logo.png';
 
 const Header = (props) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  
 
-  console.log('pagedata: ', props.title);
   return (
     <header id="header" role="banner" >
       <div className="wrap clearfix">

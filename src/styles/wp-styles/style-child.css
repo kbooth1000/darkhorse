@@ -71,6 +71,11 @@ background: rgba(15,15,15,.86)!important; /* #1c1c1c;*/
 }
 
 
+.Home .headerMeta {
+	display: none;
+}
+
+
 
 body.home #hero .masthead {
 	opacity: 0.85;

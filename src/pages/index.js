@@ -7,12 +7,11 @@ import '../styles/wp-styles/style.css';
 
 export default () => <Layout>
   <Head title="Home" />
-  <div class="home">
   <section id="hero">
   <div className="masthead" style={{ backgroundImage: 'url(https://i1.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/ss-kitchen.jpg?1587682416)' }}>
     </div>
     <div className="gradient">
-      <table className="houzz-influencer-badge" style={{ width: '96px' }} cellPadding="0" cellSpacing="0">
+      <table className="houzz-influencer-badge" style={{ width: '96px', marginTop: '100px' }} cellPadding="0" cellSpacing="0">
         <tbody>
           <tr>
             <td>
@@ -81,6 +80,5 @@ export default () => <Layout>
       </a>
     </div>
   </section>
-  </div>
 </Layout>
 
