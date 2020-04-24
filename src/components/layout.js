@@ -10,10 +10,23 @@ import 'typeface-open-sans';
 import 'typeface-raleway';
 
 import layoutStyles from './layout.module.scss';
+import { useStaticQuery, graqhql } from 'gatsby';
 
-const Layout = props =>
+const Layout = props =>{
 
-  <div className={layoutStyles.container}>
+const data = useStaticQuery(
+  graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+  `
+)
+
+return <div className={`${layoutStyles.container} ${data.site.siteMetadata.title}`}>
     <div className={layoutStyles.content}>
       <Header />
       <div className={layoutStyles.headerMeta}>
@@ -23,5 +36,6 @@ const Layout = props =>
     </div>
     <Footer />
   </div>
+}
 
 export default Layout;
