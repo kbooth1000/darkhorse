@@ -467,21 +467,21 @@ header:after, main:after, footer:after, aside:after, section:after,
 
 /* Hero */
 
-body.home #hero {
+.home #hero {
 	z-index: 100;
 	background-color: #242424;
 	position: relative;
 	line-height: 0;
 	}
 
-body.home #hero .masthead,
-body.home #hero .gradient {
+.home #hero .masthead,
+.home #hero .gradient {
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	}
 
-body.home #hero .masthead {
+.home #hero .masthead {
 	z-index: 101;
 	opacity: 0.65;
 	background-repeat: no-repeat;
@@ -489,7 +489,7 @@ body.home #hero .masthead {
 	background-size: cover;
 	}
 
-body.home #hero .gradient {
+.home #hero .gradient {
 	z-index: 102;
 	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 60%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome, Safari4+ */
@@ -500,13 +500,13 @@ body.home #hero .gradient {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
 	}
 
-body.home #hero .wrap {
+.home #hero .wrap {
 	position: relative;
 	z-index: 103;
 	padding: 170px 0; 
 	}
 
-body.home #hero h1 {
+.home #hero h1 {
 	z-index: 104;
 	color: #FFF;
 	font-size: 52px;
@@ -517,7 +517,7 @@ body.home #hero h1 {
 	text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
 	}
 
-body.home #hero h2 {
+.home #hero h2 {
 	z-index: 105;
 	color: #FFF;
 	font-size: 24px;
@@ -528,7 +528,7 @@ body.home #hero h2 {
 	width: 93%;
 	}
 
-body.home #hero a.btn {
+.home #hero a.btn {
 	z-index: 106;
 	color: #FFF;
 	font-size: 17px;
@@ -538,7 +538,7 @@ body.home #hero a.btn {
 	margin-top: 50px;
 	}
 
-body.home #hero a.btn:hover {
+.home #hero a.btn:hover {
 	color: #ea4f45;
 	background: #FFF;
 	text-decoration: none;
@@ -546,21 +546,21 @@ body.home #hero a.btn:hover {
 
 /* Columns */
 
-body.home #columns {
+.home #columns {
 	margin: 60px 0 70px;
 	}
 
-body.home #columns .column  {
+.home #columns .column  {
 	width: 300px;
 	float: left;
 	margin-right: 40px;
 	}
 
-body.home #columns .last  {
+.home #columns .last  {
 	margin-right: 0;
 	}
 
-body.home #columns h2 {
+.home #columns h2 {
 	color: #1c1c1c;
 	font-size: 24px;
 	font-weight: 900;
@@ -570,15 +570,15 @@ body.home #columns h2 {
 	margin-bottom: 15px;
 	}
 
-body.home #columns p {
+.home #columns p {
 	margin-bottom: 15px;
 	}
 
-body.home #columns a {
+.home #columns a {
 	font-weight: 700;
 	}
 
-body.home #columns span {
+.home #columns span {
 	color: #707070;
 	padding-left: 3px;
 	}
@@ -586,12 +586,12 @@ body.home #columns span {
 
 /* Portfolio */
 
-body.home #portfolio {
+.home #portfolio {
 	background: #eef1f5;
 	padding-top: 75px;
 	}
 
-body.home #portfolio h1 {
+.home #portfolio h1 {
 	color: #1c1c1c;
 	font-size: 24px;
 	font-weight: 900;
@@ -603,7 +603,7 @@ body.home #portfolio h1 {
 	width: 75%;
 	}
 
-body.home #portfolio h2 {
+.home #portfolio h2 {
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 30px;
@@ -612,16 +612,16 @@ body.home #portfolio h2 {
 	width: 75%;
 	}
 
-body.home #portfolio h2 a {
+.home #portfolio h2 a {
 	font-weight: 700;
 	}
 
-body.home #portfolio .slider-nav {
+.home #portfolio .slider-nav {
 	float: right;
 	width: 15%;
 	}
 
-body.home #portfolio .slider-nav .flex-direction-nav {
+.home #portfolio .slider-nav .flex-direction-nav {
 	float: right;
 	position: relative;
 	display: block;
@@ -630,11 +630,11 @@ body.home #portfolio .slider-nav .flex-direction-nav {
 	width: 95px;
 	}
 
-body.home #portfolio .slider-nav .flex-direction-nav li {
+.home #portfolio .slider-nav .flex-direction-nav li {
 	float: left;
 	}
 
-body.home #portfolio .slider-nav .flex-direction-nav a {
+.home #portfolio .slider-nav .flex-direction-nav a {
 	color: #888;
 	font-size: 18px;
 	background: #FFF;
@@ -645,23 +645,23 @@ body.home #portfolio .slider-nav .flex-direction-nav a {
 	box-shadow:         0px 2px 0px 0px rgba(0, 0, 0, 0.1);
 	}
 
-body.home #portfolio .flexslider {
+.home #portfolio .flexslider {
 	margin-bottom: 0;
 	}
 
-body.home #portfolio .flexslider .slides img {
+.home #portfolio .flexslider .slides img {
 	width: 100%;
 	height: auto;
 	}
 
-body.home #portfolio .flexslider .slide img {
+.home #portfolio .flexslider .slide img {
 	overflow: hidden;
 	-webkit-transition: .15s ease-in;
 	-moz-transition: .15s ease-in;
 	transition: .15s ease-in;
 	}
 
-body.home #portfolio .flexslider .slide:hover img {
+.home #portfolio .flexslider .slide:hover img {
 	-webkit-transition: .15s ease-in;
 	-moz-transition: .15s ease-in;
 	transition: .15s ease-in;
@@ -674,11 +674,11 @@ body.home #portfolio .flexslider .slide:hover img {
 
 /* Clients */
 
-body.home #clients {
+.home #clients {
 	margin: 75px 0;
 	}
 
-body.home #clients h1 {
+.home #clients h1 {
 	color: #1c1c1c;
 	font-size: 24px;
 	font-weight: 900;
@@ -690,7 +690,7 @@ body.home #clients h1 {
 	width: 80%;
 	}
 
-body.home #clients h2 {
+.home #clients h2 {
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 30px;
@@ -699,7 +699,7 @@ body.home #clients h2 {
 	width: 80%;
 	}
 
-body.home #clients h2 a {
+.home #clients h2 a {
 	font-weight: 700;
 	}
 
