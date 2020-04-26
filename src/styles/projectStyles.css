@@ -9,18 +9,6 @@ body.single-portfolio .entry-content, body.single-portfolio .entry-header {
 	max-width: 981px;
 } 
 
-body.Home {
-	margin-top: 0;
-}
-
-.Home [class ^="layout-module--content--"], 
-.Home [class ^="layout-module--container--"] {
-	max-width: none;
-}
-
-.Home .layout-module--container--3BoYY {
-	padding: 0;
-}
 
 .tiled-gallery {
 	clear: both;
