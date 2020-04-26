@@ -1,0 +1,28 @@
+
+body.Home {
+	margin-top: 0;
+}
+
+.Home [class ^="layout-module--content--"], 
+.Home [class ^="layout-module--container--"] {
+	max-width: none;
+}
+
+.Home .layout-module--container--3BoYY {
+	padding: 0;
+}
+
+.Home #columns .wrap {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+.Home .column #contact-home {
+    font-size: 1rem !important;
+    background: #eee;
+    text-align: center;
+    display: flex;
+    height: 204px;
+    align-items: center;
+}

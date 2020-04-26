@@ -1,9 +1,11 @@
 import React from "react";
 import Layout from '../components/Layout';
+import { Link } from 'gatsby';
 
 import Head from '../components/Head';
 
 import '../styles/wp-styles/style.css';
+import '../styles/homeStyles.css';
 
 export default () => <Layout>
   <Head title="Home" />
@@ -42,43 +44,97 @@ export default () => <Layout>
           <br />
         </div>
       </h2>
-      <a href="gallery" title="View Our Work" className="btn">View Our Work
-  </a>
+      <Link to="gallery" title="View Our Work" className="btn">View Our Work
+  </Link>
       <nav className="homepage-lower-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
         <ul className="header-menu">
           <li id="menu-item-51" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51">
-            <a href="gallery" data-filter=".custom-kitchens" className="active">Custom Kitchens
-  </a>
+            <Link to="gallery" data-filter=".custom-kitchens" className="active">Custom Kitchens
+  </Link>
           </li>
           <li id="menu-item-50" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-50">
-            <a href="http://darkhorsewoodworks.com/dh1/accolades/">Accolades
-  </a>
+            <Link to="accolades/">Accolades
+  </Link>
           </li>
           <li id="menu-item-24" className="portfolio menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-            <a href="http://darkhorsewoodworks.com/dh1/gallery/">Gallery
-  </a>
+            <Link to="gallery/">Gallery
+  </Link>
           </li>
           <li id="menu-item-49" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">
-            <a href="http://darkhorsewoodworks.com/dh1/press/">Press
-  </a>
+            <Link to="press/">Press
+  </Link>
           </li>
           <li id="menu-item-15" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-15">
-            <a href="http://darkhorsewoodworks.com/dh1/contact/">Contact
-  </a>
+            <Link to="contact/">Contact
+  </Link>
           </li>
         </ul>
       </nav>
       <img className="hidden-fb-poster-pic" src="http://i2.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/12/screenshot.png" />
     </div>
     <div className="homepage-decoration">
-      <a href="http://darkhorsewoodworks.com/dh1/press/">
+      <Link to="press/">
         <img src="http://darkhorsewoodworks.com/dh1/wp-content/uploads/2016/02/WoodDiamond.png" />
         <br />
         <br />
         <footer>Multiple-time Winner of the Prestigious CMA Wood Diamond Award
     </footer>
-      </a>
+      </Link>
     </div>
   </section>
-</Layout>
 
+  <section id="columns">
+    <div className="wrap">
+    <div className="column">
+    <h2>Our Story
+    </h2> 
+  <a href="about#ourstory">
+    <img src="http://darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/about2.jpeg" alt="Designing a custom piece allows you to choose all of the details – style, materials, color, finish and size. We will talk about styles you like, look at photos of similar pieces and talk about what you do and don’t like about them. We will discuss the intended use and the room where the piece will be used. If you've created a sketch of what you have in mind, we’ll look at that, too. All of this information goes into each piece Dark Horse builds. Together, we will create a design that fits your needs and your desire for a one-of-a-kind creation....." />
+    </a> 
+  <img className="unhidden-fb-poster-pic" src="http://i2.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/12/screenshot.png" />
+    </div>
+  <div className="column">
+    <h2>Working with Us
+    </h2> 
+  <a href="about/working-with-dark-horse/">
+    <img src="http://darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/dhnewspace1.jpg" alt="" style={{width: '100%'}} />
+    </a>
+  </div>
+  <div className="column last">
+    <h2>Contact Us
+    </h2>
+  <div id="contact-home">
+    <a href="contact"> 
+  <img src="http://i2.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/chris1.jpeg" alt="Chris Dehmer, Owner" />
+    </a>
+  <p> To inquire about our services, please call us
+    <br />
+  <b> 404-798-9829
+    </b>
+  <br />or
+  <br />
+  <a href="contact">CLICK HERE
+  </a>.
+  </p>
+  </div>
+  </div>
+  </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <aside id="sidebar-footer" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+social
+
+ </aside>
+
+</Layout>
