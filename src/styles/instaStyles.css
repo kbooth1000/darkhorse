@@ -1,0 +1,20 @@
+.instaBox {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.instaBox a {
+    display: block;
+    width: 72.5px;
+    height: 72.5px;
+    padding: 5px;
+    overflow: hidden;
+    /* box-sizing: border-box; */
+    /* object-fit: cover; */
+}
+
+.instaBox a img {
+    object-fit: cover;
+}

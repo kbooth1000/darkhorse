@@ -26,3 +26,7 @@ body.Home {
     height: 204px;
     align-items: center;
 }
+
+#sidebar-footer {
+    display: flex;
+}
