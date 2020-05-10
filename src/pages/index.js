@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from '../components/Layout';
+import ImageGallery from '../components/imageGallery';
 import { Link } from 'gatsby';
 
 import Head from '../components/Head';
@@ -10,7 +11,7 @@ import '../styles/homeStyles.css';
 export default () => <Layout>
   <Head title="Home" />
   <section id="hero">
-  <div className="masthead" style={{ backgroundImage: 'url(https://i1.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/ss-kitchen.jpg?1587682416)' }}>
+    <div className="masthead" style={{ backgroundImage: 'url(https://i1.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/ss-kitchen.jpg?1587682416)' }}>
     </div>
     <div className="gradient">
       <table className="houzz-influencer-badge" style={{ width: '96px', marginTop: '100px' }} cellPadding="0" cellSpacing="0">
@@ -85,40 +86,40 @@ export default () => <Layout>
 
   <section id="columns">
     <div className="wrap">
-    <div className="column">
-    <h2>Our Story
-    </h2> 
-  <a href="about#ourstory">
-    <img src="http://darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/about2.jpeg" alt="Designing a custom piece allows you to choose all of the details – style, materials, color, finish and size. We will talk about styles you like, look at photos of similar pieces and talk about what you do and don’t like about them. We will discuss the intended use and the room where the piece will be used. If you've created a sketch of what you have in mind, we’ll look at that, too. All of this information goes into each piece Dark Horse builds. Together, we will create a design that fits your needs and your desire for a one-of-a-kind creation....." />
-    </a> 
-  <img className="unhidden-fb-poster-pic" src="http://i2.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/12/screenshot.png" />
-    </div>
-  <div className="column">
-    <h2>Working with Us
-    </h2> 
-  <a href="about/working-with-dark-horse/">
-    <img src="http://darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/dhnewspace1.jpg" alt="" style={{width: '100%'}} />
-    </a>
-  </div>
-  <div className="column last">
-    <h2>Contact Us
+      <div className="column">
+        <h2>Our Story
     </h2>
-  <div id="contact-home">
-    <a href="contact"> 
-  <img src="http://i2.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/chris1.jpeg" alt="Chris Dehmer, Owner" />
-    </a>
-  <p> To inquire about our services, please call us
+        <a href="about#ourstory">
+          <img src="http://darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/about2.jpeg" alt="Designing a custom piece allows you to choose all of the details – style, materials, color, finish and size. We will talk about styles you like, look at photos of similar pieces and talk about what you do and don’t like about them. We will discuss the intended use and the room where the piece will be used. If you've created a sketch of what you have in mind, we’ll look at that, too. All of this information goes into each piece Dark Horse builds. Together, we will create a design that fits your needs and your desire for a one-of-a-kind creation....." />
+        </a>
+        <img className="unhidden-fb-poster-pic" src="http://i2.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/12/screenshot.png" />
+      </div>
+      <div className="column">
+        <h2>Working with Us
+    </h2>
+        <a href="about/working-with-dark-horse/">
+          <img src="http://darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/dhnewspace1.jpg" alt="" style={{ width: '100%' }} />
+        </a>
+      </div>
+      <div className="column last">
+        <h2>Contact Us
+    </h2>
+        <div id="contact-home">
+          <a href="contact">
+            <img src="http://i2.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/chris1.jpeg" alt="Chris Dehmer, Owner" />
+          </a>
+          <p> To inquire about our services, please call us
     <br />
-  <b> 404-798-9829
+            <b> 404-798-9829
     </b>
-  <br />or
+            <br />or
   <br />
-  <a href="contact">CLICK HERE
+            <a href="contact">CLICK HERE
   </a>.
   </p>
-  </div>
-  </div>
-  </div>
+        </div>
+      </div>
+    </div>
   </section>
 
 
@@ -133,8 +134,38 @@ export default () => <Layout>
 
 
   <aside id="sidebar-footer" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
-social
 
- </aside>
+
+    <section id="columns">
+      <div className="wrap">
+        <div className="column">
+          <h2>Our Story</h2>
+
+          <ImageGallery></ImageGallery>
+
+        </div></div></section>
+
+
+    <section id="columns">
+      <div className="wrap">
+        <div className="column">
+          <h2>Our Story</h2>
+
+          <ImageGallery></ImageGallery>
+
+        </div></div></section>
+
+
+
+    <section id="columns">
+      <div className="wrap">
+        <div className="column">
+          <h2>Our Story</h2>
+
+          <ImageGallery></ImageGallery>
+
+        </div></div></section>
+
+  </aside>
 
 </Layout>
