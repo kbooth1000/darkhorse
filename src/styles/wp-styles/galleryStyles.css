@@ -311,6 +311,7 @@
   height: 300px;
   overflow: hidden;
   max-width: 90vw;
+  transition: 1s;
 }
 
 .project-grid .project-thumb {
@@ -326,6 +327,16 @@ header.entry-header {
   justify-content: center;
   align-items: center;
 }
+
+.projects-filter {
+  cursor: pointer;
+}
+
+.projects-filter.active {
+    color: #ea4f45;
+    font-weight: 700;
+}
+
 
 .item {
   width: 300px;

@@ -9,7 +9,7 @@ module.exports.createPages = async ({
   } = actions;
   const projectTemplate = path.resolve('./src/templates/project.js');
   const blogTemplate = path.resolve('./src/templates/blog.js');
-  const pageTemplate = path.resolve('./src/templates/page.js');
+  // const pageTemplate = path.resolve('./src/templates/page.js');
   const res = await graphql(`
   query {
     wp {
@@ -64,14 +64,22 @@ module.exports.createPages = async ({
 
 
 
-  res.data.wp.pages.edges.forEach(page => {
-    createPage({
-      path: page.node.isFrontPage ? '/althome' : page.node.uri,
-      component: pageTemplate,
-      context: {
-        id: page.node.id
-      }
-    })
-  })
+  // res.data.wp.pages.edges.forEach(page => {
+  //   let pageUri = () => {
+  //     console.log('page.node.uri:', page.node.uri);
+      
+  //     if(page.node.isFrontPage) { return '/althome' }
+  //     if(page.node.uri === '/gallery') {return '/altgallery'}
+  //     if(page.node.uri === '/blog') {return '/altblog'}
+  //     return page.node.uri;
+  //   }
+  //   createPage({
+  //     path: pageUri(), //page.node.isFrontPage ? '/althome' : page.node.uri,
+  //     component: pageTemplate,
+  //     context: {
+  //       id: page.node.id
+  //     }
+  //   })
+  // })
 
 }
