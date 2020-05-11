@@ -12,6 +12,15 @@ body.Home {
 	padding: 0;
 }
 
+.home #hero {
+    z-index: 100;
+    background-color: #242424;
+    position: relative;
+    line-height: 0;
+    width: 100vw;
+    margin: 63px 0 0 -2vw;
+}
+
 .Home #columns .wrap {
     display: flex;
     width: 100vw;
@@ -31,11 +40,10 @@ body.Home {
     display: flex;
 }
 
-#sidebar-footer .widget h4 {
+#sidebar-footer h4.widget-title {
     color: #1c1c1c;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 14px;
+    font-size: 15px;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 30px;
@@ -47,4 +55,10 @@ body.Home {
     display: flex;
     justify-content: center;
     margin: auto;
+}
+
+.Home #sidebar-footer  #columns .column {
+    width: 300px;
+    float: left;
+    margin-right: 25px;
 }
