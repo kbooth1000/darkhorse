@@ -10,7 +10,7 @@ import 'typeface-open-sans';
 import 'typeface-raleway';
 
 import layoutStyles from './layout.module.scss';
-import { useStaticQuery, graqhql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
 const Layout = props =>{
 

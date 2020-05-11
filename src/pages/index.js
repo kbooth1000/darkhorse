@@ -137,34 +137,30 @@ export default () => <Layout>
 
 
     <section id="columns">
-      <div className="wrap">
         <div className="column">
-          <h2>Our Story</h2>
+          <h4 className="widget-title">Our Instagram Shots</h4>
 
           <ImageGallery></ImageGallery>
 
-        </div></div></section>
+        </div>
 
 
-    <section id="columns">
-      <div className="wrap">
         <div className="column">
-          <h2>Our Story</h2>
+        <h4 className="widget-title">Our Latest Tweets</h4>
 
           <ImageGallery></ImageGallery>
 
-        </div></div></section>
+        </div>
 
-
-
-    <section id="columns">
-      <div className="wrap">
-        <div className="column">
-          <h2>Our Story</h2>
+        <div className="last column">
+        <h4 className="widget-title">Our Latest FB Posts</h4>
 
           <ImageGallery></ImageGallery>
 
-        </div></div></section>
+        </div>
+
+    </section>
+
 
   </aside>
 

@@ -30,3 +30,21 @@ body.Home {
 #sidebar-footer {
     display: flex;
 }
+
+#sidebar-footer .widget h4 {
+    color: #1c1c1c;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-family: 'Raleway';
+    font-style: normal;
+}
+
+#sidebar-footer #columns {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
