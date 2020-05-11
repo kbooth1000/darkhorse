@@ -46,7 +46,7 @@ const ImageGallery = () => {
       } = node;
       return (
 
-          <a href={`${nodeURL}/${id}`}>
+          <a href={`${nodeURL}/${id}`}> 
             <Image
               loading="lazy"
               alt={caption || ''}
