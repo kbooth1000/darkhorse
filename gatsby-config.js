@@ -57,6 +57,13 @@ module.exports = {
       },
     },
 
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        includedRoutes: ["**/searchResults"]
+      }
+    },
+
 
     {
       resolve: 'gatsby-source-graphql',

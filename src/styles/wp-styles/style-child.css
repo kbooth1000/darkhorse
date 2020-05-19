@@ -506,6 +506,15 @@ padding: 15px;
 	border: 0 !important;
 }
 
+.entry-content {
+	max-width: 880px;
+	margin: auto;
+}
+
+.entry-content p {
+	margin-bottom: 35px;
+}
+
 
 
 
@@ -513,7 +522,6 @@ padding: 15px;
 #attachment_153 {
 	float: right;
 }
-
 
 
 /*  ACCOLADES PAGE    */
