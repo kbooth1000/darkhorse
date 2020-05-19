@@ -240,7 +240,8 @@ header:after,main:after,footer:after,aside:after,section:after,.clearfix:after {
   margin-bottom: 12px
 }
 
-#header #nav .sub-menu,#header #nav .children {
+#header #nav .sub-menu,
+#header #nav .children {
   display: none;
   padding: 0;
   position: absolute;
@@ -248,7 +249,9 @@ header:after,main:after,footer:after,aside:after,section:after,.clearfix:after {
   z-index: 99999;
   border-radius: 3px;
   background: #fff;
-  box-shadow: 0px 0px 5px rgba(0,0,0,.25)
+  box-shadow: 0px 0px 5px rgba(0,0,0,.25);
+  margin: 10px;
+  top: 20px;
 }
 
 #header #nav li:hover>ul,#header #nav ul li:hover>ul {

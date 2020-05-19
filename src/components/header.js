@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
+// import SearchBox from './searchBox';
 
 import headerStyles from './header.module.scss';
 import logo from '../assets/logo.png';
 
 const Header = (props) => {
-  
+
 
   return (
     <header id="header" role="banner" >
@@ -24,7 +25,7 @@ const Header = (props) => {
                   <Link to="/about/">Our Story</Link>
                 </li>
                 <li id="menu-item-232" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-232">
-                  <Link to="/about/working-with-dark-horse/">Working with Dark Horse</Link>
+                  <Link to="/working-with-darkhorse/">Working with Dark Horse</Link>
                 </li>
               </ul>
             </li>
@@ -47,13 +48,14 @@ const Header = (props) => {
         </nav>
 
       </div>
-      {/* <form className="search-form" action="http://darkhorsewoodworks.com/dh1/" method="get" role="search"> <input className="search-input" type="search" name="s" placeholder="Search"> <button className="search-submit btn" type="submit" role="button">
+        {/* <SearchBox>search</SearchBox> */}
+      <form className="search-form" action="http://darkhorsewoodworks.com/dh1/" method="get" role="search"> <input className="search-input" type="search" name="s" placeholder="Search" /> <button className="search-submit btn" type="submit" role="button">
           <i className="fa fa-search">
             
           </i>
           </button>
-    </form> */}
-      
+    </form>
+
     </header>
   )
 }
