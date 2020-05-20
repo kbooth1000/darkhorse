@@ -18,7 +18,7 @@ body.Home {
     position: relative;
     line-height: 0;
     width: 100vw;
-    margin: 63px 0 0 -2vw;
+    margin: 0;
 }
 
 .Home #columns .wrap {
@@ -31,7 +31,7 @@ body.Home {
     font-size: 1rem !important;
     background: #eee;
     text-align: center;
-    display: flex;
+    display: block;
     height: 204px;
     align-items: center;
 }
