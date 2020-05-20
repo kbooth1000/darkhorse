@@ -101,7 +101,7 @@ export default () => <Layout>
           <img src="http://darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/dhnewspace1.jpg" alt="" style={{ width: '100%' }} />
         </a>
       </div>
-      <div className="column last">
+      <div className="column">
         <h2>Contact Us
     </h2>
         <div id="contact-home">
@@ -137,27 +137,21 @@ export default () => <Layout>
 
 
     <section id="columns">
-        <div className="column">
-          <h4 className="widget-title">Our Instagram Shots</h4>
-
-          <ImageGallery></ImageGallery>
-
-        </div>
+      <div className="column">
+        <h4 className="widget-title">Our Instagram Shots</h4>
+        <ImageGallery />
+      </div>
 
 
-        <div className="column">
+      <div className="column">
         <h4 className="widget-title">Our Latest Tweets</h4>
+        <ImageGallery />
+      </div>
 
-          <ImageGallery></ImageGallery>
-
-        </div>
-
-        <div className="last column">
+      <div className="column">
         <h4 className="widget-title">Our Latest FB Posts</h4>
-
-          <ImageGallery></ImageGallery>
-
-        </div>
+        <ImageGallery />
+      </div>
 
     </section>
 
