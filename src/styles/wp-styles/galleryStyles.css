@@ -295,12 +295,21 @@
   display: none
 }
 
+.portfolio-filter li {
+  cursor: pointer;
+  color: #5c5c5c;
+}
+
+.portfolio-filter li:hover {
+  color: #ea4f45;
+}
+
 .project-grid {
   display: flex;
   flex-wrap: wrap;
   width: 100vw;
   max-width: 1029px;
-  transition: .3s;
+  /* transition: .3s; */
 }
 
 .project-grid .project-thumb {
@@ -311,7 +320,7 @@
   height: 300px;
   overflow: hidden;
   max-width: 90vw;
-  transition: 1s;
+  /* transition: 1s; */
 }
 
 .project-grid .project-thumb {
