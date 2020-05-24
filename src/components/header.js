@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 // import SearchBox from './searchBox';
 
-import headerStyles from './header.module.scss';
+// import headerStyles from './header.module.scss';
 import logo from '../assets/logo.png';
 
 const Header = (props) => {

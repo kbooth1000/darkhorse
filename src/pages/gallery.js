@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import Isotope from 'isotope-layout';
+// import Isotope from 'isotope-layout';
 
 import Head from '../components/Head';
 import '../styles/wp-styles/galleryStyles.css';
@@ -15,12 +15,20 @@ const Gallery = () => {
 
   // initialize an Isotope object with configs
   React.useEffect(() => {
-    setIsotope(
-      new Isotope(".project-grid", {
-        itemSelector: ".project-thumb",
-        layoutMode: "fitRows"
-      })
-    );
+    const Isotope = require('isotope-layout');
+    // import('isotope-layout')
+    // .then((Isotope)=>{
+      console.log('Isotope:',Isotope);
+      
+      setIsotope(
+        new Isotope(".project-grid", {
+          itemSelector: ".project-thumb",
+          layoutMode: "fitRows"
+        })
+      );
+    // } ).catch((error) => console.error(error));
+
+    
   }, []);
 
   React.useEffect(
@@ -91,11 +99,11 @@ const Gallery = () => {
   return (<div>
     <Layout title="Gallery">
       <Head title="Gallery" />
-      <div class="portfolio-filter clearfix">
-        <i class="fa fa-bars">
+      <div className="portfolio-filter clearfix">
+        <i className="fa fa-bars">
         </i>
         <ul>
-          <li class="filter-heading">Filter:</li>
+          <li className="filter-heading">Filter:</li>
           <li onClick={() => {
             setFilterKey("*");
           }}>All</li>

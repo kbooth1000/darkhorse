@@ -71,7 +71,7 @@ export default () => <Layout>
           </li>
         </ul>
       </nav>
-      <img className="hidden-fb-poster-pic" src="http://i2.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/12/screenshot.png" />
+      <img className="hidden-fb-poster-pic" src="http://i2.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/12/screenshot.png" alt="screenshot" />
     </div>
     <div className="homepage-decoration">
       <Link to="press/">
