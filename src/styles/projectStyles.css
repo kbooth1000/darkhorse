@@ -4,9 +4,13 @@ body.single-portfolio .entry-content, body.single-portfolio .entry-header {
     width: 100%;
 }
 
-[class ^="layout-module--content--"], 
-[class ^="layout-module--container--"] {
+[class ^="layout-module--content--"] {
 	max-width: 981px;
+	margin: auto;
+	min-width: 100%;
+} 
+[class ^="layout-module--container--"] {
+	max-width:  none !important;
 } 
 
 

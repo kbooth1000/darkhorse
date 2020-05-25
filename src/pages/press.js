@@ -7,9 +7,9 @@ import Head from '../components/Head';
 
 const Press = () => (<div className="Press">
     
-<Layout>
+<Layout title="Press">
       
-<Head title="Press" />
+<Head />
 
 <p>
 &nbsp;

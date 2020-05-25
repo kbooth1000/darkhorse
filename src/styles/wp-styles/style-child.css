@@ -44,7 +44,7 @@ Suite WordPress Theme Child
 background: rgba(25,25,25,1)!important;
 }
 
-.home #header, .home #subfooter {
+.Home #header, .home #subfooter {
 background: rgba(15,15,15,.86)!important; /* #1c1c1c;*/
 }
 

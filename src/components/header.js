@@ -18,8 +18,8 @@ const Header = (props) => {
         </div>
         <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
           <ul id="nav" className="header-menu">
-            <li id="menu-item-51" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51">
-              <Link to="/about/">About</Link>
+            <li activeClassName="current_page_parent" id="menu-item-51" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51">
+              <Link activeClassName="current_page_parent" to="/about/">About</Link>
               <ul className="sub-menu">
                 <li id="menu-item-235" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-235">
                   <Link to="/about/">Our Story</Link>
@@ -29,20 +29,20 @@ const Header = (props) => {
                 </li>
               </ul>
             </li>
-            <li id="menu-item-24" className="portfolio menu-item menu-item-type-post_type menu-item-object-page menu-item-24 current_page_parent">
-              <Link to="/gallery/">Gallery</Link>
+            <li activeClassName="current_page_parent" id="menu-item-24" className="portfolio menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
+              <Link activeClassName="current_page_parent" to="/gallery/">Gallery</Link>
             </li>
             <li id="menu-item-49" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">
-              <Link to="/press/">Press</Link>
+              <Link activeClassName="current_page_parent" to="/press/">Press</Link>
             </li>
-            <li id="menu-item-1216" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1216">
-              <Link to="/accolades/">Reviews</Link>
+            <li activeClassName="current_page_parent" id="menu-item-1216" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1216">
+              <Link activeClassName="current_page_parent" to="/accolades/">Reviews</Link>
             </li>
-            <li id="menu-item-14" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-14">
-              <Link to="/blog/">Blog</Link>
+            <li activeClassName="current_page_parent" id="menu-item-14" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-14">
+              <Link activeClassName="current_page_parent" to="/blog/">Blog</Link>
             </li>
-            <li id="menu-item-15" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-15">
-              <Link to="/contact/">Contact</Link>
+            <li activeClassName="current_page_parent" id="menu-item-15" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-15">
+              <Link activeClassName="current_page_parent" to="/contact/">Contact</Link>
             </li>
           </ul>
         </nav>
