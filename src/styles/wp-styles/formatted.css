@@ -231,7 +231,7 @@ header:after,main:after,footer:after,aside:after,section:after,.clearfix:after {
   text-decoration: none
 }
 
-#header #nav li.current_page_item a,#header #nav li.current-menu-parent a,#header #nav li.current_page_parent a {
+#header #nav li.current_page_item a,#header #nav li.current-menu-parent a,#header #nav li a.current_page_parent  {
   color: #fff;
   border-bottom: 2px solid #ea4f45
 }
@@ -278,7 +278,7 @@ header:after,main:after,footer:after,aside:after,section:after,.clearfix:after {
 }
 
 #header #nav ul a,#header #nav ul ul a {
-  color: #202020;
+  color: rgba(25, 25, 25, 1);
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
@@ -297,8 +297,8 @@ header:after,main:after,footer:after,aside:after,section:after,.clearfix:after {
   border-bottom: none
 }
 
-#header #nav li.current_page_item ul a,#header #nav li.current-menu-parent ul a,#header #nav li.current_page_parent ul a {
-  color: #202020;
+#header #nav li.current_page_item ul a,#header #nav li.current-menu-parent ul a,#header #nav li ul a.current_page_parent {
+  color: rgb(25, 25, 25, 1);
   font-weight: 700
 }
 
@@ -6742,7 +6742,7 @@ html[xmlns] .bne-testimonial-slider.bne-flexslider .slides {
   background: rgba(25,25,25,1)!important
 }
 
-.home #header,.home #subfooter {
+.Home #header,.home #subfooter {
   background: rgba(15,15,15,.86)!important
 }
 
@@ -6797,7 +6797,7 @@ body.home #hero .masthead {
   line-height: 14px
 }
 
-li.current_page_parent a {
+li a.current_page_parent {
   color: #333;
   border-bottom: 2px solid #ea4f45!important
 }
@@ -6833,12 +6833,12 @@ ul.sub-menu {
   text-shadow: 0px 0px 1px rgba(255,255,255,1)
 }
 
-#header #nav li.current_page_item ul a,#header #nav li.current-menu-parent ul a,#header #nav li.current_page_parent ul a {
+#header #nav li.current_page_item ul a,#header #nav li.current-menu-parent ul a,#header #nav li ul a.current_page_parent {
   color: #fff;
   font-weight: 100
 }
 
-#header #nav li:hover,#header #nav li ul a:hover,#header #nav li ul a:hover,#header #nav li ul a:hover,#header #nav li ul a:hover,#header #nav li.current_page_item ul a:hover,#header #nav li.current-menu-parent ul a:hover,#header #nav li.current_page_parent ul a:hover {
+#header #nav li:hover,#header #nav li ul a:hover,#header #nav li ul a:hover,#header #nav li ul a:hover,#header #nav li ul a:hover,#header #nav li.current_page_item ul a:hover,#header #nav li.current-menu-parent ul a:hover,#header #nav li ul a.current_page_parent:hover {
   text-shadow: 0px 0px 3px rgba(255,255,255,1)!important;
   color: #fff!important
 }
