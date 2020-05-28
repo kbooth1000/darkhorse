@@ -38,20 +38,22 @@ const ImageGallery = () => {
     }
   `);
 
-    const images = edges.map(({ node }) => {
+    const images = edges.map(({ node },i) => {
       const {
         id,
         caption,
         localFile: { childImageSharp },
       } = node;
+      console.log('childImageSharp:', childImageSharp);
+      
       return (
 
-          <a href={`${nodeURL}/${id}`}> 
-            <Image
+          <a key={i} href={`${nodeURL}/${id}`} style={{background: 'url('+childImageSharp.fluid.src+') center center / cover', backgroundSize:'cover',width:'68px', height:'68px',margin:'3px'}}> 
+            {/* <Image
               loading="lazy"
               alt={caption || ''}
               fluid={childImageSharp.fluid}
-            />
+            /> */}
           </a>
 
       );
