@@ -7,7 +7,6 @@ import logo from '../assets/logo.png';
 
 const Header = (props) => {
 
-
   return (
     <header id="header" role="banner" >
       <div className="wrap clearfix">

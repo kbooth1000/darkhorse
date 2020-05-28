@@ -96,9 +96,10 @@ const Gallery = () => {
   }
   )
 
-  return (<div>
+  return (
     <Layout title="Gallery">
       <Head title="Gallery" />
+        <div className="entry-content">
       <div className="portfolio-filter clearfix">
         <i className="fa fa-bars">
         </i>
@@ -120,9 +121,9 @@ const Gallery = () => {
       </div>
       <div className="project-grid">
         {projects}
-      </div>
+      </div></div>
     </Layout>
-  </div>
+  
   )
 }
 

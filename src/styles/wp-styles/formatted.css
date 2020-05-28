@@ -37,7 +37,7 @@ table {
 }
 
 body {
-  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  /* font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif; */
   font-size: 18px;
   line-height: 30px;
   color: #303030;
@@ -65,7 +65,7 @@ a:hover {
 }
 
 input,textarea,button {
-  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  /* font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif; */
   font-size: 18px;
   line-height: 30px;
   color: #303030
@@ -9429,7 +9429,7 @@ div.jp-carousel-fadeaway {
   background: url(//darkhorsewoodworks.com/dh1/wp-content/plugins/jetpack/css/../modules/carousel/images/arrows.png) no-repeat center center;
   background-size: 200px 126px
 }
-
+/* 
 .jp-carousel-msg {
   font-family: "Open Sans",sans-serif;
   font-style: normal;
@@ -9442,7 +9442,7 @@ div.jp-carousel-fadeaway {
   background-color: #fff;
   border-left: 4px solid #ffba00;
   box-shadow: 0 1px 1px 0 rgba(0,0,0,.1)
-}
+} */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),only screen and (-o-min-device-pixel-ratio:3/2),only screen and (min--moz-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5) {
   .jp-carousel-next-button span,.jp-carousel-previous-button span {
@@ -10803,38 +10803,6 @@ div.sd-box {
   border-top: 1px solid rgba(0,0,0,.13)
 }
 
-.comment-likes-widget,.entry-content .post-likes-widget,.post-likes-widget {
-  margin: 0;
-  border-width: 0;
-  display: block
-}
-
-.comment-likes-widget-placeholder,.post-likes-widget-placeholder {
-  margin: 0;
-  border-width: 0;
-  position: relative
-}
-
-.comment-likes-widget-placeholder {
-  height: 18px;
-  position: absolute;
-  display: flex;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-  margin-top: 4px
-}
-
-.comment-likes-widget-placeholder:before {
-  -webkit-font-smoothing: antialiased;
-  font-family: Noticons;
-  font-size: 20px;
-  line-height: .9;
-  color: #5cb5d4;
-  content: '\f408';
-  width: 16px;
-  display: inline-block;
-  vertical-align: middle
-}
-
 .post-likes-widget-placeholder .button {
   display: none
 }
@@ -11223,7 +11191,7 @@ body.highlander-dark h3.sd-title:before {
   text-decoration: none!important;
   display: inline-block;
   font-size: 12px;
-  font-family: "Open Sans",sans-serif;
+  /* font-family: "Open Sans",sans-serif; */
   font-weight: 400;
   border-radius: 3px;
   color: #545454!important;
@@ -12754,7 +12722,7 @@ div[class^=gr_custom_rating] {
   display: block;
   margin-top: 0;
   color: #888;
-  font: 10px/1 "Open Sans",Arial,sans-serif!important;
+  /* font: 10px/1 "Open Sans",Arial,sans-serif!important; */
   text-align: left!important;
   text-decoration: none!important;
   opacity: .85;

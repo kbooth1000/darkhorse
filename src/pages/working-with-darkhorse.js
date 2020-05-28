@@ -8,7 +8,7 @@ const html = `<div class="entry-content" itemprop="text"><p>Designing custom cab
 
 return <div className="WorkingWith">
     <Layout title="Working With Darkhorse">
-      <Head title="Our Story" />
+      <Head />
       <div className="WorkingWith-page" dangerouslySetInnerHTML={{__html:html}}>
         
       </div>

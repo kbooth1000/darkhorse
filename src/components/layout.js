@@ -9,7 +9,7 @@ import '../styles/wp-styles/style-child.css';
 import 'typeface-open-sans';
 import 'typeface-raleway';
 
-import layoutStyles from './layout.module.scss';
+import '../styles/layout.css';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const Layout = props =>{
@@ -26,11 +26,11 @@ const data = useStaticQuery(
   `
 )
 
-return <div className={`${layoutStyles.container} ${data.site.siteMetadata.title} home`}>
-    <div className={layoutStyles.content}>
+return <div className={` ${data.site.siteMetadata.title} home`}>
+    <div className="page-contents">
       <Header />
-      <div className={`${layoutStyles.headerMeta} headerMeta`}>
-        <h1>{props.title}</h1>
+      <div className="headerMeta">
+        <h1 className="page-title">{props.title}</h1>
       </div>
       {props.children}
     </div>

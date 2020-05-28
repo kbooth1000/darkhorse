@@ -9,7 +9,7 @@ const Press = () => (<div className="Press">
     
 <Layout title="Press">
       
-<Head />
+<Head title="Press" />
 
 <p>
 &nbsp;

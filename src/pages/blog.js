@@ -42,7 +42,7 @@ const Blog = () => {
   return (<div>
     <Layout title="Blog">
       <Head title="Blog" />
-      <div>
+      <div className="entry-content">
         <ul className={blogStyles.posts}>
           {posts}
         </ul>

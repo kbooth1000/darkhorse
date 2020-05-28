@@ -127,7 +127,7 @@ table {
 -------------------------------------*/
 
 body {
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	/* font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
 	font-size: 18px;
 	line-height: 30px;
 	color: #303030;
@@ -155,7 +155,7 @@ a:hover {
 	}
 	
 input, textarea, button {
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	/* font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
 	font-size: 18px;
 	line-height: 30px;
 	color: #303030;
