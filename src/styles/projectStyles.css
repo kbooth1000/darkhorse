@@ -9,10 +9,10 @@ body.single-portfolio .entry-content, body.single-portfolio .entry-header {
 	margin: auto;
 	min-width: 100%;
 } 
+
 [class ^="layout-module--container--"] {
 	max-width:  none !important;
-} 
-
+}
 
 .tiled-gallery {
 	clear: both;

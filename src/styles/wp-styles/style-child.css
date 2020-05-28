@@ -11,6 +11,10 @@ Suite WordPress Theme Child
 @import url('../suite/style.css');
 @import url('responsive.css'); */
 
+.page-title {
+	margin-left: 0;
+}
+
 .floatright {
 	float: right;
 }
@@ -509,6 +513,26 @@ padding: 15px;
 .entry-content {
 	max-width: 880px;
 	margin: auto;
+	width: 90%;
+}
+
+.Gallery .entry-content {
+	max-width: 980px;
+	width: 980px;
+}
+
+@media screen and (max-width: 1019px) {
+	.Gallery .entry-content {
+		max-width: 640px;
+		width: 640px;
+	}
+}
+
+@media screen and (max-width: 679px) {
+	.Gallery .entry-content {
+		max-width: 306px;
+		width: 306px;
+	}
 }
 
 .entry-content p {
