@@ -9,13 +9,12 @@ import '../styles/projectStyles.css';
 
 const Project = props => {
 
-  const portfolioContent = props.data.wp.portfolioBy.title;
+  const portfolioTitle = props.data.wp.portfolioBy.title;
 
 
   return (
-    <Layout>
+    <Layout title={portfolioTitle}>
       <Head title={props.data.wp.portfolioBy.title} />
-      <h1>{portfolioContent}</h1>
       <div dangerouslySetInnerHTML={{ __html: props.data.wp.portfolioBy.content }}>
       </div>
     </Layout>

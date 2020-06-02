@@ -27,7 +27,7 @@ const data = useStaticQuery(
 )
 
 return <div className={` ${data.site.siteMetadata.title} home`}>
-    <div className="page-contents">
+    <div className="page-contents entry-content">
       <Header />
       <div className="headerMeta">
         <h1 className="page-title">{props.title}</h1>

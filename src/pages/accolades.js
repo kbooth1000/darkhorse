@@ -10,7 +10,7 @@ const Accolades = () => (<div className="Accolades">
   <Layout title="Accolades">
 
     <Head />
-    <div class="entry-content" itemprop="text">
+    <div class="accolades-page" itemprop="text">
       <div class="bne-testimonial-wrapper testimonial-wrapper-id-284 testimonial-layout-list testimonial-theme-default testimonial-left testimonial-arrangement-1 testimonial-category-all accolade fancybox clearfix">
         <div id="testimonial-id-1213" class="testimonial-single clearfix">
           <div class="testimonial-author">
