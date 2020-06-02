@@ -9,7 +9,7 @@ const html = `<div><div id="attachment_153" style="width: 310px" class="wp-capti
 return <div className="About">
     <Layout title="Our Story">
       <Head title="Our Story" />
-      <div className="about-page entry-content" dangerouslySetInnerHTML={{__html:html}}>
+      <div className="about-page" dangerouslySetInnerHTML={{__html:html}}>
         
       </div>
     </Layout>

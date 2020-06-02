@@ -99,7 +99,7 @@ const Gallery = () => {
   return (
     <Layout title="Gallery">
       <Head title="Gallery" />
-        <div className="entry-content">
+        <div className="inner-content">
       <div className="portfolio-filter clearfix">
         <i className="fa fa-bars">
         </i>
