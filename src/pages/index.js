@@ -8,7 +8,7 @@ import Head from '../components/Head';
 import '../styles/wp-styles/style.css';
 import '../styles/homeStyles.css';
 
-export default () => <Layout>
+export default () => <Layout title="Home">
   <Head title="Home" />
   <section id="hero">
     <div className="masthead" style={{ backgroundImage: 'url(https://i1.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/ss-kitchen.jpg?1587682416)' }}>
