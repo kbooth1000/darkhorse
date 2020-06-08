@@ -17,17 +17,32 @@ const Layout = props =>{
 const data = useStaticQuery(
   graphql`
   query {
+    wp {
+      pages {
+        edges {
+          node {
+            slug
+            id
+          }
+        }
+      }
+      pageBy(id: "cGFnZTo0Mzk") {
+        slug
+      }
+    }
+  
     site {
       siteMetadata {
         title
       }
     }
+    
   }
   `
 )
 
-return <div className={` ${data.site.siteMetadata.title} home`}>
-    <div className="page-contents entry-content">
+return <div className={`${props.title} home x`}>
+    <div className={`page-contents ${props.title === 'Home' ? '' : 'entry-content'}`}>
       <Header />
       <div className="headerMeta">
         <h1 className="page-title">{props.title}</h1>

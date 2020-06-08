@@ -44,16 +44,10 @@ const ImageGallery = () => {
         caption,
         localFile: { childImageSharp },
       } = node;
-      console.log('childImageSharp:', childImageSharp);
       
       return (
 
           <a key={i} href={`${nodeURL}/${id}`} style={{background: 'url('+childImageSharp.fluid.src+') center center / cover', backgroundSize:'cover',width:'68px', height:'68px',margin:'3px'}}> 
-            {/* <Image
-              loading="lazy"
-              alt={caption || ''}
-              fluid={childImageSharp.fluid}
-            /> */}
           </a>
 
       );

@@ -22,7 +22,7 @@ const Blog = props => {
 
   const {date, author, content, title} = props.data.wp.postBy
 
-  const postContent = props.data.wp.postBy.title;
+  // const postContent = props.data.wp.postBy.title;
 
 
   return (
