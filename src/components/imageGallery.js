@@ -1,7 +1,7 @@
+import * as React from 'react';
 import { styled } from 'baseui';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import * as React from 'react';
 import '../styles/instaStyles.css';
 
 const Image = styled(Img, {
