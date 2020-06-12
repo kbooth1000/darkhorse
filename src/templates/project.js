@@ -18,10 +18,23 @@ const Project = props => {
  }
 
   console.log('html:', typeof html);
-  const fancyHtml = replaceAll('class="fancybox', `onclick="(e => { e.preventDefault();    var prevImgClone = document.querySelector('.fancy-image-clone');    if(prevImgClone) {document.body.removeChild(prevImgClone);}  var largeImgUrl = e.currentTarget.href;   var imgClone = e.currentTarget.parentElement.cloneNode(true);    imgClone.classList.add('fancy-image-clone');    imgClone.querySelector('img').setAttribute('src','https://thumbs.gfycat.com/SpecificCharmingLeafcutterant-size_restricted.gif');    imgClone.querySelector('img').setAttribute('src',largeImgUrl);   document.body.appendChild(imgClone);})(window.event)" class="fancybox`, html);
+  const fancyHtml = replaceAll('class="fancybox', `onclick="(e => { e.preventDefault(); 
+  var largeImgUrl = e.currentTarget.href;  
+  var lightboxBox = document.querySelector('.lightbox-box'); 
+  lightboxBox.classList.remove('inactive');
+  lightboxBox.classList.add('active');
+  lightboxBox.querySelector('img').setAttribute('src', largeImgUrl);
+  
+  })(window.event)" class="fancybox`, html);
   const finalHtml = `${fancyHtml} `;
 
+  const loadingImgUrl = 'https://thumbs.gfycat.com/SpecificCharmingLeafcutterant-size_restricted.gif';
 
+  const handleLightboxClick = e=>{
+    e.currentTarget.querySelector('img').setAttribute('src', loadingImgUrl);
+    e.currentTarget.classList.remove('active');
+    e.currentTarget.classList.add('inactive');
+  }
 
 
   const portfolioTitle = props.data.wp.portfolioBy.title;
@@ -30,8 +43,8 @@ const Project = props => {
   return (
     <Layout title={portfolioTitle}>
       <Head title={props.data.wp.portfolioBy.title} />
-      <div dangerouslySetInnerHTML={{ __html: finalHtml }}>
-      </div>
+      <div dangerouslySetInnerHTML={{ __html: finalHtml }} />
+      <div onClick={handleLightboxClick} className="lightbox-box"><img src="https://thumbs.gfycat.com/SpecificCharmingLeafcutterant-size_restricted.gif" alt="LOADING"/></div>
     </Layout>
   )
 }
