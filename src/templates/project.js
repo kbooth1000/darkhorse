@@ -28,12 +28,16 @@ const Project = props => {
   })(window.event)" class="fancybox`, html);
   const finalHtml = `${fancyHtml} `;
 
-  const loadingImgUrl = 'https://thumbs.gfycat.com/SpecificCharmingLeafcutterant-size_restricted.gif';
+  const loadingImgUrl = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif';
 
   const handleLightboxClick = e=>{
     e.currentTarget.querySelector('img').setAttribute('src', loadingImgUrl);
     e.currentTarget.classList.remove('active');
     e.currentTarget.classList.add('inactive');
+  }
+
+  const handleImgLoad = e=>{
+    e.currentTarget.querySelector('img').style.borderRadius='0%';
   }
 
 
@@ -44,7 +48,8 @@ const Project = props => {
     <Layout title={portfolioTitle}>
       <Head title={props.data.wp.portfolioBy.title} />
       <div dangerouslySetInnerHTML={{ __html: finalHtml }} />
-      <div onClick={handleLightboxClick} className="lightbox-box"><img src="https://thumbs.gfycat.com/SpecificCharmingLeafcutterant-size_restricted.gif" alt="LOADING"/></div>
+      <div onClick={handleLightboxClick}
+      onLoad={handleImgLoad} className="lightbox-box"><img src={loadingImgUrl} alt="LOADING"/></div>
     </Layout>
   )
 }

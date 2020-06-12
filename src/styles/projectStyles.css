@@ -184,5 +184,6 @@ body.single-portfolio .entry-header {
   box-shadow: 0 0 20px #111;
   max-height: 84vh;
   max-width: 94vw;
-  animation: fancy-in .35s ease-in forwards;
+	animation: fancy-in .35s ease-in forwards;
+	border-radius: 50%;
 }
