@@ -1863,7 +1863,7 @@ body.page-template-template-portfolio-php .item .view em,body.page-template-temp
 }
 
 body.single-portfolio #content article {
-  margin-bottom: 70px
+  margin: auto auto 70px;
 }
 
 body.single-portfolio .flexslider {
@@ -6931,13 +6931,13 @@ body.home #hero .wrap {
 
 .home #hero .wrapBG h1 {
   font-size: 56px!important;
-  font-weight: 100!important;
+  font-weight: 300!important;
   letter-spacing: 2px!important;
   line-height: 42px!important
 }
 
 .home #hero .wrapBG h1 b {
-  font-weight: 100!important;
+  font-weight: 300!important;
   font-size: 73px;
   margin: 0 auto 14px;
   display: inline-block;
