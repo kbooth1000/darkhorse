@@ -2110,8 +2110,11 @@ a.white {
 
 @media only screen and (min-width: 1000px) {
   .slicknav_menu {
-      display:none
+      display:none;
+      transition: .3s;
   }
+
+ 
 
   .search-form {
       margin-top: -54px !important
@@ -2130,7 +2133,8 @@ a.white {
       display: block;
       border-radius: 5px;
       padding: 2px;
-      margin-top: -44px !important
+      margin-top: -44px !important;
+      transition: .3s;
   }
 
   .slicknav_btn {
@@ -2168,6 +2172,16 @@ a.white {
       line-height: 15px;
       color: #000;
       font-weight: 600
+  }
+
+  .slicknav_nav {
+    transition: .4s;
+    height: 350px;
+  }
+
+  .slicknav_nav.slicknav_hidden {
+    display: none;
+    height: 0;
   }
 
   .slicknav_nav li {
@@ -9013,7 +9027,7 @@ img.attachment-s {
   .slicknav_menu {
       background:#fff;
       display: block;
-      margin-top: 48px
+      margin-top: 48px;
   }
 
   .slicknav_btn {
