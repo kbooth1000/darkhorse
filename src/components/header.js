@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 // import SearchBox from './searchBox';
 
 // import headerStyles from './header.module.scss';
 import logo from '../assets/logo.png';
 
-const Header = (props) => {
+const Header = props => {
+  
+  const [slickNav, setSlickNav] = useState('slicknav_hidden');
+  
+  const handleNavClick = e=>{
+    setSlickNav(slickNav === '' ? 'slicknav_hidden' : '');
+  }
 
   return (
     <header id="header" role="banner" >
@@ -15,6 +21,60 @@ const Header = (props) => {
             <img src={logo} title="Dark Horse Woodworks" alt="Dark Horse Woodworks" />
           </Link>
         </div>
+
+
+        <div className="slicknav_menu">
+          <a onClick={handleNavClick} href="#" ariaHaspopup="true" tabIndex="0" className="slicknav_btn" style={{ outline: 'none' }}>
+            <span className="slicknav_menutxt">
+            </span>
+            <span className="slicknav_icon slicknav_no-text">
+              <span className="slicknav_icon-bar">
+              </span>
+              <span className="slicknav_icon-bar">
+              </span>
+              <span className="slicknav_icon-bar">
+              </span>
+            </span>
+          </a>
+          <ul className={`slicknav_nav ${slickNav}`} aria-hidden="true" role="menu">
+            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51 slicknav_collapsed slicknav_parent">
+              <a href="#" role="menuitem" ariaHaspopup="true" tabIndex="-1" className="slicknav_item" style={{ outline: 'none' }}>
+                <Link to="about/">About</Link>
+                <span className="slicknav_arrow">
+                  <i className="fa fa-caret-down">
+                  </i>
+                </span>
+              </a>
+              <ul className="
+sub-menu slicknav_hidden" role="menu"  ariaHidden="true">
+                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-235">
+                  <Link to="about/" role="menuitem" tabIndex="-1">Our Story</Link>
+                </li>
+                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-232">
+                  <Link to="about/working-with-dark-horse/" role="menuitem" tabIndex="-1">Working with Dark Horse</Link>
+                </li>
+              </ul>
+            </li>
+            <li className="portfolio menu-item menu-item-type-post_type menu-item-object-page menu-item-24 current_page_parent">
+              <Link to="gallery/" role="menuitem" tabIndex="-1">Gallery</Link>
+            </li>
+            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">
+              <Link to="press/" role="menuitem" tabIndex="-1">Press</Link>
+            </li>
+            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1216">
+              <Link to="accolades/" role="menuitem" tabIndex="-1">Reviews</Link>
+            </li>
+            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-14">
+              <Link to="blog/" role="menuitem" tabIndex="-1">Blog</Link>
+            </li>
+            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-15">
+              <Link to="contact/" role="menuitem" tabIndex="-1">Contact</Link>
+            </li>
+          </ul>
+        </div>
+
+
+
         <nav role="navigation" itemScope="itemscope" itemType="http://schema.org/SiteNavigationElement">
           <ul id="nav" className="header-menu">
             <li id="menu-item-51" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51">
@@ -47,13 +107,13 @@ const Header = (props) => {
         </nav>
 
       </div>
-        {/* <SearchBox>search</SearchBox> */}
+      {/* <SearchBox>search</SearchBox> */}
       <form className="search-form" action="http://darkhorsewoodworks.com/dh1/" method="get" role="search"> <input className="search-input" type="search" name="s" placeholder="Search" /> <button className="search-submit btn" type="submit" role="button">
-          <i className="fa fa-search">
-            
-          </i>
-          </button>
-    </form>
+        <i className="fa fa-search">
+
+        </i>
+      </button>
+      </form>
 
     </header>
   )
