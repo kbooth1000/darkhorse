@@ -273,7 +273,7 @@ body.single-portfolio .entry-content {
 @media (max-width: 480px) {
 	.tiled-gallery {
 		transform: scale(.35) translateY(-85%);
-    margin-left: -78%;
+    margin-left: -73%;
     margin-bottom: -160%;
 	}
 }
