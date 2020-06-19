@@ -12,6 +12,9 @@ const Header = props => {
   const handleNavClick = e=>{
     setSlickNav(slickNav === '' ? 'slicknav_hidden' : '');
   }
+  const handleNavBlur = e=>{
+    setSlickNav(slickNav === '' ? 'slicknav_hidden' : '');
+  }
 
   return (
     <header id="header" role="banner" >
@@ -36,7 +39,7 @@ const Header = props => {
               </span>
             </span>
           </a>
-          <ul className={`slicknav_nav ${slickNav}`} aria-hidden="true" role="menu">
+          <ul onBlur={handleNavBlur} className={`slicknav_nav ${slickNav}`} aria-hidden="true" role="menu">
             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51 slicknav_collapsed slicknav_parent">
               <a href="#" role="menuitem" ariaHaspopup="true" tabIndex="-1" className="slicknav_item" style={{ outline: 'none' }}>
                 <Link to="about/">About</Link>
@@ -51,7 +54,7 @@ sub-menu slicknav_hidden" role="menu"  ariaHidden="true">
                   <Link to="about/" role="menuitem" tabIndex="-1">Our Story</Link>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-232">
-                  <Link to="about/working-with-dark-horse/" role="menuitem" tabIndex="-1">Working with Dark Horse</Link>
+                  <Link to="working-with-darkhorse/" role="menuitem" tabIndex="-1">Working with Dark Horse</Link>
                 </li>
               </ul>
             </li>

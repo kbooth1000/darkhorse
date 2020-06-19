@@ -40,8 +40,6 @@ module.exports.createPages = async ({
   }
   `)
 
-  
-
   res.data.wp.portfolio.edges.forEach((edge) => {
     createPage({
       component: projectTemplate,
@@ -62,42 +60,4 @@ module.exports.createPages = async ({
     })
   })
 
-
-
-  // res.data.wp.pages.edges.forEach(page => {
-  //   let pageUri = () => {
-  //     console.log('page.node.uri:', page.node.uri);
-      
-  //     if(page.node.isFrontPage) { return '/althome' }
-  //     if(page.node.uri === '/gallery') {return '/altgallery'}
-  //     if(page.node.uri === '/blog') {return '/altblog'}
-  //     return page.node.uri;
-  //   }
-  //   createPage({
-  //     path: pageUri(), //page.node.isFrontPage ? '/althome' : page.node.uri,
-  //     component: pageTemplate,
-  //     context: {
-  //       id: page.node.id
-  //     }
-  //   })
-  // })
-
 }
-
-
-
-
-// exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-//   if (stage === "build-html") {
-//     actions.setWebpackConfig({
-//       module: {
-//         rules: [
-//           {
-//             test: /isotope-layout/,
-//             use: loaders.null(),
-//           },
-//         ],
-//       },
-//     })
-//   }
-// }
