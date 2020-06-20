@@ -147,6 +147,7 @@ export default () => <Layout title="Home">
       <div className="column">
         <h4 className="widget-title">Our Latest Tweets</h4>
         <TwitterWidget />
+        <a href="https://twitter.com/StudioDarkHorse">Follow Us on Twitter</a>
       </div>
 
       <div className="column">
