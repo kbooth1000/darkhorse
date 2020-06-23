@@ -18,3 +18,22 @@
 .instaBox a img {
     object-fit: cover;
 }
+
+.link-tile {
+    display: flex !important;
+    width: 100% !important;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.instagram-logo {
+    width: 40px;
+}
+
+.instagram-logotype {
+    margin-left: 0.5rem;
+    color: #ea4f45 !important;
+    font-size: 1rem;
+    font-weight: 700;
+}

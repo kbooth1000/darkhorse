@@ -4,6 +4,8 @@ import Layout from '../components/layout';
 import Head from '../components/head';
 
 import { graphql } from 'gatsby';
+import SocialSharing from '../components/socialSharing';
+
 // import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 // export const query = graphql`
@@ -40,6 +42,7 @@ const Blog = props => {
         </p>
       <div dangerouslySetInnerHTML={ {__html: content} }>
       </div>
+      <SocialSharing pageLink={window.location} />
     </Layout>
   )
 }

@@ -18,7 +18,6 @@ const Footer = () => {
     <footer id="footer" role="contentinfo" itemScope="itemscope" itemType="http://schema.org/WPFooter" className={footerStyles.footer}>
       
 
-
       <div className="wrap clearfix"><nav role="navigation" itemScope="itemscope" itemType="http://schema.org/SiteNavigationElement">
       <ul id="links" className="footer-menu">
         <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51"><Link to="/about/">About</Link></li>

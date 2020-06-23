@@ -5,9 +5,9 @@ import TwitterWidget from '../components/twitterWidget';
 import FacebookWidget from '../components/facebookWidget';
 import { Link } from 'gatsby';
 import logo from '../assets/logo.png';
-
 import Head from '../components/Head';
 
+import '../styles/fbstyles.css';
 import '../styles/wp-styles/style.css';
 import '../styles/homeStyles.css';
 
@@ -139,7 +139,7 @@ export default () => <Layout title="Home">
   <aside id="sidebar-footer" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
 
 
-    <section id="columns">
+    <section id="columns" className="home-widgets">
       <div className="column">
         <h4 className="widget-title">Our Instagram Shots</h4>
         <ImageGallery />
@@ -149,8 +149,6 @@ export default () => <Layout title="Home">
       <div className="column">
         <h4 className="widget-title">Our Latest Tweets</h4>
         <TwitterWidget />
-        <a rel="noreferrer" target="_blank" href="https://www.facebook.com/DHWoodworks/">See our latest posts</a>
-        <a href="https://twitter.com/StudioDarkHorse">Follow Us on Twitter</a>
       </div>
 
       <div className="column">
@@ -158,8 +156,12 @@ export default () => <Layout title="Home">
         {/* <FacebookWidget /> */}
         <div className="fb-logo" style={{width:'100%', display: 'flex', alignItems:'center'}}>
         <a rel="noreferrer" target="_blank" href="https://www.facebook.com/DHWoodworks/">
-        <img src={logo} style={{filter:'invert()', width: '80px'}} title="Dark Horse Woodworks" alt="Dark Horse Woodworks" />
-        See our latest posts</a>
+        <img class="fb-logo-img" src={logo} style={{filter:'invert()', width: '80px'}} title="Dark Horse Woodworks" alt="Dark Horse Woodworks" />
+        <aside style={{fontSize:'.8em', textAlign:'right'}}>
+        <span style={{color:'#fff'}}>Dark Horse Woodworks</span><br />
+        See our latest posts
+        </aside>
+        </a>
         </div>
       </div>
 
