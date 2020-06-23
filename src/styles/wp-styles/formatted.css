@@ -1468,38 +1468,7 @@ html[xmlns] .format-gallery .slides {
   padding-top: 10px
 }
 
-.mighty_instagram_widget ul,.mighty_flickr_widget ul {
-  float: left
-}
 
-.mighty_instagram_widget li,.mighty_flickr_widget li {
-  line-height: 0;
-  margin: 0 15px 15px 0;
-  float: left
-}
-
-.mighty_instagram_widget li a,.mighty_flickr_widget a {
-  line-height: 0;
-  border-bottom: none;
-  display: block
-}
-
-.mighty_instagram_widget li a:hover,.mighty_flickr_widget li a:hover {
-  border-bottom: none
-}
-
-.mighty_instagram_widget li img,.mighty_flickr_widget li img {
-  width: 85px;
-  height: 85px
-}
-
-.mighty_instagram_widget p {
-  padding-top: 10px
-}
-
-.mighty_social_widget ul {
-  float: left
-}
 
 .mighty_social_widget li {
   float: left;

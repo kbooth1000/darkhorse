@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Modali, { useModali } from 'modali';
+import SocialSharing from '../components/socialSharing';
 
 import Layout from '../components/layout';
 import Head from '../components/head';
@@ -47,6 +47,7 @@ const Project = props => {
   return (
     <Layout title={portfolioTitle}>
       <Head title={props.data.wp.portfolioBy.title} />
+      <SocialSharing pageLink={window.location} />
       <div dangerouslySetInnerHTML={{ __html: finalHtml }} />
       <div onClick={handleLightboxClick}
       onLoad={handleImgLoad} className="lightbox-box"><img src={loadingImgUrl} alt="LOADING"/></div>

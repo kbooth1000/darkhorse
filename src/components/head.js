@@ -30,7 +30,7 @@ const Head = ({ title }) => {
     `
   )
   return (
-    <Helmet title={`${title} • ${data.site.siteMetadata.title} ${data.wp.portfolio.edges[0].node.title}`} encodeSpecialCharacters={false}><body className={title} /></Helmet>
+    <Helmet title={`${title} • ${data.site.siteMetadata.title} `} encodeSpecialCharacters={false}><body className={title} /></Helmet>
   )
 }
 

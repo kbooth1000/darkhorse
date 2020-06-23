@@ -1,0 +1,18 @@
+.fb-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 5px;
+  border-radius: 5px;
+  background: #242527;
+}
+
+.fb-logo-img {
+    filter: invert();
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 6px;
+}

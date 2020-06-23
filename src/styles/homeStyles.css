@@ -55,10 +55,22 @@ body.Home {
     display: flex;
     justify-content: center;
     margin: auto;
+    flex-wrap: wrap;
 }
 
 .Home #sidebar-footer  #columns .column {
     width: 300px;
-    float: left;
     margin-right: 25px;
 }
+
+@media screen and (max-width: 999px) {
+    .Home #sidebar-footer  #columns {
+        flex-direction: column-reverse;
+    }
+    .Home #sidebar-footer  #columns .column {
+        margin: auto  auto 3rem auto;
+        width: 500px;
+        max-width: 90%;
+    }
+}
+
