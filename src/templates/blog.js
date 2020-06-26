@@ -42,7 +42,7 @@ const Blog = props => {
         </p>
       <div dangerouslySetInnerHTML={ {__html: content} }>
       </div>
-      <SocialSharing pageLink={window.location} />
+      <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} />
     </Layout>
   )
 }
