@@ -8,7 +8,7 @@ const FacebookWidget = () => {
         <Feed link="https://www.facebook.com">
         {/* https://www.facebook.com/DHWoodworks/ */}
           {({ handleClick }) => (
-            <button type="button" onClick={handleClick}>Share on Feed</button>
+            <button type="button" onClick={handleClick}>Share on Facebook</button>
           )}
         </Feed>
       </FacebookProvider>

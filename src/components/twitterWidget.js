@@ -3,15 +3,17 @@ import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterH
 import '../styles/twitStyles.css';
 
 const TwitterWidget = () => {
+  const action = ()=>console.log("ACTION");
   return (
     <div className="TwitterWidget">
-    <TwitterTimelineEmbed
-  sourceType="list"
-  ownerScreenName="StudioDarkHorse"
-  options={{height: 350}}
-/>
+      <TwitterTimelineEmbed
+        sourceType="profile"
+        screenName="StudioDarkHorse"
+        options={{ height: 400 }}
+        onComplete={action}
+      />
 
-<a href="https://twitter.com/StudioDarkHorse" className="link-tile"><span className="twitter-logotype">Follow us on Twitter</span></a>
+      <a href="https://twitter.com/StudioDarkHorse" className="link-tile"><span className="twitter-logotype">Follow us on Twitter</span></a>
     </div>
   )
 }
