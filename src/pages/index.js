@@ -155,10 +155,10 @@ export default () => <Layout title="Home">
         <h4 className="widget-title">Our Latest FB Posts</h4>
         {/* <FacebookWidget /> */}
         <div className="fb-logo" style={{width:'100%', display: 'flex', alignItems:'center'}}>
-        <a rel="noreferrer" target="_blank" href="https://www.facebook.com/DHWoodworks/">
-        <img class="fb-logo-img" src={logo} style={{filter:'invert()', width: '80px'}} title="Dark Horse Woodworks" alt="Dark Horse Woodworks" />
+        <a rel="noreferrer" target="_blank" href="https://www.facebook.com/DHWoodworks/" style={{display:'flex'}}>
+        <img class="fb-logo-img" src={logo} style={{width: '80px'}} title="Dark Horse Woodworks" alt="Dark Horse Woodworks" />
         <aside style={{fontSize:'.8em', textAlign:'right'}}>
-        <span style={{color:'#fff'}}>Dark Horse Woodworks</span><br />
+        <span style={{color:'#444'}}>Dark Horse Woodworks</span><br />
         See our latest posts
         </aside>
         </a>

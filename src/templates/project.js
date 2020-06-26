@@ -47,7 +47,7 @@ const Project = props => {
   return (
     <Layout title={portfolioTitle}>
       <Head title={props.data.wp.portfolioBy.title} />
-      <SocialSharing pageLink={window.location} />
+      <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} />
       <div dangerouslySetInnerHTML={{ __html: finalHtml }} />
       <div onClick={handleLightboxClick}
       onLoad={handleImgLoad} className="lightbox-box"><img src={loadingImgUrl} alt="LOADING"/></div>
