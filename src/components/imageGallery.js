@@ -47,7 +47,7 @@ const ImageGallery = () => {
       
       return (
 
-          <a key={i} href={`${nodeURL}/${id}`} style={{background: 'url(.'+childImageSharp.fluid.src+') center center / cover', backgroundSize:'cover',width:'68px', height:'68px',margin:'3px'}} rel="noreferrer" target="_blank" > 
+          <a key={i} href={`${nodeURL}/${id}`} style={{background: 'url('+childImageSharp.fluid.src+') center center / cover', backgroundSize:'cover',width:'68px', height:'68px',margin:'3px'}} rel="noreferrer" target="_blank" > 
           </a>
 
       );
