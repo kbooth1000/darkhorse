@@ -17,7 +17,6 @@ const Project = props => {
     return str.split(searchString).join(replaceString);
  }
 
-  console.log('html:', typeof html);
   const fancyHtml = replaceAll('class="fancybox', `onclick="(e => { e.preventDefault(); 
   var largeImgUrl = e.currentTarget.href;  
   var lightboxBox = document.querySelector('.lightbox-box'); 
@@ -26,6 +25,7 @@ const Project = props => {
   lightboxBox.querySelector('img').setAttribute('src', largeImgUrl);
   
   })(window.event)" class="fancybox`, html);
+
   const finalHtml = `${fancyHtml} `;
 
   const loadingImgUrl = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif';
