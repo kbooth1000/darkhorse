@@ -40,7 +40,7 @@ const MyForm = () => {
   };
   return (
     <Layout title="Contact">
-<Head />
+<Head title="Contact Us" />
       <div>
         <div className="col-md-8 mt-5">
         {!serverState.status && (
@@ -48,23 +48,23 @@ const MyForm = () => {
         <br />
         <br />
         <p>
-          <label> Your Name (required) <span class="contact-name">
+          <label> Your Name (required) <span className="contact-name">
             <input type="text" name="your-name" size="40" />
           </span> </label>
         </p>
         <p>
-          <label> Your Email (required) <span class="wpcf7-form-control-wrap your-email">
+          <label> Your Email (required) <span className="wpcf7-form-control-wrap your-email">
             <input type="email" name="your-email" size="40" />
           </span> </label>
         </p>
         <p>
-          <label> Your Phone Number <span class="contact-tel">
+          <label> Your Phone Number <span className="contact-tel">
             <input type="tel" name="tel-443" size="40" />
           </span> </label>
         </p>
         <p>
-          <label>How did you hear about us? <span class="contact-source">
-            <select name="contact-source" class="wpcf7-form-control wpcf7-select" aria-invalid="false">
+          <label>How did you hear about us? <span className="contact-source">
+            <select name="contact-source" className="wpcf7-form-control wpcf7-select" aria-invalid="false">
               <option value="Advertisement">Advertisement</option>
               <option value="Cold Call">Cold Call</option>
               <option value="Employee Referral">Employee Referral</option>
@@ -80,21 +80,21 @@ const MyForm = () => {
         </p>
         <p>
           <label>Your Message<br />
-          <span class="contact-message">
+          <span className="contact-message">
             <textarea name="your-message" cols="40" rows="10">
             </textarea>
           </span>
           </label>
         </p>
 
-        <div class="g-recaptcha" data-sitekey="6LcLj_QUAAAAAH2x9o72lGJTE5A3O2fPkXO0itaj">rc</div>
+        <div className="g-recaptcha" data-sitekey="6LcLj_QUAAAAAH2x9o72lGJTE5A3O2fPkXO0itaj">rc</div>
 
         <p>
           <input type="submit" value="Send" disabled={serverState.submitting} />
           <br />
 
         </p>
-        <div class="wpcf7-response-output wpcf7-display-none" aria-hidden="true">
+        <div className="wpcf7-response-output wpcf7-display-none" aria-hidden="true">
           
         </div>
         </form>
