@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import axios from "axios";
 import { Link } from "gatsby"
 import Layout from "../components/layout"
+import Head from '../components/Head';
 
 
 const MyForm = () => {
@@ -16,7 +17,9 @@ const MyForm = () => {
       status: { ok, msg }
     });
     if (ok) {
-      form.reset();
+      console.log('msg:', msg);
+      // form.reset();
+      form.innerText = {msg}
     }
   };
   const handleOnSubmit = e => {
@@ -25,48 +28,85 @@ const MyForm = () => {
     setServerState({ submitting: true });
     axios({
       method: "post",
-      url: "https://getform.io/f/d78b0326-4a86-4e9a-9e0d-5f9819c4bb5c",
+      url: "https://getform.io/f/1686b915-5791-47a2-b067-bd33238f44e5",
       data: new FormData(form)
     })
       .then(r => {
-        handleServerResponse(true, "Thanks!", form);
+        handleServerResponse(true, "Thank You! Your message has been sent.", form);
       })
       .catch(r => {
         handleServerResponse(false, r.response.data.error, form);
       });
   };
   return (
-    <Layout>
-
+    <Layout title="Contact">
+<Head />
       <div>
         <div className="col-md-8 mt-5">
-          <h3>Getform.io Gatsby Form Example</h3>
+        {!serverState.status && (
           <form onSubmit={handleOnSubmit}>
-            <div className="form-group">
-              <label for="exampleInputEmail1" required="required">Email address</label>
-              <input type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-            </div>
-            <div className="form-group">
-              <label for="exampleInputName">Name</label>
-              <input type="text" name="name" className="form-control" id="exampleInputName" placeholder="Enter your name" required="required" />
-            </div>
-            <div className="form-group">
-              <label for="exampleFormControlSelect1">Favourite Platform</label>
-              <select className="form-control" id="exampleFormControlSelect1" name="platform" required="required">
-                <option>Github</option>
-                <option>Gitlab</option>
-                <option>Bitbucket</option>
-              </select>
-            </div>
-            <button type="submit" className="btn btn-primary" disabled={serverState.submitting}>
-              Submit
-            </button>
+        <br />
+        <br />
+        <p>
+          <label> Your Name (required) <span class="contact-name">
+            <input type="text" name="your-name" size="40" />
+          </span> </label>
+        </p>
+        <p>
+          <label> Your Email (required) <span class="wpcf7-form-control-wrap your-email">
+            <input type="email" name="your-email" size="40" />
+          </span> </label>
+        </p>
+        <p>
+          <label> Your Phone Number <span class="contact-tel">
+            <input type="tel" name="tel-443" size="40" />
+          </span> </label>
+        </p>
+        <p>
+          <label>How did you hear about us? <span class="contact-source">
+            <select name="contact-source" class="wpcf7-form-control wpcf7-select" aria-invalid="false">
+              <option value="Advertisement">Advertisement</option>
+              <option value="Cold Call">Cold Call</option>
+              <option value="Employee Referral">Employee Referral</option>
+              <option value="External Referral">External Referral</option>
+              <option value="Online Store">Online Store</option>
+              <option value="Partner">Partner</option>
+              <option value="Trade Show">Trade Show</option>
+              <option value="Web Research">Web Research</option>
+              <option value="Chat">Chat</option>
+            </select>
+          </span>
+          </label>
+        </p>
+        <p>
+          <label>Your Message<br />
+          <span class="contact-message">
+            <textarea name="your-message" cols="40" rows="10">
+            </textarea>
+          </span>
+          </label>
+        </p>
+
+        <div class="g-recaptcha" data-sitekey="6LcLj_QUAAAAAH2x9o72lGJTE5A3O2fPkXO0itaj">rc</div>
+
+        <p>
+          <input type="submit" value="Send" disabled={serverState.submitting} />
+          <br />
+
+        </p>
+        <div class="wpcf7-response-output wpcf7-display-none" aria-hidden="true">
+          
+        </div>
+        </form>
+        )}
+
             {serverState.status && (
               <p className={!serverState.status.ok ? "errorMsg" : ""}>
+          <br />
+          <br />
                 {serverState.status.msg}
               </p>
             )}
-          </form>
         </div>
       </div>
 
