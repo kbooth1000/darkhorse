@@ -17,7 +17,6 @@ const Project = props => {
     return str.split(searchString).join(replaceString);
  }
 
-  console.log('html:', typeof html);
   const fancyHtml = replaceAll('class="fancybox', `onclick="(e => { e.preventDefault(); 
   var largeImgUrl = e.currentTarget.href;  
   var lightboxBox = document.querySelector('.lightbox-box'); 
@@ -26,6 +25,7 @@ const Project = props => {
   lightboxBox.querySelector('img').setAttribute('src', largeImgUrl);
   
   })(window.event)" class="fancybox`, html);
+
   const finalHtml = `${fancyHtml} `;
 
   const loadingImgUrl = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif';
@@ -42,12 +42,14 @@ const Project = props => {
 
 
   const portfolioTitle = props.data.wp.portfolioBy.title;
+  const featuredImage = props.data.wp.portfolioBy.featuredImage.sourceUrl;
 
 
   return (
     <Layout title={portfolioTitle}>
       <Head title={props.data.wp.portfolioBy.title} />
-      <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} />
+      <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} /><br />
+      <img className="featured-image" src={featuredImage} />
       <div dangerouslySetInnerHTML={{ __html: finalHtml }} />
       <div onClick={handleLightboxClick}
       onLoad={handleImgLoad} className="lightbox-box"><img src={loadingImgUrl} alt="LOADING"/></div>
@@ -64,6 +66,9 @@ export const query = graphql`
       portfolioBy(slug: $slug) {
         content(format: RENDERED)
         title
+        featuredImage {
+          sourceUrl(size: L)
+        }
       }
     }
   }
