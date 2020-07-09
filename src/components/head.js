@@ -33,7 +33,8 @@ const Head = ({ title }) => {
   return (
     <Helmet title={`${title} • ${data.site.siteMetadata.title} `} encodeSpecialCharacters={false}>
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaLoaded&render=explicit"
+    async defer></script>
 
       <body className={title} />
 
