@@ -1,7 +1,8 @@
-import React, { useState }  from "react"
+import React, { useState, useEffect }  from "react";
 import axios from "axios";
-import { Link } from "gatsby"
-import Layout from "./layout"
+import { Link } from "gatsby";
+import Layout from "./layout";
+import Head from "./head";
 
 
 const MyForm = () => {
@@ -36,7 +37,8 @@ const MyForm = () => {
         });
     };
     return (
-        <Layout>
+        <Layout title="Contact Us">
+    <Head title="Contact Us" />
     
     <div>
          <div className="col-md-8 mt-5">

@@ -193,6 +193,33 @@ body.single-portfolio .entry-content {
   border-radius: 50%;
 }
 
+.sharedaddy {
+  display: none;
+}
+
+.social-sharing {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.social-sharing h3 {
+  width: 116px;
+  margin: 0;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.social-sharing section {
+  width: 116px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
 a[href$='.jpg']:not(.fancybox) {
   pointer-events: none;
 }
