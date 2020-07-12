@@ -26,7 +26,7 @@ const Project = props => {
   
   })(window.event)" class="fancybox`, html);
 
-  const finalHtml = `${fancyHtml} `;
+  const finalHtml = `${fancyHtml}`;
 
   const loadingImgUrl = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif';
 

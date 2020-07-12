@@ -31,8 +31,14 @@ const Head = ({ title }) => {
   )
 
   return (
-    <Helmet title={`${title} • ${data.site.siteMetadata.title} `} encodeSpecialCharacters={false}>
-
+    <Helmet title={`${title} • ${data.site.siteMetadata.title} `} encodeSpecialCharacters={false} link={[
+      {"rel": "icon", 
+       "type": "image/png", 
+       "href": "../assets/favicon/favicon.ico"
+      }
+    ]
+      }>
+<link rel="icon" type="image/png" href="../assets/favicon/favicon.ico" sizes="16x16" />
     <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaLoaded&render=explicit"
     async defer></script>
 

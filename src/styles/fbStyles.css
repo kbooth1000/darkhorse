@@ -9,6 +9,10 @@
   color: #555;
 }
 
+.fb-logo:hover {
+  text-decoration: none;
+}
+
 .fb-logo-img {
     /* filter: invert(); */
     width: 80px;

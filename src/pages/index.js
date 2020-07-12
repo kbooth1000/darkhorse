@@ -10,11 +10,19 @@ import Head from '../components/Head';
 import '../styles/fbstyles.css';
 import '../styles/wp-styles/style.css';
 import '../styles/homeStyles.css';
+import bg1 from '../assets/bg1.jpg';
+import bg2 from '../assets/bg2.jpg';
+import bg3 from '../assets/bg3.jpg';
 
-export default () => <Layout title="Home">
+
+export default () => {
+  const bgImages = [
+    bg1,bg2,bg3, bg1
+  ]
+return (<Layout title="Home">
   <Head title="Home" />
   <section id="hero">
-    <div className="masthead" style={{ backgroundImage: 'url(https://i1.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/ss-kitchen.jpg?1587682416)' }}>
+    <div className="masthead" style={{ backgroundImage: `url(${bgImages[Math.floor(Math.random()*bgImages.length)]})` }}>
     </div>
     <div className="gradient">
       <table className="houzz-influencer-badge" style={{ width: '96px', marginTop: '100px' }} cellPadding="0" cellSpacing="0">
@@ -150,7 +158,7 @@ export default () => <Layout title="Home">
         {/* <FacebookWidget /> */}
         <div className="fb-logo" style={{width:'100%', display: 'flex', alignItems:'center'}}>
         <a rel="noreferrer" target="_blank" href="https://www.facebook.com/DHWoodworks/" style={{display:'flex'}}>
-        <img class="fb-logo-img" src={logo} style={{width: '80px'}} title="Dark Horse Woodworks" alt="Dark Horse Woodworks" />
+        <img className="fb-logo-img" src={logo} style={{width: '80px'}} title="Dark Horse Woodworks" alt="Dark Horse Woodworks" />
         <aside style={{fontSize:'.8em', textAlign:'right'}}>
         <span style={{color:'#444'}}>Dark Horse Woodworks</span><br />
         See our latest posts
@@ -164,4 +172,4 @@ export default () => <Layout title="Home">
 
   </aside>
 
-</Layout>
+</Layout>)}

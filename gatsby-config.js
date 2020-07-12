@@ -12,7 +12,7 @@ const config = require('./data/config');
 
 
 module.exports = {
-  pathPrefix: `/darkhorse`,
+  pathPrefix: `/dh`,
   siteMetadata: {
     title: 'Dark Horse Woodworks',
     author: 'Kyle J Booth'
@@ -65,7 +65,7 @@ module.exports = {
       options: {
         typeName: `WPGraphQL`,
         fieldName: `wp`,
-        url: `http://darkhorsewoodworks.com/dh1/graphql`
+        url: `http://www.atlantavoices.com/dh/graphql`
       }
     },
     'gatsby-plugin-sass',
