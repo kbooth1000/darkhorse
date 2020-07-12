@@ -13,7 +13,7 @@ export default props => <div className="social-sharing">
   <h3>Share this:</h3>
   <section>
     <Twitter solid small link={props.pageLink} style={style} />
-    <Pinterest solid small link={props.pageLink} style={style} />
+    <Pinterest solid small link={props.featuredImage} style={style} />
     <Facebook solid small link={props.pageLink} style={style} />
   </section>
 </div>

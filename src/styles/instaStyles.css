@@ -6,13 +6,10 @@
 }
 
 .instaBox a {
-    display: block;
-    width: 72.5px;
-    height: 72.5px;
-    padding: 5px;
-    overflow: hidden;
-    /* box-sizing: border-box; */
-    /* object-fit: cover; */
+    background-size: cover;
+    width: 72px;
+    height: 72px;
+    margin: 5px;
 }
 
 .instaBox a img {

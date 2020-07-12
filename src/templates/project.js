@@ -26,7 +26,7 @@ const Project = props => {
   
   })(window.event)" class="fancybox`, html);
 
-  const finalHtml = `${fancyHtml} `;
+  const finalHtml = `${fancyHtml}`;
 
   const loadingImgUrl = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif';
 
@@ -48,7 +48,7 @@ const Project = props => {
   return (
     <Layout title={portfolioTitle}>
       <Head title={props.data.wp.portfolioBy.title} />
-      <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} /><br />
+      <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} featuredImage={featuredImage} /><br />
       <img className="featured-image" src={featuredImage} />
       <div dangerouslySetInnerHTML={{ __html: finalHtml }} />
       <div onClick={handleLightboxClick}
