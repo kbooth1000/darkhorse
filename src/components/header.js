@@ -40,17 +40,12 @@ const Header = props => {
             </span>
           </a>
           <ul onBlur={handleNavBlur} className={`slicknav_nav ${slickNav}`} aria-hidden="true" role="menu">
-            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51 slicknav_collapsed slicknav_parent">
+            <li>
               <a href="#" role="menuitem" ariaHaspopup="true" tabIndex="-1" className="slicknav_item" style={{ outline: 'none' }}>
                 <Link to="about/">About</Link>
-                <span className="slicknav_arrow">
-                  <i className="fa fa-caret-down">
-                  </i>
-                </span>
               </a>
-              <ul className="
-sub-menu slicknav_hidden" role="menu"  ariaHidden="true">
-                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-235">
+              <ul role="menu" ariaHidden="true">
+                <li>
                   <Link to="about/" role="menuitem" tabIndex="-1">Our Story</Link>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-232">
@@ -58,7 +53,7 @@ sub-menu slicknav_hidden" role="menu"  ariaHidden="true">
                 </li>
               </ul>
             </li>
-            <li className="portfolio menu-item menu-item-type-post_type menu-item-object-page menu-item-24 current_page_parent">
+            <li>
               <Link to="gallery/" role="menuitem" tabIndex="-1">Gallery</Link>
             </li>
             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">

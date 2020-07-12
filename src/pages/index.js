@@ -87,7 +87,7 @@ export default () => <Layout title="Home">
     </div>
   </section>
 
-  <section id="columns">
+  <section className="columns">
     <div className="wrap">
       <div className="column">
         <h2>Our Story
@@ -130,16 +130,10 @@ export default () => <Layout title="Home">
 
 
 
-
-
-
-
-
-
   <aside id="sidebar-footer" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
 
-
-    <section id="columns" className="home-widgets">
+    <section className="columns home-widgets">
+      <div className="wrap">
       <div className="column">
         <h4 className="widget-title">Our Instagram Shots</h4>
         <ImageGallery />
@@ -164,7 +158,7 @@ export default () => <Layout title="Home">
         </a>
         </div>
       </div>
-
+      </div>
     </section>
 
 

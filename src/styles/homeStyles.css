@@ -21,10 +21,17 @@ body.Home {
     margin: 0;
 }
 
-.Home #columns .wrap {
+.Home .columns .wrap {
     display: flex;
     width: 100vw;
     justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.Home .columns .wrap .column {
+    min-width: 200px;
+    margin: auto 4%;
 }
 
 .Home .column #contact-home {
@@ -51,25 +58,25 @@ body.Home {
     font-style: normal;
 }
 
-#sidebar-footer #columns {
+#sidebar-footer .columns {
     display: flex;
     justify-content: center;
     margin: auto;
     flex-wrap: wrap;
 }
 
-.Home #sidebar-footer  #columns .column {
+.Home #sidebar-footer .columns .column {
     width: 300px;
     margin-right: 25px;
 }
 
 @media screen and (max-width: 999px) {
-    .Home #sidebar-footer  #columns {
+    .Home #sidebar-footer .columns {
         flex-direction: column-reverse;
     }
-    .Home #sidebar-footer  #columns .column {
+    .Home #sidebar-footer .columns .column {
         margin: auto  auto 3rem auto;
-        width: 500px;
+        /* width: 500px; */
         max-width: 90%;
     }
 }
