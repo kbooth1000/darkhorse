@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 
 import { useStaticQuery, graphql } from 'gatsby';
 
+import favicon from '../assets/favicon/favicon.ico';
+
 
 const Head = ({ title }) => {
   const data = useStaticQuery(
@@ -34,11 +36,11 @@ const Head = ({ title }) => {
     <Helmet title={`${title} • ${data.site.siteMetadata.title} `} encodeSpecialCharacters={false} link={[
       {"rel": "icon", 
        "type": "image/png", 
-       "href": "../assets/favicon/favicon.ico"
+       "href": {favicon}
       }
     ]
       }>
-<link rel="icon" type="image/png" href="../assets/favicon/favicon.ico" sizes="16x16" />
+<link rel="icon" type="image/png" href={favicon} sizes="16x16" />
     <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaLoaded&render=explicit"
     async defer></script>
 

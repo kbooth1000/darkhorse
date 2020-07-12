@@ -48,7 +48,7 @@ const Project = props => {
   return (
     <Layout title={portfolioTitle}>
       <Head title={props.data.wp.portfolioBy.title} />
-      <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} /><br />
+      <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} featuredImage={featuredImage} /><br />
       <img className="featured-image" src={featuredImage} />
       <div dangerouslySetInnerHTML={{ __html: finalHtml }} />
       <div onClick={handleLightboxClick}
