@@ -26,7 +26,10 @@ const Project = props => {
   
   })(window.event)" class="fancybox`, html);
 
-  const finalHtml = `${fancyHtml}`;
+  const fancyHtml2 = replaceAll('https://i1.wp.com/', '//', fancyHtml);
+  const fancyHtml3 = replaceAll('https://i2.wp.com/', '//', fancyHtml2);
+
+  const finalHtml = `${fancyHtml3}`;
 
   const loadingImgUrl = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif';
 
