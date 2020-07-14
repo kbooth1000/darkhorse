@@ -27,7 +27,7 @@ const Header = props => {
 
 
         <div className="slicknav_menu">
-          <a onClick={handleNavClick} href="#" ariaHaspopup="true" tabIndex="0" className="slicknav_btn" style={{ outline: 'none' }}>
+          <a onClick={handleNavClick} href="#" aria-haspopup="true" tabIndex="0" className="slicknav_btn" style={{ outline: 'none' }}>
             <span className="slicknav_menutxt">
             </span>
             <span className="slicknav_icon slicknav_no-text">

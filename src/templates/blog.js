@@ -22,25 +22,30 @@ import SocialSharing from '../components/socialSharing';
 
 const Blog = props => {
 
-  const {date, author, content, title} = props.data.wp.postBy
+  const { date, author, content, title } = props.data.wp.postBy
 
   // const postContent = props.data.wp.postBy.title;
+  const replaceAll = (searchString, replaceString, str) => {
+    return str.split(searchString).join(replaceString);
+  }
+  const fancyHtml2 = replaceAll('https://i1.wp.com/', '//', content);
+  const fancyHtml3 = replaceAll('https://i2.wp.com/', '//', fancyHtml2);
 
 
   return (
     <Layout>
       <Head title={title} />
       <h1>{title}</h1>
-      <p class="entry-meta"> 
-      <time className="entry-time" itemProp="datePublished" dateTime="2019-07-19T14:39:30-04:00">
-        {date}
-      </time> by 
+      <p class="entry-meta">
+        <time className="entry-time" itemProp="datePublished" dateTime="2019-07-19T14:39:30-04:00">
+          {date}
+        </time> by
       <span className="entry-author vcard" itemProp="author" itemScope="itemscope" itemType="http://schema.org/Person">
-        <span> <strong> {author.name}</strong>
+          <span> <strong> {author.name}</strong>
+          </span>
         </span>
-        </span>
-        </p>
-      <div dangerouslySetInnerHTML={ {__html: content} }>
+      </p>
+      <div dangerouslySetInnerHTML={{ __html: fancyHtml3 }}>
       </div>
       <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} />
     </Layout>
