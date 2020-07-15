@@ -67,11 +67,25 @@ export const query = graphql`
   query($slug: String!) {
     wp {
       portfolioBy(slug: $slug) {
-        content(format: RENDERED)
-        title
+        alt_image_group {
+          altImageFilter
+          altImageFilter2
+          altImageFilter3
+          altImage {
+            sourceUrl(size: S)
+          }
+          altImage2 {
+            sourceUrl(size: S)
+          }
+          altImage3 {
+            sourceUrl(size: S)
+          }
+        }
+        content
         featuredImage {
           sourceUrl(size: L)
         }
+        title
       }
     }
   }
