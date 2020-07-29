@@ -13012,10 +13012,6 @@ img#wpstats {
   display: none
 }
 
-html:not(.jetpack-lazy-images-js-enabled):not(.js) .jetpack-lazy-image {
-  display: none
-}
-
 h1 {
   font-family: 'Raleway';
   font-style: normal;

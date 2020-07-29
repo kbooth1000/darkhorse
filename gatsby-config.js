@@ -12,7 +12,7 @@ const config = require('./data/config');
 
 
 module.exports = {
-  pathPrefix: `/dh`,
+  pathPrefix: `/dh1`,
   siteMetadata: {
     title: 'Dark Horse Woodworks',
     author: 'Kyle J Booth'

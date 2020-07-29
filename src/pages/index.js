@@ -82,11 +82,11 @@ return (<Layout title="Home">
           </li>
         </ul>
       </nav>
-      <img className="hidden-fb-poster-pic" src="http://i2.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/12/screenshot.png" alt="screenshot" />
+      <img className="hidden-fb-poster-pic" src={require('../assets/uploads/2014/12/screenshot.png')} alt="screenshot" />
     </div>
     <div className="homepage-decoration">
       <Link to="press/">
-        <img src="http://darkhorsewoodworks.com/dh1/wp-content/uploads/2016/02/WoodDiamond.png" />
+        <img src={require('../assets//uploads/2016/02/WoodDiamond.png') } />
         <br />
         <br />
         <footer>Multiple-time Winner of the Prestigious CMA Wood Diamond Award
@@ -101,15 +101,15 @@ return (<Layout title="Home">
         <h2>Our Story
     </h2>
         <a href="about#ourstory">
-          <img src="http://darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/about2.jpeg" alt="Designing a custom piece allows you to choose all of the details – style, materials, color, finish and size. We will talk about styles you like, look at photos of similar pieces and talk about what you do and don’t like about them. We will discuss the intended use and the room where the piece will be used. If you've created a sketch of what you have in mind, we’ll look at that, too. All of this information goes into each piece Dark Horse builds. Together, we will create a design that fits your needs and your desire for a one-of-a-kind creation....." />
+          <img src={require('../assets//uploads/2014/11/about2.jpeg') } alt="Designing a custom piece allows you to choose all of the details – style, materials, color, finish and size. We will talk about styles you like, look at photos of similar pieces and talk about what you do and don’t like about them. We will discuss the intended use and the room where the piece will be used. If you've created a sketch of what you have in mind, we’ll look at that, too. All of this information goes into each piece Dark Horse builds. Together, we will create a design that fits your needs and your desire for a one-of-a-kind creation....." />
         </a>
-        <img className="unhidden-fb-poster-pic" src="http://i2.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/12/screenshot.png" />
+        <img className="unhidden-fb-poster-pic" src={require('../assets//uploads/2014/12/screenshot.png')} />
       </div>
       <div className="column">
         <h2>Working with Us
     </h2>
         <a href="about/working-with-dark-horse/">
-          <img src="http://darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/dhnewspace1.jpg" alt="" style={{ width: '100%' }} />
+          <img src={require('../assets//uploads/2014/11/dhnewspace1.jpg') } alt="" style={{ width: '100%' }} />
         </a>
       </div>
       <div className="column">
@@ -117,7 +117,7 @@ return (<Layout title="Home">
     </h2>
         <div id="contact-home">
           <a href="contact">
-            <img src="http://i2.wp.com/darkhorsewoodworks.com/dh1/wp-content/uploads/2014/11/chris1.jpeg" alt="Chris Dehmer, Owner" />
+            <img src={require('../assets//uploads/2014/11/chris1.jpeg')} alt="Chris Dehmer, Owner" />
           </a>
           <p> To inquire about our services, please call us
     <br />
