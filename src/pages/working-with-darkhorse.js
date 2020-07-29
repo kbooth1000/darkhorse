@@ -1,18 +1,29 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import Head from '../components/Head';
 
-const WorkingWith = () =>{
-
-const html = `<div class="entry-content" itemprop="text"><p>Designing custom cabinetry, shelving and other home furnishings allows you to choose all of the details – style, materials, color, finish and size.</p><p>In the design stage, we talk about styles you like and look at photos of cabinetry and furnishings that capture what you have in mind. We’ll talk about what you do and don’t like about those photos/styles, as well as the intended use and the rooms where the custom work will be located. If you’ve created a sketch of what you have in mind, we’ll look at that, too.</p><p>Together, we’ll create a design that fits your needs and your desire for a one-of-a-kind creation. (Any architects and designers who are involved in your project will be part of this process as well, of course.)</p><p>After we’ve worked together to determine the design elements, Dark HorseWoodworks will provide a proposal stating the price and approximate delivery date.</p><p>We often have a backlog of projects that can last anywhere from a few weeks to a few months, and we’ll always give you realistic expectations about timing. Unless otherwise stated, all price quotes include setup and installation.</p><p><strong>Payment</strong></p><p>We are pleased to accept cash, checks, Visa, MasterCard, American Express and Discover.</p><p><strong>Warranty</strong></p><p>We stand behind the products we create. Typically, our work is intended for normal indoor use. Should our furniture or cabinetry fail at any time during<br> the lifetime of the original owner because of issues with our workmanship or material, we will either repair or replace it at no cost.</p><p><strong>If you are interested in discussing a project, please fill out the form below:</strong></p><div id="contact-form-226"><form action="http://darkhorsewoodworks.com/dh1/about/working-with-dark-horse/#contact-form-226" method="post" class="contact-form commentsblock"><div class="grunion-field-wrap grunion-field-name-wrap"> <label for="g226-name" class="grunion-field-label name">Name<span>(required)</span></label> <input type="text" name="g226-name" id="g226-name" value="" class="name" required="" aria-required="true"></div><div class="grunion-field-wrap grunion-field-email-wrap"> <label for="g226-email" class="grunion-field-label email">Email<span>(required)</span></label> <input type="email" name="g226-email" id="g226-email" value="" class="email" required="" aria-required="true"></div><div class="grunion-field-wrap grunion-field-textarea-wrap"> <label for="contact-form-comment-g226-message" class="grunion-field-label textarea">Message<span>(required)</span></label><textarea name="g226-message" id="contact-form-comment-g226-message" rows="20" class="textarea" required="" aria-required="true"></textarea></div><p class="contact-submit"> <button type="submit" class="pushbutton-wide">Submit</button> <input type="hidden" id="_wpnonce" name="_wpnonce" value="bb5fde3253"><input type="hidden" name="_wp_http_referer" value="/dh1/about/working-with-dark-horse/"> <input type="hidden" name="contact-form-id" value="226"> <input type="hidden" name="action" value="grunion-contact-form"> <input type="hidden" name="contact-form-hash" value="f566c76d7ad03c88ae0b4e37d9419ee75cf35431"></p></form></div></div>`;
-
-return <div className="WorkingWith">
+const WorkingWith = () => {
+  return <div className="WorkingWith">
     <Layout title="Working With Darkhorse">
       <Head />
-      <div className="WorkingWith-page" dangerouslySetInnerHTML={{__html:html}}>
-        
+      <div className="WorkingWith-page">
+        <div className="entry-content">
+          <p>Designing custom cabinetry, shelving and other home furnishings allows you to choose all of the details – style, materials, color, finish and size.</p>
+          <p>In the design stage, we talk about styles you like and look at photos of cabinetry and furnishings that capture what you have in mind. We’ll talk about what you do and don’t like about those photos/styles, as well as the intended use and the rooms where the custom work will be located. If you’ve created a sketch of what you have in mind, we’ll look at that, too.</p>
+          <p>Together, we’ll create a design that fits your needs and your desire for a one-of-a-kind creation. (Any architects and designers who are involved in your project will be part of this process as well, of course.)</p>
+          <p>After we’ve worked together to determine the design elements, Dark HorseWoodworks will provide a proposal stating the price and approximate delivery date.</p>
+          <p>We often have a backlog of projects that can last anywhere from a few weeks to a few months, and we’ll always give you realistic expectations about timing. Unless otherwise stated, all price quotes include setup and installation.</p>
+          <p><strong>Payment</strong></p>
+          <p>We are pleased to accept cash, checks, Visa, MasterCard, American Express and Discover.</p>
+          <p><strong>Warranty</strong></p>
+          <p>We stand behind the products we create. Typically, our work is intended for normal indoor use. Should our furniture or cabinetry fail at any time during<br /> the lifetime of the original owner because of issues with our workmanship or material, we will either repair or replace it at no cost.</p>
+          <p><strong>If you are interested in discussing a project, please fill out the form below:</strong></p>
+          <p><Link to="contact">Click here to contact us about your project.
+          </Link></p>
+      </div>
       </div>
     </Layout>
-  </div>
+            </div>
 }
 export default WorkingWith;

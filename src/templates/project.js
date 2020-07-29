@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import SocialSharing from '../components/socialSharing';
 
 import Layout from '../components/layout';
@@ -25,12 +25,14 @@ const Project = props => {
   lightboxBox.querySelector('img').setAttribute('src', largeImgUrl);
   
   })(window.event)" class="fancybox`, html);
+  // const fancyHtml1 = replaceAll('src="https://i0.wp.com', 'src="https://i2.wp.com', fancyHtml);
+  // const fancyHtml1a = replaceAll('src="https://i1.wp.com', 'src="https://i2.wp.com', fancyHtml1);
 
-  const fancyHtml2 = replaceAll('https://i1.wp.com/', '//', fancyHtml);
-  const fancyHtml3 = replaceAll('https://i2.wp.com/', '//', fancyHtml2);
+  // const fancyHtml2 = replaceAll('src="https://i2.wp.com/www.atlantavoices.com/dh/wp-content', `src="localhost:8000/assets`, fancyHtml1a);
 
-  const finalHtml = `${fancyHtml3}`;
+  // const fancyHtml3 = replaceAll(' width="', `')}`, fancyHtml2);
 
+  const finalHtml = `${fancyHtml}`;
   const loadingImgUrl = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif';
 
   const handleLightboxClick = e=>{
@@ -51,7 +53,10 @@ const Project = props => {
   return (
     <Layout title={portfolioTitle}>
       <Head title={props.data.wp.portfolioBy.title} />
-      <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} featuredImage={featuredImage} /><br />
+      
+      <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} featuredImage={featuredImage} />
+      <span style={{float:'left', marginTop:'-1rem'}}>
+      <Link to="gallery"><span style={{color:'#666', fontWeight: '100', textDecoration:'none'}}>...Gallery</span></Link></span><br /><br />
       <img className="featured-image" src={featuredImage} />
       <div dangerouslySetInnerHTML={{ __html: finalHtml }} />
       <div onClick={handleLightboxClick}

@@ -97,14 +97,14 @@ const Contact = () => {
           </span>
           </label>
         </p>
-
+<div style={{background:'#ddd', width:'305px'}}>
         <Recaptcha
     sitekey='6LcLj_QUAAAAAH2x9o72lGJTE5A3O2fPkXO0itaj'
     onloadCallback={loaded}
     verifyCallback={callback}
     >
           ...LOADING...
-    </Recaptcha>
+    </Recaptcha></div>
     <p>&nbsp;
         </p>
         <p>
