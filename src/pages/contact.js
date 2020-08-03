@@ -5,6 +5,8 @@ import { Link } from "gatsby";
 import Layout from "../components/layout"
 import Head from '../components/Head';
 
+import '../styles/contactStyles.css';
+
 
 const Contact = () => {
 
@@ -97,7 +99,7 @@ const Contact = () => {
           </span>
           </label>
         </p>
-<div style={{background:'#ddd', width:'305px'}}>
+<div className="recaptcha-bg-box">
         <Recaptcha
     sitekey='6LcLj_QUAAAAAH2x9o72lGJTE5A3O2fPkXO0itaj'
     onloadCallback={loaded}

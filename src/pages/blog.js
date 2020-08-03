@@ -4,6 +4,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 
 import Head from '../components/Head';
 import blogStyles from './blog.module.scss';
+import '../styles/blogStyles.css';
 
 
 const Blog = () => {
@@ -29,6 +30,9 @@ const Blog = () => {
 
   const nodes = data.wp.posts.edges;
   const posts = nodes.map((post, i) => { 
+    const rawDate = (new Date(post.node.date));
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const formattedDate = `${months[rawDate.getMonth()]} ${rawDate.getDate()}, ${rawDate.getFullYear()}`
     const replaceAll = (searchString, replaceString, str) => {
       return str.split(searchString).join(replaceString);
     }
@@ -39,7 +43,7 @@ const Blog = () => {
     <li key={`post${i}`} className={blogStyles.post}>
       <Link to={`/blog/${post.node.slug}`}>
         <h3 className="blog-title">{post.node.title}</h3>
-        <p className="blog-date">{post.node.date}</p>
+        <time className="blog-date">{formattedDate}</time>
       </Link>
       <div dangerouslySetInnerHTML={{ __html: fancyHtml3 }}></div>
 

@@ -1,0 +1,24 @@
+
+h3.blog-title,
+.headerMeta h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: 34px;
+    margin-bottom: 5px;
+    color: #121212;
+    text-decoration: none;
+}
+
+.Blog a:hover {
+    text-decoration: none;
+}
+
+p.entry-meta {
+    position: absolute;
+    left: 10rem;
+}
+
+.blog-content {
+    margin-top: 7rem;
+}

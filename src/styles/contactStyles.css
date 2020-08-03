@@ -1,0 +1,44 @@
+.recaptcha-bg-box {
+    width: 305px;
+    animation: pulse 1s alternate;
+}
+
+@keyframes pulse {
+    0% {
+        filter: opacity(1);
+        margin: 0px;
+        /* width: 290px; */
+        width: 0;
+        /* height: 65px; */
+    }
+    20% {
+        filter: opacity(1);
+        margin: 0px;
+        /* width: 290px; */
+        width: 0;
+        /* height: 65px; */
+    }
+    100% {
+        filter: opacity(.8);
+        width: 210px;
+        /* height: 75px; */
+        margin: 0;
+
+    }
+}
+
+.recaptcha-bg-box:before {
+    content: '••••••••loading••••••••';
+    margin: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 80px;
+    position: absolute;
+    width: 250px;
+    z-index: -1;
+    /* background: #eeeeee; */
+    animation: pulse 1s ease-in-out alternate infinite;
+    overflow: hidden;
+    padding-left: 2rem;
+}
