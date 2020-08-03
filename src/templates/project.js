@@ -32,7 +32,7 @@ const Project = props => {
 
   // const fancyHtml3 = replaceAll(' width="', `')}`, fancyHtml2);
 
-  const finalHtml = `${fancyHtml}`;
+  const finalHtml = `${replaceAll('<iframe ', '<iframe data-display="none"', fancyHtml)}`;
   const loadingImgUrl = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif';
 
   const handleLightboxClick = e=>{
@@ -50,15 +50,28 @@ const Project = props => {
   const featuredImage = props.data.wp.portfolioBy.featuredImage.sourceUrl;
 
 
+
+  const houzzButtonHtml = `<a class="houzz-share-button"
+  data-url="http://darkhorsewoodworks.com/dh1/project/${props.data.wp.portfolioBy.slug}"
+  data-hzid="2881"
+  data-title="${portfolioTitle}"
+  data-img="${replaceAll('darkhorsewoodworks.com/dh1','atlantavoices.com/dh',featuredImage)}"
+  data-desc="${props.data.wp.portfolioBy.excerpt.substring(0,props.data.wp.portfolioBy.excerpt.indexOf('</p>'))}"
+  data-category="${props.data.wp.portfolioBy.termNames.toString()}"
+  data-showcount="1 "
+  href="https://www.houzz.com">Houzz</a>`
+console.log('HouzzButton:',houzzButtonHtml);
+
   return (
     <Layout title={portfolioTitle}>
-      <Head title={props.data.wp.portfolioBy.title} />
-      
+      <Head title={props.data.wp.portfolioBy.title} isProject={true} />
       <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} featuredImage={featuredImage} />
       <span style={{float:'left', marginTop:'-1rem'}}>
       <Link to="gallery"><span style={{color:'#666', fontWeight: '100', textDecoration:'none'}}>...Gallery</span></Link></span><br /><br />
       <img className="featured-image" src={featuredImage} />
       <div dangerouslySetInnerHTML={{ __html: finalHtml }} />
+      <span className="save-to-houzz">Save to Houzz:</span><br />
+      <div dangerouslySetInnerHTML={{ __html: replaceAll('darkhorsewoodworks.com/dh1','atlantavoices.com/dh',houzzButtonHtml)} } />
       <div onClick={handleLightboxClick}
       onLoad={handleImgLoad} className="lightbox-box"><img src={loadingImgUrl} alt="LOADING"/></div>
     </Layout>
@@ -72,6 +85,9 @@ export const query = graphql`
   query($slug: String!) {
     wp {
       portfolioBy(slug: $slug) {
+        slug
+        excerpt
+        termNames(taxonomies: PORTFOLIOTYPE)
         content
         featuredImage {
           sourceUrl(size: L)

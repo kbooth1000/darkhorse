@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import favicon from '../assets/favicon/favicon.ico';
 
 
-const Head = ({ title }) => {
+const Head = ({ title, isProject }) => {
   const data = useStaticQuery(
     graphql`
     query {
@@ -34,16 +34,18 @@ const Head = ({ title }) => {
 
   return (
     <Helmet title={`${title} • ${data.site.siteMetadata.title} `} encodeSpecialCharacters={false} link={[
-      {"rel": "icon", 
-       "type": "image/png", 
-       "href": {favicon}
+      {
+        "rel": "icon",
+        "type": "image/png",
+        "href": { favicon }
       }
     ]
-      }>
-<link rel="icon" type="image/png" href={favicon} sizes="16x16" />
-    <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaLoaded&render=explicit"
-    async defer></script>
-
+    }>
+      <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
+      <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaLoaded&render=explicit"
+        async defer></script>
+      {isProject && <script src={`//platform.houzz.com/js/widgets.js?${new Date().getTime()})`}></script>
+      }
       <body className={title} />
 
     </Helmet>
