@@ -165,6 +165,9 @@ return (<Layout title="Home">
         </aside>
         </a>
         </div>
+        <br />
+        <br />
+        <table style={{width: '96px', float:'right', marginRight:'1rem'}} cellpadding="0" cellspacing="0"><tr><td><a href="https://www.houzz.com/pro/darkhorsewoodworks/dark-horse-woodworks"><img src="https://st.hzcdn.com/static/badge_19_9@2x.png" alt="Christopher Dehmer in Atlanta, GA on Houzz" width="96" height="96" border="0" /></a></td></tr></table>
       </div>
       </div>
     </section>
