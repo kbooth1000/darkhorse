@@ -8,20 +8,6 @@ import SocialSharing from '../components/socialSharing';
 
 import '../styles/blogStyles.css';
 
-// import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-
-// export const query = graphql`
-// query($slug: String!){
-//   contentfulBlogPost(slug: {eq: $slug}){
-//     title
-//     publishedDate(formatString: "MMMM Do, YYYY")
-//     body {
-//       json
-//     }          
-//   }
-// }
-// `
-
 const Blog = props => {
 
   const { date, author, content, title } = props.data.wp.postBy

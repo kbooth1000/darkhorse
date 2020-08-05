@@ -10,15 +10,36 @@ h3.blog-title,
     text-decoration: none;
 }
 
+.headerMeta h1.page-title {
+    position: relative;
+    left: -2rem;
+}
+
 .Blog a:hover {
     text-decoration: none;
 }
 
 p.entry-meta {
     position: absolute;
-    left: 10rem;
+    left: 6rem;
 }
 
 .blog-content {
-    margin-top: 7rem;
+    margin-top: 5.5rem;
+    padding-right: 1.5rem;
+}
+
+.blog-content img {
+    max-width: 75%;
+}
+
+@media screen and (max-width: 676px) {
+    .headerMeta {
+        margin: 3.75rem auto 2rem 0;
+        margin-bottom: 1rem !important;
+    }
+    .headerMeta h1.page-title {
+        position: relative;
+        margin-left: 0;
+    }
 }

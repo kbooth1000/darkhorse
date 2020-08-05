@@ -432,3 +432,9 @@ body.page-template-template-portfolio-sortable-php .portfolio-filter ul, body.pa
   color: rgb(234, 79, 69);
   font-weight: 600;
 }
+@media screen and (max-width: 799px) {
+  .project-grid .item .project-caption {
+    opacity: 1;
+    filter: opacity(1);
+  }
+}
