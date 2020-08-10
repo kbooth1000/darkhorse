@@ -4,9 +4,8 @@ import Search from "../components/SearchComponent"
 const SearchPage = () => (
   <div>
     <h1 style={{ marginTop: `3em`, textAlign: `center` }}>
-      Search data:
     </h1>
-    <div>
+    <div style={{width:'290px'}}>
       <Search />
     </div>
   </div>
