@@ -14,9 +14,10 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "baseui": "^9.73.2",
     "gatsby": "^2.20.18",
-    "gatsby-cli": "^2.8.29",
+    "gatsby-cli": "^2.12.80",
     "gatsby-image": "^2.4.2",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-offline": "^3.0.27",
@@ -31,7 +32,9 @@
     "gatsby-transformer-remark": "^2.6.50",
     "gatsby-transformer-sharp": "^2.3.13",
     "gatsby-wordpress-search": "^1.0.9",
+    "html-react-parser": "^0.13.0",
     "isotope-layout": "^3.0.6",
+    "js-search": "^2.0.0",
     "modali": "^1.2.0",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
