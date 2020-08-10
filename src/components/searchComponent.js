@@ -28,11 +28,21 @@ const Search = () => {
 
   const removeLinebreaks = str => str.replace(/(\r\n|\n|\r)/gm, "");
 
-  const removeWPShortcodes = str => str?.toString().replace(str?.slice(str.indexOf('['), str.indexOf(']') + 1), '');
+  const removeWPShortcodes =  string =>{
+    const str = string.toString()
+    let valid = true;
+    return str?.split('').map(
+          char =>  { 
+            if(char === '[') valid = false;
+            if(char ===  ']') valid = true;
+            return (valid) ? (char===']' ? ' ' : char) : ''
+      }    
+    ).join('')
+  }
 
   const removeHTMLTags = string =>{
     const str = string.toString()
-    let valid;
+    let valid = true;
     return str?.split('').map(
           char =>  { 
             if(char === '<') valid = false;
@@ -40,26 +50,29 @@ const Search = () => {
             return (valid) ? (char==='>' ? ' ' : char) : ''
       }    
     ).join('')
-    // return replaceAll(str?.slice(str.indexOf('<'), str.indexOf('>') + 1), '  ', str);
   }
 
   const htmlNodesFromString = data => data
     .filter(post => post.searchData)
     .filter(post => post.searchData.toString().toLowerCase().includes(searchQuery))
+    
     .map(
       post => removeHTMLTags(post.searchData.toString())
-      // Array.from(parse(post.searchData.toString()))
-      //   .filter(node => (node.type === undefined  ||
-      //     node.type === 'p'))
+    )
+    .map(
+      post => removeLinebreaks(post)
+    )
+    .map(
+      post => removeWPShortcodes(post)
     )
 
   const onlyTextFromHtml = htmlNodes => htmlNodes
     .map(
-         p => {
-        let p1 = removeLinebreaks(p);
-        let p2 = removeWPShortcodes(p1);
-        return p2;
-      }
+         p =>  p   // GET RID OF THIS FUNCTION
+      //   let p1 = removeLinebreaks(p);
+      //   let p2 = removeWPShortcodes(p1);
+      //   return p1;
+      // }
       )
         // .join(' ')
     
@@ -69,7 +82,7 @@ const Search = () => {
       const wordsSurroundingSearchQuery = (str, queryWord) => {
         const splitStr = str.split(' ');
         const wordIndex = splitStr.indexOf(splitStr.filter(subst => subst.includes(queryWord))[0]);
-        return `...${splitStr.slice(wordIndex - 8 || 0, wordIndex + 8 || splitStr.length).join(' ') }...`;
+        return `...${splitStr.slice((wordIndex - 8 < 0) ? 0 : wordIndex - 8, (wordIndex + 8 >= splitStr.length) ? splitStr.length : wordIndex + 8).join(' ') }...`;
         
       }
   console.log('DATA: ',
