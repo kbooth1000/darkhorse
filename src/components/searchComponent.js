@@ -6,6 +6,7 @@ import parse from 'html-react-parser';
 
 const Search = () => {
 
+  const [showSearch, setShowSearch] = useState('');
   const [data, setData] = useState([{ hits: [] }]);
   const [searchQuery, setSearchQuery] = useState('somethingunlikely');
 
@@ -109,12 +110,15 @@ const Search = () => {
                 Search:
               </label>
               <input
+                onFocus={()=>setShowSearch('show')}
+                onBlur={()=>setShowSearch('')}
                 id="searchbar"
                 onChange={handleSearchChange}
                 placeholder="Search"
-                style={{ margin: `0 auto`, width: `400px` }}
               />
-      <div className="search-results">
+      <div className={`search-results ${showSearch}`}
+        onMouseLeave={()=>setShowSearch('')}
+      >
         {data
           .filter(post => post.searchData)
           .filter(post => post.searchData.toString().toLowerCase().includes(searchQuery))
