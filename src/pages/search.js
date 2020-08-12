@@ -1,5 +1,6 @@
 import React from "react"
 import Search from "../components/SearchComponent"
+import '../styles/searchStyles.css'
 
 const SearchPage = () => (
   <div>

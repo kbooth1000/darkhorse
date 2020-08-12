@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-// import SearchBox from './searchBox';
+import Search from "../components/SearchComponent";
+import '../styles/searchStyles.css'
 
 // import headerStyles from './header.module.scss';
 import logo from '../assets/logo.png';
@@ -105,13 +106,14 @@ const Header = props => {
         </nav>
 
       </div>
-      {/* <SearchBox>search</SearchBox> */}
-      <form className="search-form" action="http://darkhorsewoodworks.com/dh1/" method="get" role="search"> <input className="search-input" type="search" name="s" placeholder="Search" /> <button className="search-submit btn" type="submit" role="button">
-        <i className="fa fa-search">
+      <Search>search</Search>
 
-        </i>
+      {/* <form className="search-form" action="http://darkhorsewoodworks.com/dh1/" method="get" role="search"> <input className="search-input" type="search" name="s" placeholder="Search" /> <button className="search-submit btn" type="submit" role="button">
+        <i className="fa fa-search"> */}
+
+        {/* </i>
       </button>
-      </form>
+      </form> */}
 
     </header>
   )
