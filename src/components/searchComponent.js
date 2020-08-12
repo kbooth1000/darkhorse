@@ -7,6 +7,7 @@ import parse from 'html-react-parser';
 const Search = () => {
 
   const [showSearch, setShowSearch] = useState('');
+  const [searchClass, setSearchClass] = useState('');
   const [data, setData] = useState([{ hits: [] }]);
   const [searchQuery, setSearchQuery] = useState('somethingunlikely');
 
@@ -105,7 +106,7 @@ const Search = () => {
 
   const excerptCharLimit = 190;
   return (
-    <div className="Search">
+    <div className={`Search ${searchClass}`} onMouseLeave={()=>setSearchClass('unhover')} onMouseEnter={()=>setSearchClass('')}>
     <label htmlFor="searchbar" style={{ paddingRight: `10px` }}>
                 Search:
               </label>
