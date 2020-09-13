@@ -295,12 +295,19 @@
   display: none
 }
 
-.portfolio-filter li {
+.portfolio-filter li,
+.portfolio-filter li button {
   cursor: pointer;
   color: #5c5c5c;
+  font-weight: 400;
+  transition: .3s;
+  text-decoration: none;
+  border: none;
+  background: none;
 }
 
-.portfolio-filter li:hover {
+.portfolio-filter li:hover,
+  .portfolio-filter li:hover button {
   color: #ea4f45;
 }
 
@@ -418,13 +425,6 @@ body.page-template-template-portfolio-sortable-php .portfolio-filter ul, body.pa
 .portfolio-filter li {
   display: inline-block;
   margin-right: 2rem;
-}
-
-.portfolio-filter li a {
-  color: #1c1c1c;
-  font-weight: 600;
-  transition: .3s;
-  text-decoration: none;
 }
 
 .portfolio-filter li a.active,

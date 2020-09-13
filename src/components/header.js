@@ -40,14 +40,12 @@ const Header = props => {
               </span>
             </span>
           </a>
-          <ul onBlur={handleNavBlur} className={`slicknav_nav ${slickNav}`} aria-hidden="true" role="menu">
+          <ul onBlur={handleNavBlur} className={`slicknav_nav ${slickNav}`} aria-hidden="true">
             <li>
-              <a href="#" role="menuitem" ariaHaspopup="true" tabIndex="-1" className="slicknav_item" style={{ outline: 'none' }}>
-                <Link to="about/">About</Link>
-              </a>
-              <ul role="menu" ariaHidden="true">
+                <Link aria-haspopup="true" tabIndex="-1" className="slicknav_item" style={{ outline: 'none' }} to="about/">About</Link>
+              <ul aria-hidden="true">
                 <li>
-                  <Link to="about/" role="menuitem" tabIndex="-1">Our Story</Link>
+                  <Link to="about/" tabIndex="-1">Our Story</Link>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-232">
                   <Link to="working-with-darkhorse/" role="menuitem" tabIndex="-1">Working with Dark Horse</Link>

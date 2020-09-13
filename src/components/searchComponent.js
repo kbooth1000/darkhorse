@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { Link } from 'gatsby';
-import parse from 'html-react-parser';
 
 const Search = () => {
 
@@ -21,11 +20,6 @@ const Search = () => {
     }
     getResponse();
   }, []);
-
-
-  const replaceAll = (searchString, replaceString, str) => {
-    return str.split(searchString).join(replaceString);
-  }
 
   const removeLinebreaks = str => str.replace(/(\r\n|\n|\r)/gm, "");
 
@@ -98,9 +92,8 @@ const Search = () => {
    'somethingunlikely')
 }
 
-  const excerptCharLimit = 190;
   return (
-    <div className={`Search ${searchClass}`} onMouseLeave={()=>setSearchClass('unhover')} onMouseEnter={()=>setSearchClass('')}>
+    <div className={`Search ${searchClass}`} onMouseLeave={()=>setSearchClass('unhover')} onMouseEnter={()=>setSearchClass('')} role="search" >
     <label htmlFor="searchbar" style={{ paddingRight: `10px` }}>
                 Search:
               </label>

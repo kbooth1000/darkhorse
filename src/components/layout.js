@@ -10,36 +10,8 @@ import 'typeface-open-sans';
 import 'typeface-raleway';
 
 import '../styles/layout.css';
-import { useStaticQuery, graphql } from 'gatsby';
 
 const Layout = props =>{
-
-const data = useStaticQuery(
-  graphql`
-  query {
-    wp {
-      pages {
-        edges {
-          node {
-            slug
-            id
-          }
-        }
-      }
-      pageBy(id: "cGFnZTo0Mzk") {
-        slug
-      }
-    }
-  
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    
-  }
-  `
-)
 
 return <div className={`${props.title === 'Home' ? 'Home' : ''} home x`}>
     <div className={`page-contents ${props.title === 'Home' ? '' : 'entry-content'}`}>

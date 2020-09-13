@@ -6,7 +6,7 @@ import Head from '../components/Head';
 const WorkingWith = () => {
   return <div className="WorkingWith">
     <Layout title="Working With Darkhorse">
-      <Head />
+      <Head title="Working With Darkhorse" />
       <div className="WorkingWith-page">
         <div className="entry-content">
           <p>Designing custom cabinetry, shelving and other home furnishings allows you to choose all of the details – style, materials, color, finish and size.</p>

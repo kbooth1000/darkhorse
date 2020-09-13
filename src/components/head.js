@@ -32,8 +32,10 @@ const Head = ({ title, isProject, featuredImg }) => {
     `
   )
 
+  title = title ? title : '';
+
   return (
-    <Helmet title={`${title} • ${data.site.siteMetadata.title} `} encodeSpecialCharacters={false} link={[
+    <Helmet title={`${title ? title : data.site.siteMetadata.title} • ${data.site.siteMetadata.title} `} encodeSpecialCharacters={false} link={[
       {
         "rel": "icon",
         "type": "image/png",
@@ -43,7 +45,7 @@ const Head = ({ title, isProject, featuredImg }) => {
     }>
 
       <meta property="og:type" content="article" />
-      <meta property="og:title" content={`Dark Horse Woodworks : ${title} ${title.includes('Project') ? '' : 'Project'}`} />
+      <meta property="og:title" content={`Dark Horse Woodworks : ${title}`} />
       <meta property="og:image" content={featuredImg} />
 
       <link rel="icon" type="image/png" href={favicon} sizes="16x16" />

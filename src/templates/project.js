@@ -63,7 +63,7 @@ console.log('HouzzButton:',houzzButtonHtml);
 
   return (
     <Layout title={portfolioTitle}>
-      <Head title={props.data.wp.portfolioBy.title} isProject={true} featuredImg={props.data.wp.portfolioBy.featuredImage.sourceUrl} />
+      <Head title={`${props.data.wp.portfolioBy.title} ${props.data.wp.portfolioBy.title.includes('Project') ? '' : 'Project'}`} isProject={true} featuredImg={props.data.wp.portfolioBy.featuredImage.sourceUrl} />
       <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} featuredImage={featuredImage} />
       <span style={{float:'left', marginTop:'-1rem'}}>
       <Link to="gallery"><span style={{color:'#666', fontWeight: '100', textDecoration:'none'}}>...Gallery</span></Link></span><br /><br />
