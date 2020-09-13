@@ -25,14 +25,15 @@ const Project = props => {
   lightboxBox.querySelector('img').setAttribute('src', largeImgUrl);
   
   })(window.event)" itemprop="url`, html);
-  // const fancyHtml1 = replaceAll('src="https://i0.wp.com', 'src="https://i2.wp.com', fancyHtml);
+  const fancyHtml1 = replaceAll('http://www.atlantavoices.com/dh/', '/', fancyHtml);
+  
   // const fancyHtml1a = replaceAll('src="https://i1.wp.com', 'src="https://i2.wp.com', fancyHtml1);
 
   // const fancyHtml2 = replaceAll('src="https://i2.wp.com/www.atlantavoices.com/dh/wp-content', `src="localhost:8000/assets`, fancyHtml1a);
 
   // const fancyHtml3 = replaceAll(' width="', `')}`, fancyHtml2);
 
-  const finalHtml = `${replaceAll('<iframe ', '<iframe data-display="none"', fancyHtml)}`;
+  const finalHtml = `${replaceAll('<iframe ', '<iframe data-display="none"', fancyHtml1)}`;
   const loadingImgUrl = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif';
 
   const handleLightboxClick = e=>{

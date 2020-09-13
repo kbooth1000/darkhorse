@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios";
 import Recaptcha from 'react-gcaptcha';
-import { Link } from "gatsby";
 import Layout from "../components/layout"
 import Head from '../components/Head';
 
