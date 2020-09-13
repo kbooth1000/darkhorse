@@ -16,7 +16,6 @@ const Search = () => {
       const result = await axios(
         'http://www.atlantavoices.com/dh/wp-json/wp/v2/searchResults',
       );
-      console.log('RESULT: ', result);
 
       setData(result.data);
     }
@@ -87,14 +86,9 @@ const Search = () => {
         return `...${splitStr.slice((wordIndex - 8 < 0) ? 0 : wordIndex - 8, (wordIndex + 8 >= splitStr.length) ? splitStr.length : wordIndex + 8).join(' ') }...`;
         
       }
-  console.log('DATA: ',
-  articleTexts,
-  );
 
   let searchResultsList = articleTexts.map(txt => wordsSurroundingSearchQuery(txt, searchQuery)
  )
-
- console.log('searchResultsList:', searchResultsList)
 
  const minSearchChars = 3;
 

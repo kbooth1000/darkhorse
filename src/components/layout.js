@@ -41,7 +41,7 @@ const data = useStaticQuery(
   `
 )
 
-return <div className={`${props.title} home x`}>
+return <div className={`${props.title === 'Home' ? 'Home' : ''} home x`}>
     <div className={`page-contents ${props.title === 'Home' ? '' : 'entry-content'}`}>
       <Header />
       <div className="headerMeta">
