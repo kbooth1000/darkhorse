@@ -55,8 +55,7 @@ const Accolades = () => (<div className="Accolades">
           <div class="testimonial-content">
             <div class="testimonial-message">
               <p>Chris and the boys from Dark Horse Woodworks knocked this out of the park! We came to Chris earlier this year with a dream, and he made it a reality. Yes, we had a picture as our starting point, but as we all know, that only gets you about 10 percent there. Chris and his team then had to figure out how to do that in our space. They combated crooked walls, an uneven ceiling and sloping floors –not to mention also dealing with me changing my mind a few times throughout the project!</p>
-              <p>Chris’s attention to detail is borderline obsessive, but we appreciated it. Not only does the cabinetry look beautiful, but it also functions beautifully – the key to a good working kitchen. Chris wasn’t satisfied until everything was perfect, and it paid off. We couldn’t be happier with the result. I’d highly recommend Chris and the Dark Horse team.<a name="02">
-              </a>
+              <p>Chris’s attention to detail is borderline obsessive, but we appreciated it. Not only does the cabinetry look beautiful, but it also functions beautifully – the key to a good working kitchen. Chris wasn’t satisfied until everything was perfect, and it paid off. We couldn’t be happier with the result. I’d highly recommend Chris and the Dark Horse team.
               </p>
             </div>
           </div>
@@ -73,8 +72,7 @@ const Accolades = () => (<div className="Accolades">
           </div>
           <div class="testimonial-content">
             <div class="testimonial-message">
-              <p>We loved working with Dark Horse. Not only are they great craftsmen with a confidence-inspiring attention to detail, but Chris has a unique understanding of wood. He suggested and sourced several unusual varieties that made a significant difference in our house. Everyone who comes in comments on the warm, beautiful wood. Thanks Chris!<a name="01">
-              </a>
+              <p>We loved working with Dark Horse. Not only are they great craftsmen with a confidence-inspiring attention to detail, but Chris has a unique understanding of wood. He suggested and sourced several unusual varieties that made a significant difference in our house. Everyone who comes in comments on the warm, beautiful wood. Thanks Chris!
               </p>
             </div>
           </div>

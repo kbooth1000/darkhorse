@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { Link } from 'gatsby';
-import parse from 'html-react-parser';
 
 const Search = () => {
 
@@ -16,17 +15,11 @@ const Search = () => {
       const result = await axios(
         'http://www.atlantavoices.com/dh/wp-json/wp/v2/searchResults',
       );
-      console.log('RESULT: ', result);
 
       setData(result.data);
     }
     getResponse();
   }, []);
-
-
-  const replaceAll = (searchString, replaceString, str) => {
-    return str.split(searchString).join(replaceString);
-  }
 
   const removeLinebreaks = str => str.replace(/(\r\n|\n|\r)/gm, "");
 
@@ -87,14 +80,9 @@ const Search = () => {
         return `...${splitStr.slice((wordIndex - 8 < 0) ? 0 : wordIndex - 8, (wordIndex + 8 >= splitStr.length) ? splitStr.length : wordIndex + 8).join(' ') }...`;
         
       }
-  console.log('DATA: ',
-  articleTexts,
-  );
 
   let searchResultsList = articleTexts.map(txt => wordsSurroundingSearchQuery(txt, searchQuery)
  )
-
- console.log('searchResultsList:', searchResultsList)
 
  const minSearchChars = 3;
 
@@ -104,9 +92,8 @@ const Search = () => {
    'somethingunlikely')
 }
 
-  const excerptCharLimit = 190;
   return (
-    <div className={`Search ${searchClass}`} onMouseLeave={()=>setSearchClass('unhover')} onMouseEnter={()=>setSearchClass('')}>
+    <div className={`Search ${searchClass}`} onMouseLeave={()=>setSearchClass('unhover')} onMouseEnter={()=>setSearchClass('')} role="search" >
     <label htmlFor="searchbar" style={{ paddingRight: `10px` }}>
                 Search:
               </label>

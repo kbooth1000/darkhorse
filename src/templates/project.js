@@ -29,11 +29,11 @@ const Project = props => {
   
   // const fancyHtml1a = replaceAll('src="https://i1.wp.com', 'src="https://i2.wp.com', fancyHtml1);
 
-  // const fancyHtml2 = replaceAll('src="https://i2.wp.com/www.atlantavoices.com/dh/wp-content', `src="localhost:8000/assets`, fancyHtml1a);
+  const fancyHtml2 = replaceAll('darkhorsewoodworks.com/dh1/', `atlantavoices.com/dh/`, fancyHtml1);
 
   // const fancyHtml3 = replaceAll(' width="', `')}`, fancyHtml2);
 
-  const finalHtml = `${replaceAll('<iframe ', '<iframe data-display="none"', fancyHtml1)}`;
+  const finalHtml = `${replaceAll('<iframe ', '<iframe data-display="none"', fancyHtml2)}`;
   const loadingImgUrl = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif';
 
   const handleLightboxClick = e=>{
@@ -50,8 +50,6 @@ const Project = props => {
   const portfolioTitle = props.data.wp.portfolioBy.title;
   const featuredImage = props.data.wp.portfolioBy.featuredImage.sourceUrl;
 
-
-
   const houzzButtonHtml = `<a class="houzz-share-button"
   data-url="http://darkhorsewoodworks.com/dh1/project/${props.data.wp.portfolioBy.slug}"
   data-hzid="2881"
@@ -65,7 +63,7 @@ console.log('HouzzButton:',houzzButtonHtml);
 
   return (
     <Layout title={portfolioTitle}>
-      <Head title={props.data.wp.portfolioBy.title} isProject={true} />
+      <Head title={`${props.data.wp.portfolioBy.title} ${props.data.wp.portfolioBy.title.includes('Project') ? '' : 'Project'}`} isProject={true} featuredImg={props.data.wp.portfolioBy.featuredImage.sourceUrl} />
       <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} featuredImage={featuredImage} />
       <span style={{float:'left', marginTop:'-1rem'}}>
       <Link to="gallery"><span style={{color:'#666', fontWeight: '100', textDecoration:'none'}}>...Gallery</span></Link></span><br /><br />

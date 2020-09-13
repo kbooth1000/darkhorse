@@ -4,15 +4,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import '../styles/instaStyles.css';
 
-const Image = styled(Img, {
-  objectFit: 'cover',
-  objectPosition: '100% 0',
-  width: '55px',
-  height: '55px',
-  // maxHeight: '25rem',
-});
-
-
 const nodeURL = 'https://www.instagram.com/p';
 
 const ImageGallery = () => {
@@ -41,7 +32,6 @@ const ImageGallery = () => {
     const images = edges.map(({ node },i) => {
       const {
         id,
-        caption,
         localFile: { childImageSharp },
       } = node;
       
@@ -53,11 +43,7 @@ const ImageGallery = () => {
       );
     });
 
-
-
   return (
-
-
     <div className="instaBox">
       {images}
       <br />

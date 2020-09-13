@@ -37,7 +37,6 @@ const Gallery = () => {
     [isotope, filterKey]
   );
 
-  const [projectTypesShown, setProjectTypesShown] = useState('all');
   const data = useStaticQuery(graphql`
   query {
     wp {
@@ -79,7 +78,6 @@ const Gallery = () => {
   const nodes = data.wp.portfolio.edges;
 
   const projects = nodes.map((project, i) => {
-    const typeClassesArr = project.node.portfolioTypes.edges.map(type => type.node.slug);
     const typeClasses = project.node.portfolioTypes.edges.reduce((val, type) => ` type-${type.node.slug}` + val, '');
 
     let getImageSource = () => {
@@ -130,18 +128,18 @@ const Gallery = () => {
           </i>
           <ul>
             <li className="filter-heading">Filter:</li>
-            <li onClick={() => {
+            <li><button onClick={() => {
               setFilterKey("*");
-            }}>All</li>
-            <li onClick={() => {
+            }}>All</button></li>
+            <li><button onClick={() => {
               setFilterKey("type-kitchens");
-            }}>Kitchens</li>
-            <li onClick={() => {
+            }} type="button">Kitchens</button></li>
+            <li><button onClick={() => {
               setFilterKey("type-bathrooms");
-            }}>Bathrooms</li>
-            <li onClick={() => {
+            }}>Bathrooms</button></li>
+            <li><button onClick={() => {
               setFilterKey("type-built-ins");
-            }}>Built-ins</li>
+            }}>Built-ins</button></li>
           </ul>
         </div>
         <div className="project-grid">
