@@ -25,7 +25,6 @@ const Blog = props => {
   const fancyHtml1 = replaceAll('http://www.atlantavoices.com/dh/', '/', content);
   const fancyHtml2 = replaceAll('https://i1.wp.com/', '//', fancyHtml1);
   const fancyHtml3 = replaceAll('https://i2.wp.com/', '//', fancyHtml2);
-  console.log('props', props)
 
   return (
     <Layout title={title}>
