@@ -48,6 +48,10 @@ const Head = ({ title, isProject, featuredImg }) => {
       <meta property="og:title" content={`Dark Horse Woodworks : ${title}`} />
       <meta property="og:image" content={featuredImg} />
 
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={`Dark Horse Woodworks : ${title}`} />
+      <meta name="twitter:image" content={featuredImg} />
+
       <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
       <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaLoaded&render=explicit"
         async defer></script>
