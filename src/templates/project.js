@@ -89,7 +89,7 @@ export const query = graphql`
         termNames(taxonomies: PORTFOLIOTYPE)
         content
         featuredImage {
-          sourceUrl(size: L)
+          sourceUrl(size: M)
         }
         title
       }

@@ -7,27 +7,30 @@ import { graphql } from 'gatsby';
 import SocialSharing from '../components/socialSharing';
 
 import '../styles/blogStyles.css';
+import logo from '../assets/logo.png';
 
 const Blog = props => {
 
   const { date, author, content, title } = props.data.wp.postBy
-    const rawDate = (new Date(date));
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    const formattedDate = `${months[rawDate.getMonth()]} ${rawDate.getDate()}, ${rawDate.getFullYear()}`
-  // const postContent = props.data.wp.postBy.title;
+  const contentAfterImg = content.substring(content.indexOf('<img'));
+  const imgTag = contentAfterImg.substring(0, contentAfterImg.indexOf('>'));
+  const imgTagFromSrc = imgTag.substring(imgTag.indexOf(' src="') + 6);
+  const imgSrc = imgTagFromSrc.substring(0, imgTagFromSrc.indexOf('" '));
+  const rawDate = (new Date(date));
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const formattedDate = `${months[rawDate.getMonth()]} ${rawDate.getDate()}, ${rawDate.getFullYear()}`
   const replaceAll = (searchString, replaceString, str) => {
     return str.split(searchString).join(replaceString);
   }
   const fancyHtml1 = replaceAll('http://www.atlantavoices.com/dh/', '/', content);
   const fancyHtml2 = replaceAll('https://i1.wp.com/', '//', fancyHtml1);
   const fancyHtml3 = replaceAll('https://i2.wp.com/', '//', fancyHtml2);
-
+  console.log('props', props)
 
   return (
     <Layout title={title}>
-      <Head title={title} />
-      {/* <h1 className="page-title">{title}</h1> */}
-      <p class="entry-meta">
+      <Head title={title} featuredImg={props.data.wp.postBy.featuredImage ? props.data.wp.postBy.featuredImg.sourceUrl : imgSrc ? imgSrc : logo} />
+      <p className="entry-meta">
         <time className="entry-time">
           {formattedDate}
         </time> by
@@ -56,6 +59,9 @@ export const query = graphql`
         }
         content(format: RENDERED)
         title(format: RENDERED)
+        featuredImage {
+          sourceUrl(size: M)
+        }
       }
     }
   }
