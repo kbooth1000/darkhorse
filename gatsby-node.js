@@ -20,7 +20,7 @@ module.exports.createPages = async ({
           }
         }
       }
-      portfolio(first: 99) {
+      portfolios(first: 99) {
         edges {
           node {
             slug
@@ -40,7 +40,7 @@ module.exports.createPages = async ({
   }
   `)
 
-  res.data.wp.portfolio.edges.forEach((edge) => {
+  res.data.wp.portfolios.edges.forEach((edge) => {
     createPage({
       component: projectTemplate,
       path: `/project/${edge.node.slug}`,

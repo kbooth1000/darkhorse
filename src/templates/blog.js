@@ -22,7 +22,7 @@ const Blog = props => {
   const replaceAll = (searchString, replaceString, str) => {
     return str.split(searchString).join(replaceString);
   }
-  const fancyHtml1 = replaceAll('http://www.atlantavoices.com/dh/', '/', content);
+  const fancyHtml1 = replaceAll('http://www.atlantavoices.com/dh2/', '/', content);
   const fancyHtml2 = replaceAll('https://i1.wp.com/', '//', fancyHtml1);
   const fancyHtml3 = replaceAll('https://i2.wp.com/', '//', fancyHtml2);
 

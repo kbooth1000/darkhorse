@@ -65,7 +65,7 @@ module.exports = {
       options: {
         typeName: `WPGraphQL`,
         fieldName: `wp`,
-        url: `http://www.atlantavoices.com/dh/graphql`
+        url: `http://www.atlantavoices.com/dh2/graphql`
       }
     },
     'gatsby-plugin-sass',

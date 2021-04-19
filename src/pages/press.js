@@ -37,7 +37,7 @@ const Press = () => (<div className="Press">
                         <br />
                         <a href="http://www.fdmc-online.com/fdmc/february_2018?pg=52#pg52">
                             <img className="alignright size-full wp-image-1469"
-                                src="https://i1.wp.com/www.atlantavoices.com/dh/wp-content/uploads/2018/02/fdmc-article-img.jpg?resize=620%2C342"
+                                src="https://i1.wp.com/www.atlantavoices.com/dh2/wp-content/uploads/2018/02/fdmc-article-img.jpg?resize=620%2C342"
                                 alt="Dehmer, Krig and Thomasset at Thomasset&apos;s workshop." width="620" height="342" />
                         </a>
 
@@ -155,7 +155,7 @@ Visit a home featured in
                 <div className="bne-element-container accolade">
 
                     <div className="press-item">
-                        <a href=" http://i1.wp.com/atlantavoices.com/dh/ajc-jan-5-2014/" target="_self">
+                        <a href=" http://i1.wp.com/atlantavoices.com/dh2/ajc-jan-5-2014/" target="_self">
                             <img className="bne-testimonial-featured-image flat-square wp-post-image" src={require('../assets/uploads/2014/11/kudzu.jpeg')} alt=" " width="250" height="250" />
                             <br />
 Kudzu, Best of 2012
@@ -178,7 +178,7 @@ Kudzu, Best of 2012
 </p>
 
                     <div className="press-item">
-                        <a href="http://i1.wp.com/atlantavoices.com/dh/ajc-jan-5-2014/" target="_self">
+                        <a href="http://i1.wp.com/atlantavoices.com/dh2/ajc-jan-5-2014/" target="_self">
                             <img className="wp-post-image" src={require('../assets/uploads/2014/11/ajchomefinder1.gif')} alt="AJC Homefinder" />
 Article appeared
 <br />
@@ -202,7 +202,7 @@ Sunday, January 5th, 2014
 
                     <div className="press-item">
                         <a href="http://www.cabinetmakers.org/2017-wood-diamond-awards.html" >
-                            <img style={{ width: '130px' }} src="http://i1.wp.com/atlantavoices.com/dh/wp-content/uploads/2016/02/WoodDiamond.png" alt="CMA Wood Diamond Award" />
+                            <img style={{ width: '130px' }} src="http://i1.wp.com/atlantavoices.com/dh2/wp-content/uploads/2016/02/WoodDiamond.png" alt="CMA Wood Diamond Award" />
                         </a>
                         <br />
                         <b>2017</b>
@@ -243,7 +243,7 @@ Dark Horse Woodworks Wins Five Prestigious CMA Wood Diamond Awards.
 
                     <div className="press-item">
                         <a href="http://www.cabinetmakers.org/2016-wood-diamond-awards.html" >
-                            <img style={{ width: '130px' }} src="http://i1.wp.com/atlantavoices.com/dh/wp-content/uploads/2016/02/WoodDiamond.png" alt="CMA Wood Diamond Award" />
+                            <img style={{ width: '130px' }} src="http://i1.wp.com/atlantavoices.com/dh2/wp-content/uploads/2016/02/WoodDiamond.png" alt="CMA Wood Diamond Award" />
                         </a>
                         <br />
                         <b>
@@ -287,7 +287,7 @@ Dark Horse Woodworks Wins Five Prestigious CMA Wood Diamond Awards.
 
                     <div className="press-item">
                         <a href="http://www.cabinetmakers.org/2015-wood-diamond-award-winners.html" >
-                            <img style={{ width: '130px' }} src="http://i1.wp.com/atlantavoices.com/dh/wp-content/uploads/2016/02/WoodDiamond.png" alt="CMA Wood Diamond Award" />
+                            <img style={{ width: '130px' }} src="http://i1.wp.com/atlantavoices.com/dh2/wp-content/uploads/2016/02/WoodDiamond.png" alt="CMA Wood Diamond Award" />
                         </a>
                         <br />
                         <b>
@@ -336,7 +336,7 @@ Face Frame&nbsp;– Under $25K
                     <div className="bne-element-container accolade">
                         <div className="press-item">
                             <a href="http://www.cabinetmakers.org/2014-wood-diamond-award-winners.html" >
-                                <img style={{ width: '130px' }} src="http://i1.wp.com/atlantavoices.com/dh/wp-content/uploads/2016/02/WoodDiamond.png" alt="CMA Wood Diamond Award" />
+                                <img style={{ width: '130px' }} src="http://i1.wp.com/atlantavoices.com/dh2/wp-content/uploads/2016/02/WoodDiamond.png" alt="CMA Wood Diamond Award" />
                             </a>
                             <br />
                             <b>
@@ -368,7 +368,7 @@ Dark Horse Woodworks Wins Two Prestigious CMA Wood Diamond Awards.
                         <div className="bne-element-container accolade">
                             <div className="press-item">
                                 <a href="http://www.cabinetmakers.org/2013-wood-diamond-award-winners.html" >
-                                    <img style={{ width: '130px' }} src="http://i1.wp.com/atlantavoices.com/dh/wp-content/uploads/2016/02/WoodDiamond.png" alt="CMA Wood Diamond Award" />
+                                    <img style={{ width: '130px' }} src="http://i1.wp.com/atlantavoices.com/dh2/wp-content/uploads/2016/02/WoodDiamond.png" alt="CMA Wood Diamond Award" />
                                 </a>
                                 <br />
                                 <b>

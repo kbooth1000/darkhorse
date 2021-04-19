@@ -11,7 +11,7 @@ const Head = ({ title, isProject, featuredImg }) => {
     graphql`
     query {
       wp {
-        portfolio(first: 33) {
+        portfolios(first: 33) {
           edges {
             node {
               title

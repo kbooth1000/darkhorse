@@ -40,7 +40,7 @@ const Gallery = () => {
   const data = useStaticQuery(graphql`
   query {
     wp {
-      portfolio(first: 33) {
+      portfolios(first: 33) {
         edges {
           node {
             title
@@ -75,7 +75,7 @@ const Gallery = () => {
     }
   }
   `);
-  const nodes = data.wp.portfolio.edges;
+  const nodes = data.wp.portfolios.edges;
 
   const projects = nodes.map((project, i) => {
     const typeClasses = project.node.portfolioTypes.edges.reduce((val, type) => ` type-${type.node.slug}` + val, '');
