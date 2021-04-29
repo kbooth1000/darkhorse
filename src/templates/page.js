@@ -42,7 +42,9 @@ export const query = graphql`
       pageBy(id: $id) {
         date
         author {
-          name
+          node {
+              name
+            }
         }
         content(format: RENDERED)
         title(format: RENDERED)

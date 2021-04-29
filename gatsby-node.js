@@ -1,5 +1,10 @@
 const path = require('path');
 
+console.log('*******************************************');
+console.log('*******************************************');
+console.log('*******************************************');
+console.log('*******************************************');
+
 module.exports.createPages = async ({
   graphql,
   actions
@@ -24,6 +29,8 @@ module.exports.createPages = async ({
         edges {
           node {
             slug
+            id
+            content
           }
         }
       }
@@ -41,11 +48,14 @@ module.exports.createPages = async ({
   `)
 
   res.data.wp.portfolios.edges.forEach((edge) => {
+    
     createPage({
       component: projectTemplate,
       path: `/project/${edge.node.slug}`,
       context: {
-        slug: edge.node.slug
+        slug: edge.node.slug,
+        id: edge.node.id,
+        content: edge.node.content
       }
     })
   })

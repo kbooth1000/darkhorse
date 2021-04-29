@@ -2,10 +2,10 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Link } from 'gatsby';
 
-import footerStyles from './footer.module.scss';
+//import footerStyles from './footer.module.scss';
 
 const Footer = () => {
-  const data = useStaticQuery(graphql`
+  const data = graphql`
     query {
       site {
         siteMetadata {
@@ -13,9 +13,9 @@ const Footer = () => {
         }
       }
     }
-  `)
+  `
   return (
-    <footer id="footer" role="contentinfo" itemScope="itemscope" itemType="http://schema.org/WPFooter" className={footerStyles.footer}>
+    <footer id="footer" role="contentinfo" itemScope="itemscope" itemType="http://schema.org/WPFooter" className="footer">
       
 
       <div className="wrap clearfix"><nav role="navigation" itemScope="itemscope" itemType="http://schema.org/SiteNavigationElement">
@@ -27,7 +27,7 @@ const Footer = () => {
       <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><Link to="/blog/">Blog</Link></li>
       <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-15"><Link to="/contact/">Contact</Link></li>
       </ul></nav>
-      <p className="copyright">Copyright &copy; {new Date().getFullYear()}       {data.site.siteMetadata.title}<br /></p></div>
+      <p className="copyright">Copyright &copy; {new Date().getFullYear()}       Darkhorse Woodworks, Inc. <br /></p></div>
 
     </footer>
   )

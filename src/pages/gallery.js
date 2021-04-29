@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 
@@ -60,7 +60,9 @@ const Gallery = () => {
               }
             }
             featuredImage {
-              sourceUrl(size: S)
+              node {
+                sourceUrl(size: S)
+              }
             }
             portfolioTypes {
               edges {

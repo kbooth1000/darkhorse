@@ -9,11 +9,13 @@ import '../styles/projectStyles.css';
 
 
 const Project = props => {
+console.log({props})
 
-  console.log('***********#################***********************', props.data.wp)
-  const html = props.data.wp.portfolioBy.content;
+  const html = props.data.wp.portfolio.content ? props.data.wp.portfolio.content : 'no content'
 
   function replaceAll(searchString, replaceString, str) {
+    console.log({str});
+    
     return str.split(searchString).join(replaceString);
   }
 
@@ -47,30 +49,30 @@ const Project = props => {
   }
 
 
-  const portfolioTitle = props.data.wp.portfolioBy.title;
-  const featuredImage = props.data.wp.portfolioBy.featuredImage.sourceUrl;
+  const portfolioTitle = props.data.wp.portfolio.title;
+  const featuredImage = props.data.wp.portfolio.featuredImage.node.sourceUrl;
 
   const houzzButtonHtml = `<a class="houzz-share-button"
-  data-url="http://darkhorsewoodworks.com/dh1/project/${props.data.wp.portfolioBy.slug}"
+  data-url="http://darkhorsewoodworks.com/dh1/project/${props.data.wp.portfolio.slug}"
   data-hzid="2881"
   data-title="${portfolioTitle}"
-  data-img="${replaceAll('darkhorsewoodworks.com/dh1', 'atlantavoices.com/dh', featuredImage)}"
-  data-desc="${props.data.wp.portfolioBy.excerpt.substring(0, props.data.wp.portfolioBy.excerpt.indexOf('</p>'))}"
-  data-category="${props.data.wp.portfolioBy.termNames.toString()}"
+  data-img="${replaceAll('darkhorsewoodworks.com/dh1', 'atlantavoices.com/dh2', featuredImage)}"
+  data-desc="${props.data.wp.portfolio.excerpt.substring(0, props.data.wp.portfolio.excerpt.indexOf('</p>'))}"
+  data-category="${props.data.wp.portfolio.terms.edges[0].node.name.toString()}"
   data-showcount="1 "
   href="https://www.houzz.com">Houzz</a>`
   console.log('HouzzButton:', houzzButtonHtml);
 
   return (
     <Layout title={portfolioTitle}>
-      <Head title={`${props.data.wp.portfolioBy.title} ${props.data.wp.portfolioBy.title.includes('Project') ? '' : 'Project'}`} isProject={true} featuredImg={props.data.wp.portfolioBy.featuredImage.sourceUrl} />
+      <Head title={`${props.data.wp.portfolio.title} ${props.data.wp.portfolio.title.includes('Project') ? '' : 'Project'}`} isProject={true} featuredImg={props.data.wp.portfolio.featuredImage.sourceUrl} />
       <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} featuredImage={featuredImage} />
       <span style={{ float: 'left', marginTop: '-1rem' }}>
         <Link to="gallery"><span style={{ color: '#666', fontWeight: '100', textDecoration: 'none' }}>...Gallery</span></Link></span><br /><br />
       <img className="featured-image" src={featuredImage} />
       <div dangerouslySetInnerHTML={{ __html: finalHtml }} />
       <span className="save-to-houzz">Save to Houzz:</span><br />
-      <div dangerouslySetInnerHTML={{ __html: replaceAll('darkhorsewoodworks.com/dh1', 'atlantavoices.com/dh', houzzButtonHtml) }} />
+      <div dangerouslySetInnerHTML={{ __html: replaceAll('darkhorsewoodworks.com/dh1', 'atlantavoices.com/dh2', houzzButtonHtml) }} />
       <div onClick={handleLightboxClick}
         onLoad={handleImgLoad} className="lightbox-box"><img src={loadingImgUrl} alt="LOADING" /></div>
     </Layout>
@@ -81,17 +83,26 @@ export default Project;
 
 
 export const query = graphql`
-  query($slug: String!) {
+  query($id: ID!) {
     wp {
       portfolio(id: $id) {
-        slug
-        excerpt
-        terms(taxonomies: PORTFOLIOTYPE)
-        content
-        featuredImage {
+      terms {
+        edges {
+          node {
+            termTaxonomyId
+            name
+          }
+        }
+      }
+      slug
+      excerpt
+      content(format: RENDERED)
+      featuredImage {
+        node {
           sourceUrl(size: M)
         }
-        title
+      }
+      title
       }
     }
   }

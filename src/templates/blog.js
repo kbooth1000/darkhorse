@@ -49,19 +49,28 @@ export default Blog;
 
 
 export const query = graphql`
-  query($slug: String!) {
+  query($id: Int) {
     wp {
-      postBy(slug: $slug) {
-        date
-        author {
-          name
-        }
-        content(format: RENDERED)
-        title(format: RENDERED)
-        featuredImage {
-          sourceUrl(size: M)
+    posts(where: {id: $id}) {
+      edges {
+        node {
+          date
+          content(format: RENDERED)
+          title(format: RENDERED)
+          slug
+          author {
+            node {
+              name
+            }
+          }
+          featuredImage {
+            node {
+              sourceUrl(size: M)
+            }
+          }
         }
       }
     }
+  }
   }
 `

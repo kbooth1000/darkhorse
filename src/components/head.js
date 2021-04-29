@@ -7,17 +7,17 @@ import favicon from '../assets/favicon/favicon.ico';
 
 
 const Head = ({ title, isProject, featuredImg }) => {
-  const data = useStaticQuery(
-    graphql`
+  const data = graphql`
     query {
       wp {
-        portfolios(first: 33) {
+        portfolios {
           edges {
             node {
-              title
-              slug
+              id
               featuredImage {
-                sourceUrl(size: S)
+                node {
+                  sourceUrl(size: S)
+                }
               }
             }
           }
@@ -30,12 +30,12 @@ const Head = ({ title, isProject, featuredImg }) => {
       }
     }
     `
-  )
+  
 
   title = title ? title : '';
 
   return (
-    <Helmet title={`${title ? title : data.site.siteMetadata.title} • ${data.site.siteMetadata.title} `} encodeSpecialCharacters={false} link={[
+    <Helmet title={`${title ? title : ''} • $'Darkhorse Woodworks, Inc.' `} encodeSpecialCharacters={false} link={[
       {
         "rel": "icon",
         "type": "image/png",
