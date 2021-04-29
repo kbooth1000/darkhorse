@@ -98,7 +98,7 @@ const Gallery = () => {
           img = project.node.alt_image_group.altImage3.sourceUrl;
           break;
         default:
-          img = project.node.featuredImage.sourceUrl;
+          img = project.node.featuredImage.node.sourceUrl;
       }
       return img;
     }
