@@ -22,6 +22,20 @@ module.exports.createPages = async ({
         edges {
           node {
             slug
+            author {
+              node {
+                name
+              }
+            }
+            content
+            title
+            id
+            date
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
           }
         }
       }
@@ -65,7 +79,11 @@ module.exports.createPages = async ({
       component: blogTemplate,
       path: `/blog/${edge.node.slug}`,
       context: {
-        slug: edge.node.slug
+        slug: edge.node.slug,
+        content: edge.node.content,
+        author: edge.node.author.node.name,
+        title: edge.node.title,
+        date: edge.node.date
       }
     })
   })
