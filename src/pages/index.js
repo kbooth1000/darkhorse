@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from '../components/Layout';
-//import ImageGallery from '../components/imageGallery';
+import ImageGallery from '../components/imageGallery';
 import TwitterWidget from '../components/twitterWidget';
 //import FacebookWidget from '../components/facebookWidget';
 import { Link } from 'gatsby';
@@ -144,7 +144,7 @@ return (<Layout title="Home">
       <div className="wrap">
       <div className="column">
         <h4 className="widget-title">Our Instagram Shots</h4>
-        {/*<ImageGallery />*/}
+        <ImageGallery />
       </div>
 
 
