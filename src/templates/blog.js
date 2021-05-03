@@ -10,31 +10,32 @@ import '../styles/blogStyles.css';
 import logo from '../assets/logo.png';
 
 const Blog = props => {
-
-  const { date, author, content, title } = props.data.wp.postBy
+  
+  const { date, content, title, author } = props.pageContext;
   const contentAfterImg = content.substring(content.indexOf('<img'));
   const imgTag = contentAfterImg.substring(0, contentAfterImg.indexOf('>'));
   const imgTagFromSrc = imgTag.substring(imgTag.indexOf(' src="') + 6);
   const imgSrc = imgTagFromSrc.substring(0, imgTagFromSrc.indexOf('" '));
+  console.log('blogProps:',props.pageContext, date);
   const rawDate = (new Date(date));
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   const formattedDate = `${months[rawDate.getMonth()]} ${rawDate.getDate()}, ${rawDate.getFullYear()}`
   const replaceAll = (searchString, replaceString, str) => {
     return str.split(searchString).join(replaceString);
   }
-  const fancyHtml1 = replaceAll('http://www.atlantavoices.com/dh/', '/', content);
+  const fancyHtml1 = replaceAll('http://www.atlantavoices.com/dh2/', '/', content);
   const fancyHtml2 = replaceAll('https://i1.wp.com/', '//', fancyHtml1);
   const fancyHtml3 = replaceAll('https://i2.wp.com/', '//', fancyHtml2);
 
   return (
     <Layout title={title}>
-      <Head title={title} featuredImg={props.data.wp.postBy.featuredImage ? props.data.wp.postBy.featuredImg.sourceUrl : imgSrc ? imgSrc : logo} />
+      <Head title={title} featuredImg={props.pageContext.featuredImage ? props.pageContext.featuredImg.node.sourceUrl : imgSrc ? imgSrc : logo} />
       <p className="entry-meta">
         <time className="entry-time">
           {formattedDate}
         </time> by
       <span className="entry-author vcard" itemProp="author" itemScope="itemscope" itemType="http://schema.org/Person">
-          <span> <strong> {author.name}</strong>
+          <span> <strong> {author}</strong>
           </span>
         </span>
       </p>
@@ -49,19 +50,23 @@ export default Blog;
 
 
 export const query = graphql`
-  query($slug: String!) {
+  query($id: ID!) {
     wp {
-      postBy(slug: $slug) {
-        date
-        author {
-          name
-        }
-        content(format: RENDERED)
-        title(format: RENDERED)
-        featuredImage {
-          sourceUrl(size: M)
-        }
-      }
+    post(id: $id) {
+          date
+          content(format: RENDERED)
+          title(format: RENDERED)
+          slug
+          author {
+            node {
+              name
+            }
+          }
+          featuredImage {
+            node {
+              sourceUrl(size: M)
+            }
+          }
     }
   }
-`
+  }`

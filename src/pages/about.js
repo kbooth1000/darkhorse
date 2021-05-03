@@ -13,7 +13,7 @@ const About = () => {
       <div className="entry-content">
 
         <div id="attachment_153" style={{width: '310px', marginLeft: '1rem'}} className="wp-caption alignnone">
-          <img src="http://www.atlantavoices.com/dh/wp-content/uploads/2014/11/about21.jpeg?zoom=1.100000023841858&amp;resize=300%2C205" alt="Who knew this would turn into a lifelong passion?" width="270" height="184" />
+          <img src="http://www.atlantavoices.com/dh2/wp-content/uploads/2014/11/about21.jpeg?zoom=1.100000023841858&amp;resize=300%2C205" alt="Who knew this would turn into a lifelong passion?" width="270" height="184" />
             <p id="caption-attachment-153" className="wp-caption-text">Who knew this would turn into a lifelong passion?
             </p>
             </div>

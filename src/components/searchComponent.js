@@ -13,7 +13,7 @@ const Search = () => {
   useEffect(() => {
     async function getResponse() {
       const result = await axios(
-        'http://www.atlantavoices.com/dh/wp-json/wp/v2/searchResults',
+        'http://www.atlantavoices.com/dh2/wp-json/wp/v2/searchResults',
       );
 
       setData(result.data);

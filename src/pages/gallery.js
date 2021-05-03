@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 
@@ -40,7 +40,7 @@ const Gallery = () => {
   const data = useStaticQuery(graphql`
   query {
     wp {
-      portfolio(first: 33) {
+      portfolios(first: 33) {
         edges {
           node {
             title
@@ -60,7 +60,9 @@ const Gallery = () => {
               }
             }
             featuredImage {
-              sourceUrl(size: S)
+              node {
+                sourceUrl(size: S)
+              }
             }
             portfolioTypes {
               edges {
@@ -75,7 +77,7 @@ const Gallery = () => {
     }
   }
   `);
-  const nodes = data.wp.portfolio.edges;
+  const nodes = data.wp.portfolios.edges;
 
   const projects = nodes.map((project, i) => {
     const typeClasses = project.node.portfolioTypes.edges.reduce((val, type) => ` type-${type.node.slug}` + val, '');
@@ -96,7 +98,7 @@ const Gallery = () => {
           img = project.node.alt_image_group.altImage3.sourceUrl;
           break;
         default:
-          img = project.node.featuredImage.sourceUrl;
+          img = project.node.featuredImage.node.sourceUrl;
       }
       return img;
     }

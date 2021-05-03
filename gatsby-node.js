@@ -1,5 +1,10 @@
 const path = require('path');
 
+console.log('*******************************************');
+console.log('*******************************************');
+console.log('*******************************************');
+console.log('*******************************************');
+
 module.exports.createPages = async ({
   graphql,
   actions
@@ -17,13 +22,29 @@ module.exports.createPages = async ({
         edges {
           node {
             slug
+            author {
+              node {
+                name
+              }
+            }
+            content
+            title
+            id
+            date
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
           }
         }
       }
-      portfolio(first: 99) {
+      portfolios(first: 99) {
         edges {
           node {
             slug
+            id
+            content
           }
         }
       }
@@ -40,12 +61,15 @@ module.exports.createPages = async ({
   }
   `)
 
-  res.data.wp.portfolio.edges.forEach((edge) => {
+  res.data.wp.portfolios.edges.forEach((edge) => {
+    
     createPage({
       component: projectTemplate,
       path: `/project/${edge.node.slug}`,
       context: {
-        slug: edge.node.slug
+        slug: edge.node.slug,
+        id: edge.node.id,
+        content: edge.node.content
       }
     })
   })
@@ -55,7 +79,11 @@ module.exports.createPages = async ({
       component: blogTemplate,
       path: `/blog/${edge.node.slug}`,
       context: {
-        slug: edge.node.slug
+        slug: edge.node.slug,
+        content: edge.node.content,
+        author: edge.node.author.node.name,
+        title: edge.node.title,
+        date: edge.node.date
       }
     })
   })

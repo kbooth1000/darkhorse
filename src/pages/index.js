@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from '../components/Layout';
-import ImageGallery from '../components/imageGallery';
+//import ImageGallery from '../components/imageGallery';
 import TwitterWidget from '../components/twitterWidget';
-import FacebookWidget from '../components/facebookWidget';
+//import FacebookWidget from '../components/facebookWidget';
 import { Link } from 'gatsby';
 import logo from '../assets/logo.png';
 import Head from '../components/Head';
@@ -86,7 +86,7 @@ return (<Layout title="Home">
     </div>
     <div className="homepage-decoration">
       <Link to="press/">
-        <img src={require('../assets//uploads/2016/02/WoodDiamond.png') } />
+        <img alt="" src={require('../assets//uploads/2016/02/WoodDiamond.png') } />
         <br />
         <br />
         <footer>Multiple-time Winner of the Prestigious CMA Wood Diamond Award
@@ -103,7 +103,7 @@ return (<Layout title="Home">
         <a href="about#ourstory">
           <img src={require('../assets//uploads/2014/11/about2.jpeg') } alt="Designing a custom piece allows you to choose all of the details – style, materials, color, finish and size. We will talk about styles you like, look at photos of similar pieces and talk about what you do and don’t like about them. We will discuss the intended use and the room where the piece will be used. If you've created a sketch of what you have in mind, we’ll look at that, too. All of this information goes into each piece Dark Horse builds. Together, we will create a design that fits your needs and your desire for a one-of-a-kind creation....." />
         </a>
-        <img className="unhidden-fb-poster-pic" src={require('../assets//uploads/2014/12/screenshot.png')} />
+        <img alt="" className="unhidden-fb-poster-pic" src={require('../assets//uploads/2014/12/screenshot.png')} />
       </div>
       <div className="column">
         <h2>Working with Us
@@ -138,13 +138,13 @@ return (<Layout title="Home">
 
 
 
-  <aside id="sidebar-footer" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+  <aside id="sidebar-footer" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
 
     <section className="columns home-widgets">
       <div className="wrap">
       <div className="column">
         <h4 className="widget-title">Our Instagram Shots</h4>
-        <ImageGallery />
+        {/*<ImageGallery />*/}
       </div>
 
 
