@@ -64,7 +64,7 @@ Read more:
 </b>
                         <br />
                         <a href="https://www.rehau.com/us-en/furniture/reference-projects/dark-horse-woodworks-wildwood-kitchen-testimonial">
-                            <img style={{ padding: '3px', float: 'right' }} src="https://www.rehau.com/blob/550920/a8a95eff270d0aa8a279d7b0ec9585dc/logodesktop-png-data.png" alt="Rehau Unlimited Polymer Solutions" />
+                            <img style={{ padding: '3px', float: 'right' }} src="https://www.rehau.com/resource/crblob/184142/9c21f19feb5ad62e7aea43255866bcfb/rehau-logo.svg-data.svg" alt="Rehau Unlimited Polymer Solutions" />
                         </a>
  Custom cabinetry designer creates modern elegance with RAUVISIO crystal polymer back-painted glass surface with REHAU LaserEdge....
 <br />

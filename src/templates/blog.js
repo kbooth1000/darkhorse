@@ -23,9 +23,9 @@ const Blog = props => {
   const replaceAll = (searchString, replaceString, str) => {
     return str.split(searchString).join(replaceString);
   }
-  const fancyHtml1 = replaceAll('http://www.atlantavoices.com/dh2/', '/', content);
+  const fancyHtml1 = replaceAll(' src="http://www.atlantavoices.com/dh2/', ' src="https://i2.wp.com/www.atlantavoices.com/dh2/', content);
   const fancyHtml2 = replaceAll('https://i1.wp.com/', '//', fancyHtml1);
-  const fancyHtml3 = replaceAll('https://i2.wp.com/', '//', fancyHtml2);
+  const fancyHtml3 = fancyHtml1; //replaceAll('https://i2.wp.com/', '//', fancyHtml2);
 
   return (
     <Layout title={title}>

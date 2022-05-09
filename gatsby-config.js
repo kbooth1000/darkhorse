@@ -18,6 +18,7 @@ module.exports = {
     author: 'Kyle J Booth'
   },
   plugins: [
+    //`gatsby-plugin-instagram`,
 
     `gatsby-plugin-react-helmet`,
     {
@@ -35,14 +36,16 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
 
-    `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        // type: `user-profile`,
-        username: config.social.instagram,
-      },
-    },
+    //`gatsby-plugin-offline`,
+    //{
+    //  resolve: `gatsby-source-instagram`,
+    //  options: {
+    //    // type: `user-profile`,
+    //    username: `darkhorsewoodworks`//`1557694970` //config.social.instagram,
+    //  },
+    //},
+
+    
 
     {
       resolve: `gatsby-plugin-alias-imports`,

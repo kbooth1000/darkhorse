@@ -68,7 +68,9 @@ console.log({props})
       <Head title={`${props.data.wp.portfolio.title} ${props.data.wp.portfolio.title.includes('Project') ? '' : 'Project'}`} isProject={true} featuredImg={props.data.wp.portfolio.featuredImage.sourceUrl} />
       <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} featuredImage={featuredImage} />
       <span style={{ float: 'left', marginTop: '-1rem' }}>
-        <Link to="gallery"><span style={{ color: '#666', fontWeight: '100', textDecoration: 'none' }}>...Gallery</span></Link></span><br /><br />
+        <Link to="/gallery"><span style={{ color: '#666', fontWeight: '100', textDecoration: 'none' }}>...Gallery</span></Link></span><br /><br />
+        {/*<a href="./gallery"><span style={{ color: '#666', fontWeight: '100', textDecoration: 'none' }}>...Gallery</span></a></span><br /><br />*/}
+
       <img className="featured-image" src={featuredImage} />
       <div dangerouslySetInnerHTML={{ __html: finalHtml }} />
       <span className="save-to-houzz">Save to Houzz:</span><br />
