@@ -109,7 +109,7 @@ return (<Layout title="Home">
       <div className="column">
         <h2>Working with Us
     </h2>
-        <a href="about/working-with-dark-horse/">
+        <a href="working-with-dark-horse/">
           <img src={require('../assets//uploads/2014/11/dhnewspace1.jpg') } alt="" style={{ width: '100%' }} />
         </a>
       </div>
