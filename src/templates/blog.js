@@ -16,7 +16,7 @@ const Blog = props => {
   const imgTag = contentAfterImg.substring(0, contentAfterImg.indexOf('>'));
   const imgTagFromSrc = imgTag.substring(imgTag.indexOf(' src="') + 6);
   const imgSrc = imgTagFromSrc.substring(0, imgTagFromSrc.indexOf('" '));
-  console.log('blogProps:',props.pageContext, date);
+  // console.log('blogProps:',props.pageContext, date);
   const rawDate = (new Date(date));
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   const formattedDate = `${months[rawDate.getMonth()]} ${rawDate.getDate()}, ${rawDate.getFullYear()}`

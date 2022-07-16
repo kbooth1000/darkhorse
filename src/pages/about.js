@@ -32,7 +32,7 @@ const About = () => {
             <p><strong>Versatility</strong></p>
             <p>The Dark Horse Studios team specializes in contemporary large-scale cabinetry and other projects for kitchens, living areas, bathrooms, libraries and beyond.</p>
             <p>A custom design is a collaboration between you and the Dark Horse design-craft team. We’re always excited to talk with you about your project and look at the ways we could work together to bring your ideas to life.</p>
-            <p><Link to="contact">Click here to contact us about your project.</Link></p>
+            <p><Link to="/contact">Click here to contact us about your project.</Link></p>
             <p>The Dark Horse team values working with clients who appreciate the distinction of custom, finely crafted cabinetry and furniture, and we find the design process as satisfying as the building process.</p
             ><p>We enjoy meeting and getting to know our clients, finding out what they believe is important, and incorporating their sense of style into a unique project.</p>
             <p>Our collaborations with innovative design and architecture firms have led to awards as well as coverage in national publications such as <em>Dwell</em> magazine and <em>The New York Times</em>.</p>

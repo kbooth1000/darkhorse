@@ -35,7 +35,7 @@ const Head = ({ title, isProject, featuredImg }) => {
   title = title ? title : '';
 
   return (
-    <Helmet title={`${title ? title : ''} • $'Darkhorse Woodworks, Inc.' `} encodeSpecialCharacters={false} link={[
+    <Helmet title={`${title ? title : ''} • Darkhorse Woodworks, Inc.`} encodeSpecialCharacters={false} link={[
       {
         "rel": "icon",
         "type": "image/png",

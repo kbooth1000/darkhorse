@@ -19,7 +19,7 @@ const WorkingWith = () => {
           <p><strong>Warranty</strong></p>
           <p>We stand behind the products we create. Typically, our work is intended for normal indoor use. Should our furniture or cabinetry fail at any time during<br /> the lifetime of the original owner because of issues with our workmanship or material, we will either repair or replace it at no cost.</p>
           <p><strong>If you are interested in discussing a project, please fill out the form below:</strong></p>
-          <p><Link to="contact">Click here to contact us about your project.
+          <p><Link to="/contact">Click here to contact us about your project.
           </Link></p>
       </div>
       </div>

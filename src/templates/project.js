@@ -14,7 +14,7 @@ console.log({props})
   const html = props.data.wp.portfolio.content ? props.data.wp.portfolio.content : 'no content'
 
   function replaceAll(searchString, replaceString, str) {
-    console.log({str});
+    // console.log({str});
     
     return str.split(searchString).join(replaceString);
   }
