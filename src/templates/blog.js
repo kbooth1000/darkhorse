@@ -16,16 +16,16 @@ const Blog = props => {
   const imgTag = contentAfterImg.substring(0, contentAfterImg.indexOf('>'));
   const imgTagFromSrc = imgTag.substring(imgTag.indexOf(' src="') + 6);
   const imgSrc = imgTagFromSrc.substring(0, imgTagFromSrc.indexOf('" '));
-  console.log('blogProps:',props.pageContext, date);
+  // console.log('blogProps:',props.pageContext, date);
   const rawDate = (new Date(date));
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   const formattedDate = `${months[rawDate.getMonth()]} ${rawDate.getDate()}, ${rawDate.getFullYear()}`
   const replaceAll = (searchString, replaceString, str) => {
     return str.split(searchString).join(replaceString);
   }
-  const fancyHtml1 = replaceAll('http://www.atlantavoices.com/dh2/', '/', content);
+  const fancyHtml1 = replaceAll(' src="http://www.atlantavoices.com/dh2/', ' src="https://i2.wp.com/www.atlantavoices.com/dh2/', content);
   const fancyHtml2 = replaceAll('https://i1.wp.com/', '//', fancyHtml1);
-  const fancyHtml3 = replaceAll('https://i2.wp.com/', '//', fancyHtml2);
+  const fancyHtml3 = fancyHtml1; //replaceAll('https://i2.wp.com/', '//', fancyHtml2);
 
   return (
     <Layout title={title}>

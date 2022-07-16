@@ -13,7 +13,7 @@ const About = () => {
       <div className="entry-content">
 
         <div id="attachment_153" style={{width: '310px', marginLeft: '1rem'}} className="wp-caption alignnone">
-          <img src="http://www.atlantavoices.com/dh2/wp-content/uploads/2014/11/about21.jpeg?zoom=1.100000023841858&amp;resize=300%2C205" alt="Who knew this would turn into a lifelong passion?" width="270" height="184" />
+          <img src="https://www.darkhorsewoodworks.com/dh1/static/about2-2c054d43028dc2ccd760a662e8db5f1f.jpeg" alt="Who knew this would turn into a lifelong passion?" width="270" height="184" />
             <p id="caption-attachment-153" className="wp-caption-text">Who knew this would turn into a lifelong passion?
             </p>
             </div>
@@ -32,7 +32,7 @@ const About = () => {
             <p><strong>Versatility</strong></p>
             <p>The Dark Horse Studios team specializes in contemporary large-scale cabinetry and other projects for kitchens, living areas, bathrooms, libraries and beyond.</p>
             <p>A custom design is a collaboration between you and the Dark Horse design-craft team. We’re always excited to talk with you about your project and look at the ways we could work together to bring your ideas to life.</p>
-            <p><Link to="contact">Click here to contact us about your project.</Link></p>
+            <p><Link to="/contact">Click here to contact us about your project.</Link></p>
             <p>The Dark Horse team values working with clients who appreciate the distinction of custom, finely crafted cabinetry and furniture, and we find the design process as satisfying as the building process.</p
             ><p>We enjoy meeting and getting to know our clients, finding out what they believe is important, and incorporating their sense of style into a unique project.</p>
             <p>Our collaborations with innovative design and architecture firms have led to awards as well as coverage in national publications such as <em>Dwell</em> magazine and <em>The New York Times</em>.</p>

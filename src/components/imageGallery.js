@@ -4,11 +4,11 @@
 
 //const nodeURL = 'https://www.instagram.com/p';
 
-//const ImageGallery__ = () => {
+//const ImageGallery = () => {
 //  const {
-//    allInstaNode: { edges },
+//    allInstaNode:  {edges} ,
 //  } = useStaticQuery(graphql`
-//    {
+//   {
 //      allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 12) {
 //        edges {
 //          node {
@@ -53,4 +53,4 @@
 //  );
 //};
 
-//export default ImageGallery__;
+//export default ImageGallery;

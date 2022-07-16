@@ -83,6 +83,7 @@ module.exports.createPages = async ({
         content: edge.node.content,
         author: edge.node.author.node.name,
         title: edge.node.title,
+        id: edge.node.id,
         date: edge.node.date
       }
     })

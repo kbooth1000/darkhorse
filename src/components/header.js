@@ -42,30 +42,30 @@ const Header = props => {
           </a>
           <ul onBlur={handleNavBlur} className={`slicknav_nav ${slickNav}`} aria-hidden="true">
             <li>
-                <Link aria-haspopup="true" tabIndex="-1" className="slicknav_item" style={{ outline: 'none' }} to="about/">About</Link>
+                <Link aria-haspopup="true" tabIndex="-1" className="slicknav_item" style={{ outline: 'none' }} to="/about/">About</Link>
               <ul aria-hidden="true">
                 <li>
-                  <Link to="about/" tabIndex="-1">Our Story</Link>
+                  <Link to="/about/" tabIndex="-1">Our Story</Link>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-232">
-                  <Link to="working-with-darkhorse/" role="menuitem" tabIndex="-1">Working with Dark Horse</Link>
+                  <Link to="/working-with-darkhorse/" role="menuitem" tabIndex="-1">Working with Dark Horse</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <Link to="gallery/" role="menuitem" tabIndex="-1">Gallery</Link>
+              <Link to="/gallery/" role="menuitem" tabIndex="-1">Gallery</Link>
             </li>
             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">
-              <Link to="press/" role="menuitem" tabIndex="-1">Press</Link>
+              <Link to="/press/" role="menuitem" tabIndex="-1">Press</Link>
             </li>
             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1216">
-              <Link to="accolades/" role="menuitem" tabIndex="-1">Reviews</Link>
+              <Link to="/accolades/" role="menuitem" tabIndex="-1">Reviews</Link>
             </li>
             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-14">
-              <Link to="blog/" role="menuitem" tabIndex="-1">Blog</Link>
+              <Link to="/blog/" role="menuitem" tabIndex="-1">Blog</Link>
             </li>
             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-15">
-              <Link to="contact/" role="menuitem" tabIndex="-1">Contact</Link>
+              <Link to="/contact/" role="menuitem" tabIndex="-1">Contact</Link>
             </li>
           </ul>
         </div>

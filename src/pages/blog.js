@@ -39,7 +39,7 @@ const Blog = () => {
       return str.split(searchString).join(replaceString);
     }
     const fancyHtml2 = replaceAll('https://i1.wp.com/', '//', post.node.content);
-    const fancyHtml3 = replaceAll('https://i2.wp.com/', '//', fancyHtml2);
+    const fancyHtml3 = post.node.content; // replaceAll('https://i2.wp.com/', '//', fancyHtml2);
 
     return (
       <li key={`post${i}`} className="post">

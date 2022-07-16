@@ -14,7 +14,7 @@ const Gallery = () => {
 
   React.useEffect(() => {
     const Isotope = require('isotope-layout');
-    console.log('Isotope:', Isotope);
+    // console.log('Isotope:', Isotope);
 
     setIsotope(
       new Isotope(".project-grid", {
