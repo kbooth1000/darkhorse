@@ -67,7 +67,7 @@ console.log({props})
     <Layout title={portfolioTitle}>
       <Head title={`${props.data.wp.portfolio.title} ${props.data.wp.portfolio.title.includes('Project') ? '' : 'Project'}`} isProject={true} featuredImg={props.data.wp.portfolio.featuredImage.sourceUrl} />
       <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} featuredImage={featuredImage} />
-      <span style={{ float: 'left', marginTop: '-1rem' }}>
+      <span style={{ float: 'right', marginTop: '-1rem', paddingTop:'1rem' }}>
         <Link to="/gallery"><span style={{ color: '#666', fontWeight: '100', textDecoration: 'none' }}>...Gallery</span></Link></span><br /><br />
         {/*<a href="./gallery"><span style={{ color: '#666', fontWeight: '100', textDecoration: 'none' }}>...Gallery</span></a></span><br /><br />*/}
 
