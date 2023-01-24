@@ -1,9 +1,9 @@
 const path = require('path');
 
+console.log('');
 console.log('*******************************************');
 console.log('*******************************************');
-console.log('*******************************************');
-console.log('*******************************************');
+console.log('');
 
 module.exports.createPages = async ({
   graphql,
@@ -44,22 +44,19 @@ module.exports.createPages = async ({
           node {
             slug
             id
-            content
-          }
-        }
-      }
-      pages(first: 99) {
-        edges {
-          node{
-            id
-            uri
-            isFrontPage
+            content(format: RAW)
           }
         }
       }
     }
   }
   `)
+
+  console.log(`
+  
+  $$$$$$$$$$$: ${res}
+  
+  `);
 
   res.data.wp.portfolios.edges.forEach((edge) => {
     
@@ -69,7 +66,8 @@ module.exports.createPages = async ({
       context: {
         slug: edge.node.slug,
         id: edge.node.id,
-        content: edge.node.content
+        content: edge.node.content,
+        excerpt: edge.node.excerpt
       }
     })
   })

@@ -85,27 +85,28 @@ export default Project;
 
 
 export const query = graphql`
-  query($id: ID!) {
-    wp {
-      portfolio(id: $id) {
-      terms {
-        edges {
-          node {
-            termTaxonomyId
-            name
-          }
-        }
-      }
-      slug
-      excerpt
-      content(format: RENDERED)
-      featuredImage {
-        node {
-          sourceUrl(size: M)
-        }
-      }
-      title
+query ($id: ID!) {
+  wp{
+  portfolio(id: $id) {
+    slug
+    excerpt
+    content(format: RENDERED)
+    featuredImage {
+      node {
+        sourceUrl(size: M)
       }
     }
+    title
   }
+  terms {
+    edges {
+      node {
+        termTaxonomyId
+        name
+      }
+    }
+    }
+  }
+}
+
 `
