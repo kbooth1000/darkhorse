@@ -52,13 +52,12 @@ console.log({props})
   const portfolioTitle = props.data.wp.portfolio.title;
   const featuredImage = props.data.wp.portfolio.featuredImage.node.sourceUrl;
 
-  const houzzButtonHtml = `<a class="houzz-share-button"
-  data-url="http://darkhorsewoodworks.com/dh1/project/${props.data.wp.portfolio.slug}"
+  const houzzButtonHtml = `<a class="houzz-share-button" data-url="http://darkhorsewoodworks.com/dh1/project/${props.data.wp.portfolio.slug}"
   data-hzid="2881"
   data-title="${portfolioTitle}"
   data-img="${replaceAll('darkhorsewoodworks.com/dh1', 'atlantavoices.com/dh2', featuredImage)}"
   data-desc="${props.data.wp.portfolio.excerpt.substring(0, props.data.wp.portfolio.excerpt.indexOf('</p>'))}"
-  data-category="${props.data.wp.portfolio.terms.edges[0].node.name.toString()}"
+  data-category="${props.data.wp.terms.edges[0].node.name.toString()}"
   data-showcount="1 "
   href="https://www.houzz.com">Houzz</a>`
   console.log('HouzzButton:', houzzButtonHtml);
@@ -69,7 +68,6 @@ console.log({props})
       <SocialSharing pageLink={(typeof window !== 'undefined') ? window.location : '#'} featuredImage={featuredImage} />
       <span style={{ float: 'left', marginTop: '-1rem' }}>
         <Link to="/gallery"><span style={{ color: '#666', fontWeight: '100', textDecoration: 'none' }}>...Gallery</span></Link></span><br /><br />
-        {/*<a href="./gallery"><span style={{ color: '#666', fontWeight: '100', textDecoration: 'none' }}>...Gallery</span></a></span><br /><br />*/}
 
       <img className="featured-image" src={featuredImage} />
       <div dangerouslySetInnerHTML={{ __html: finalHtml }} />
